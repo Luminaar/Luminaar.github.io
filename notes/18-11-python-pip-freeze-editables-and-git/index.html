@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Python Pip &#8212;freeze, editables and&nbsp;git</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://luminar.dev/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://luminar.dev/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Full Atom Feed" />
+          <link href="https://luminar.dev/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Categories Atom Feed" />
+
+  <link href="https://luminar.dev/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://luminar.dev/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" rel="canonical" />
+
+    <meta name="description" content="Interesting behaviour when using Pip —freeze on a locally installed package with .git directory.">
+
+    <meta name="author" content="max">
+
+    <meta name="tags" content="python">
+    <meta name="tags" content="git">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Max K. Luminar"/>
+<meta property="og:title" content="Python Pip —freeze, editables and git"/>
+<meta property="og:description" content="Interesting behaviour when using Pip —freeze on a locally installed package with .git directory."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-11-16 07:55:12+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://luminar.dev/author/max.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="git"/>
+<meta property="og:image" content="https://luminar.dev//assets/images/default-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Python Pip —freeze, editables and git",
+  "headline": "Python Pip —freeze, editables and git",
+  "datePublished": "2018-11-16 07:55:12+01:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "max",
+    "url": "https://luminar.dev/author/max.html"
+  },
+  "image": "https://luminar.dev//assets/images/default-bg.jpg",
+  "url": "https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/",
+  "description": "Interesting behaviour when using Pip —freeze on a locally installed package with .git directory."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://luminar.dev/about/">About</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://luminar.dev/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Python Pip &#8212;freeze, editables and&nbsp;git</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://luminar.dev/author/max.html">Max K.</a>
+            | <time datetime="2018-11-16">2018-11-16</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://luminar.dev//assets/images/default-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>When developing a Python package, the recommended practice is to install your package in editable mode. This way you can still edit your source code and run your tests on installed version of your package, without having reinstalling it each&nbsp;time.</p>
+<p>Usually, your project structure will be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span>My_project/
+|-- .git
+|-- my_project/
+|   |-- __init__.py
+|   |-- module.py
+|
+|-- setup.py
+</pre></div>
+
+
+<p>You can run <code>pip install -e .</code> in the top level directory to install your package&nbsp;locally.</p>
+<p>After that, an interesting thing happens if you do a <code>pip freeze</code>. If there is a  <code>.git</code> directory (or a directory for other <span class="caps">VCS</span>), your package will be listed as&nbsp;follows:</p>
+<div class="highlight"><pre><span></span><span class="p">-</span><span class="nf">e</span> <span class="n">git</span><span class="o">+</span><span class="n">git</span><span class="p">@</span><span class="n">github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">user</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">project</span><span class="p">.</span><span class="n">git</span><span class="mo">@07</span><span class="mi">9</span><span class="n">d2ae797515c740a1742fc77bdcd68e577cbe5</span><span class="err">#</span><span class="n">egg</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">project</span>
+</pre></div>
+
+
+<p>I.e. it will point to the repository of your project instead of just naming your package. I could not find a mention of this anywhere in the documentation and it surprised me at&nbsp;first.</p>
+<p>Note: If there is not remote specified for your repository it will fallback to the package name and insert a comment in the&nbsp;output:</p>
+<div class="highlight"><pre><span></span>## !! Could not determine repository location
+</pre></div>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Python Pip &#8212;freeze, editables and&nbsp;git&amp;url=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://luminar.dev/tag/python.html">python</a><a href="https://luminar.dev/tag/git.html">git</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="https://luminar.dev//assets/images/avatar.jpg" alt="Max K." />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="https://luminar.dev/author/max.html">Max K.</a></h4>
+                            <p class="post-author-about">I'm a backend engineer at Avast. I work mostly with Python, Scala and Kubernetes.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Prague</span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/Luminaar"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/Luminar_"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://luminar.dev/theme/js/script.js"></script>
+
+</body>
+</html>

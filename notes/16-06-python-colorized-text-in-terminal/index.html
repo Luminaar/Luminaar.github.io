@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Python - colorized text in&nbsp;terminal</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://luminar.dev/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://luminar.dev/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Full Atom Feed" />
+          <link href="https://luminar.dev/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Categories Atom Feed" />
+
+  <link href="https://luminar.dev/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://luminar.dev/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" rel="canonical" />
+
+    <meta name="description" content="This snippet is useful if you want to make your terminal output colorized.">
+
+    <meta name="author" content="max">
+
+    <meta name="tags" content="python">
+    <meta name="tags" content="terminal">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Max K. Luminar"/>
+<meta property="og:title" content="Python - colorized text in terminal"/>
+<meta property="og:description" content="This snippet is useful if you want to make your terminal output colorized."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-06-27 15:17:58+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://luminar.dev/author/max.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="terminal"/>
+<meta property="og:image" content="https://luminar.dev//assets/images/default-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Python - colorized text in terminal",
+  "headline": "Python - colorized text in terminal",
+  "datePublished": "2016-06-27 15:17:58+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "max",
+    "url": "https://luminar.dev/author/max.html"
+  },
+  "image": "https://luminar.dev//assets/images/default-bg.jpg",
+  "url": "https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/",
+  "description": "This snippet is useful if you want to make your terminal output colorized."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://luminar.dev/about/">About</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://luminar.dev/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Python - colorized text in&nbsp;terminal</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://luminar.dev/author/max.html">Max K.</a>
+            | <time datetime="2016-06-27">2016-06-27</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://luminar.dev//assets/images/default-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>This snippet is useful if you want to make your terminal output
+colorized. It should work on Unix and Windows with
+<a href="https://support.microsoft.com/cs-cz/kb/101875"><span class="caps">ANSI</span>.<span class="caps">SYS</span></a>&nbsp;enabled.</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">colors</span><span class="p">():</span>
+    <span class="c1"># Text mode</span>
+    <span class="n">ENDC</span>      <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0m&#39;</span>
+    <span class="n">BOLD</span>      <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1m&#39;</span>
+    <span class="n">UNDERLINE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[4m&#39;</span>
+    <span class="n">INVERSE</span>   <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[7m&#39;</span>
+
+    <span class="c1"># Colors</span>
+    <span class="n">ORANGE</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[93m&#39;</span>
+    <span class="n">BLACK</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;30m&#39;</span>
+    <span class="n">BLUE</span>      <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;34m&#39;</span>
+    <span class="n">GREEN</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;32m&#39;</span>
+    <span class="n">CYAN</span>      <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;36m&#39;</span>
+    <span class="n">RED</span>       <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;31m&#39;</span>
+    <span class="n">PURPLE</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;35m&#39;</span>
+    <span class="n">BROWN</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;33m&#39;</span>
+    <span class="n">LGRAY</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[0;37m&#39;</span>
+    <span class="n">DGRAY</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;30m&#39;</span>
+    <span class="n">LBLUE</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;34m&#39;</span>
+    <span class="n">LGREEN</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;32m&#39;</span>
+    <span class="n">LCYAN</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;36m&#39;</span>
+    <span class="n">LRED</span>      <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;31m&#39;</span>
+    <span class="n">LPURPLE</span>   <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;35m&#39;</span>
+    <span class="n">YELLOW</span>    <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;33m&#39;</span>
+    <span class="n">WHITE</span>     <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\033</span><span class="s1">[1;37m&#39;</span>
+</pre></div>
+
+
+<p>You can combine colors and text modes, for example, this command will
+print red, underlined&nbsp;text:</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">RED</span> <span class="o">+</span> <span class="n">colors</span><span class="o">.</span><span class="n">UNDERLINE</span> <span class="o">+</span> <span class="s1">&#39;hello world&#39;</span> <span class="o">+</span> <span class="n">colors</span><span class="o">.</span><span class="n">ENDC</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Note: Do not forget to add <code>colros.ENCD</code> at the end, otherwise the
+rest of the output will be&nbsp;colorized.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Python - colorized text in&nbsp;terminal&amp;url=https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://luminar.dev/tag/python.html">python</a><a href="https://luminar.dev/tag/terminal.html">terminal</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="https://luminar.dev//assets/images/avatar.jpg" alt="Max K." />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="https://luminar.dev/author/max.html">Max K.</a></h4>
+                            <p class="post-author-about">I'm a backend engineer at Avast. I work mostly with Python, Scala and Kubernetes.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Prague</span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/Luminaar"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/Luminar_"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://luminar.dev/theme/js/script.js"></script>
+
+</body>
+</html>
