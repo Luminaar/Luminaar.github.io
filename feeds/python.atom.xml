@@ -57,5 +57,5 @@ print red, underlined&amp;nbsp;text:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Note: Do not forget to add &lt;code&gt;colros.ENCD&lt;/code&gt; at the end, otherwise the
+&lt;p&gt;Note: Do not forget to add &lt;code&gt;colors.ENDC&lt;/code&gt; at the end, otherwise the
 rest of the output will be&amp;nbsp;colorized.&lt;/p&gt;</content><category term="python"></category><category term="terminal"></category></entry></feed>

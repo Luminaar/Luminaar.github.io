@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Technický dluh a jeho dopady na kvalitu&nbsp;softwaru</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://luminar.dev/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://luminar.dev/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Full Atom Feed" />
+          <link href="https://luminar.dev/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Categories Atom Feed" />
+
+  <link href="https://luminar.dev/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://luminar.dev/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" rel="canonical" />
+
+    <meta name="description" content="Shrnutí poznatků o technickém dluhu">
+
+    <meta name="author" content="max">
+
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Max K. Luminar"/>
+<meta property="og:title" content="Technický dluh a jeho dopady na kvalitu softwaru"/>
+<meta property="og:description" content="Shrnutí poznatků o technickém dluhu"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-03-05 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://luminar.dev/author/max.html">
+<meta property="article:section" content="CZ"/>
+<meta property="og:image" content="https://luminar.dev//assets/images/default-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Technický dluh a jeho dopady na kvalitu softwaru",
+  "headline": "Technický dluh a jeho dopady na kvalitu softwaru",
+  "datePublished": "2019-03-05 00:00:00+01:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "max",
+    "url": "https://luminar.dev/author/max.html"
+  },
+  "image": "https://luminar.dev//assets/images/default-bg.jpg",
+  "url": "https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/",
+  "description": "Shrnutí poznatků o technickém dluhu"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://luminar.dev/about/">About</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://luminar.dev/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Technický dluh a jeho dopady na kvalitu&nbsp;softwaru</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://luminar.dev/author/max.html">Max K.</a>
+            | <time datetime="2019-03-05">2019-03-05</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://luminar.dev//assets/images/default-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Tento příspěvek je upravenou verzí semestrální práce, kterou
+jsem vypracoval v rámci studia (předmět Řízení kvality <span class="caps">SW</span>).</p>
+<p>Původní práce měla asi 15 stran a pokoušela se o akademický formát -
+trpný rod, citace, zavádění každého použitého pojmu, překládání běžně
+zavedených výrazů do češtiny. Pokusil jsem se to upravit do trochu
+lidštější formy, ale je možné, že mi některé věci unikly. Napadlo
+mně, přeložit celou věc do angličtiny, ale nakonec jsem se rozhodl,
+že mám zábavnější věci na&nbsp;práci.</p>
+<p>Článek je v podstatě kompilací informací, které se mi podařilo najít
+k tématu. Jsou to původní blogy, několik knih o <span class="caps">SW</span> inženýrství, které
+se o technickém dluhu krátce zmiňují, nebo akademické práce, které se
+snaží z toho udělat vědu (viz odkazy v textu a seznam literatury na
+konci článku). Když jsem začínal s psaním, přišlo mi, že
+vlastně nemám moc o čem. Nakonec se mi podařilo dát dohromady docela
+obsáhlý&nbsp;přehled.</p>
+<p>Hlavní účel tohoto článku vidím v sjednocení a vyjasnění pojmů pro
+následující diskuze o technickém dluhu na&nbsp;projektech.</p>
+<h2>Úvod</h2>
+<p>Technický dluh je metafora, která vystihuje častý jev, vznikající při
+tvorbě softwarových systémů* . Tento jev má téměř vždy negativní
+dopady a vyskytuje se v různých částech systému, z různých důvodů.
+Tento článek obsahuje definici technického dluhu, popisuje jeho
+vlastnosti a určuje několik různých druhů. Dále jsou popsány
+časté důvody vzniku technického dluhu a jeho přímé i nepřímé dopady
+na kvalitu softwaru. Nakonec jsou popsány postupy, jak
+technickému dluhu&nbsp;čelit.</p>
+<p>* <em>Pojmy software, systém a projekt jsou používány zaměnitelně pro
+  označení celku, na jehož tvorbě se podílí skupina lidí (tým
+  vývojářů, management,&nbsp;zákazníci).</em></p>
+<h2>Definice technického&nbsp;dluhu</h2>
+<p>Pojem technický dluh poprvé <a href="http://c2.com/doc/oopsla92.html">použil Ward Cunningham</a> jako metaforu,
+která se týká vývoje&nbsp;softwaru.</p>
+<p>Cunningham uvádí, že aby bylo dosaženo největší kvality softwaru,
+musí být implementace průběžně konsolidována (musí se odstraňovat
+nedostatky a zvyšovat její logická soudržnost). Počáteční
+implementace sice může být ze začátku pro zákazníka přijatelná, ale
+pokud nebude prováděn pravidelný refactoring, může to ohrozit celou&nbsp;organizaci:</p>
+<blockquote>
+<p>Vydání první verze softwaru je jako půjčka. Malá půjčka zrychluje
+vývoj pokud je brzo splacena refactoringem &#8230; Nebezpeční nastává,
+pokud není dluh splacen. Každá minuta kdy je používán ne zcela
+správný kód jsou úroky z tohoto dluhu. Celé vývojářské organizace
+mohou být tíhou dluhu nekonsolidovaného softwaru zcela&nbsp;zastaveny.</p>
+</blockquote>
+<p><a href="http://wiki.c2.com/?WardExplainsDebtMetaphor">Ward později upřesňuje</a>, že tato
+metafora neznamená vytvoření špatné implementace a jejího pozdějšího
+upravení na lepší implementaci.  Spíše jde o vytvoření takové
+implementace, která odpovídá úrovni poznání dané domény a její
+postupné zlepšování s tím, jak poznání roste.  Technický dluh podle
+něj také neznamená odložení implementace funkcionality. Týká se jen
+technických rozhodnutí, která ovlivňují další&nbsp;vývoj.</p>
+<p>Na rozdíl od Cunninghama, ostatní autoři do svých definicí zahrnují i
+nedokonalosti implementace. Steve McConnell dělí technický dluh podle
+následující taxonomie (viz toto <a href="https://vimeo.com/49866475">video</a>
+pro podrobný&nbsp;popis):</p>
+<ol>
+<li>Neočekávaný&nbsp;dluh</li>
+<li>Úmyslný dluh<ol>
+<li>A. Krátkodobý&nbsp;dluh</li>
+<li>B. Dlouhodobý&nbsp;dluh</li>
+</ol>
+</li>
+</ol>
+<p>Úmyslný dluh vzniká v systému přijetím explicitního rozhodnutí, které
+má své důvody a může sloužit vyššímu cíli. Neočekávaný dluh naopak
+vznikne aniž by to někdo pozoroval a později způsobuje nečekané&nbsp;komplikace.</p>
+<p>Krátkodobý dluh je takový, u kterého se očekává, že bude splácen
+často (např. mezi jednotlivými vývojovými cykly) nebo průběžně.
+Dlouhodobý je naopak v systému delší&nbsp;dobu.</p>
+<p>Podobně jako McConnell, i <a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html">Martin Fowler ve svém příspěvku</a> zahrnuje
+neúmyslné nedokonalosti implementace do technického dluhu. Navíc
+rozlišuje, zda byl dluh přijat z dobrého důvodu, či nikoliv, pomocí
+následující&nbsp;matice:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Reckless</th>
+<th align="center">Prudent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deliberate</td>
+<td align="center"><span class="caps">II</span>.</td>
+<td align="center">I.</td>
+</tr>
+<tr>
+<td>Inadvertent</td>
+<td align="center"><span class="caps">III</span>.</td>
+<td align="center"><span class="caps">IV</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>První kvadrant označuje technický dluh, který byl přijat za účelem
+splnění nějakého cíle s plným uvědoměním si následků - ”Software musí
+být vydán hned. Uvědomujeme si, jak to ovlivní další&nbsp;práci”.</p>
+<p>Druhý kvadrant označuje dluh, který byl přijat záměrně, ale toto
+rozhodnutí nebylo promyšleno a nemá dobrý důvod - ”S designem se teď
+nebudeme&nbsp;zdržovat”.</p>
+<p>Do třetího kvadrantu spadají případy, kdy vývojáři nevědí, že
+přijímají technický dluh nejčastěji kvůli vlastní neschopnosti -
+”Nějak to tam&nbsp;nasekáme”.</p>
+<p>Do posledního kvadrantu patří případy, kdy vývojáři sice udělali
+neoptimální rozhodnutí, ale později je odhalili a byli schopni se z
+nich poučit - ”Teď už víme, jak na&nbsp;to”.</p>
+<p>Dále v tomto článku budeme pracovat s touto&nbsp;definicí:</p>
+<ul>
+<li>Technický dluh zahrnuje interní činnosti technického charakteru,
+jejichž provedení bylo odloženo (ať už úmyslně či ne), což bude mít
+do budoucna vliv na kvalitu softwaru a na práci&nbsp;vývojářů</li>
+<li>Technický dluh zahrnuje i nedostatky implementace, které nevznikly&nbsp;úmyslně</li>
+<li>Odložení implementace funkcionality není technickým&nbsp;dluhem</li>
+</ul>
+<h2>Typy technického&nbsp;dluhu</h2>
+<p>Často jsou rozlišovány různé typy technického dluhu podle toho, která
+část systému ho&nbsp;obsahuje.</p>
+<p><strong>Dluh kódu</strong> se projevuje porušením standardů při psaní zdrojového kódu
+(např. nedodržení stylu, nesprávné pojmenování atd). Tento dluh je
+často možné odhalit pomocí statické analýzu&nbsp;kódu.</p>
+<p><strong>Designový dluh</strong> vzniká při nedodržení zásad dobré softwarové
+architektury a to buď od začátku (například kvůli nedostatku času)
+ale i když se požadavky mění na tolik, že původní architektura je již
+nemůže&nbsp;uspokojit.</p>
+<p><strong>Testovací dluh</strong> vzniká při nedokonalém pokrytí systému testy. Ty buď
+zcela chybí, nebo jsou špatně napsané a nepomáhají v odhalení
+defektů. Testy mohou být také zastaralé, protože při předchozích
+úpravách nebyly upraveny. Pokud dobré testy existují, ale nejsou
+spouštěny automatizovaně, může to také být technickým&nbsp;dluhem.</p>
+<p><strong>Dokumentační dluh</strong> je podobný jako testovací dluh. Dokumentace buď zcela chybí,
+je neaktuální nebo napsaná&nbsp;nekvalitně.</p>
+<h2>Vlastnosti technického&nbsp;dluhu</h2>
+<p>Metafora technického dluhu se postupně vyvíjela a vznikaly další
+paralely s finančním dluhem. <a href="https://linkinghub.elsevier.com/retrieve/pii/B9780123855121000025">C. Seyman a Y.
+Guo</a>
+ve své akademické práci formalizují pojmy, které jsou často ve
+spojení s technickým dluhem&nbsp;používány.</p>
+<p><strong>Výše dluhu</strong> je míra náročnosti odstranění technického dluhu. Tuto míru
+lze udávat buď jako čas (např. člověko-dny) nebo i v&nbsp;penězích.</p>
+<p><strong>Pravděpodobnost úroků</strong> udává, jak pravděpodobné je, že technický dluh
+ovlivní budoucí práci. Například tím, že zaviní defekty v kódu,
+nebo že bude upravován kód, který není otestovaný a zdokumentovaný.
+Ovlivňujícím faktorem může být i špatná architektura, která ztíží
+přidání nové&nbsp;funkcionality.</p>
+<p><strong>Výše úroků</strong> udává míru úsilí, které bude muset být vynaložené navíc,
+pokud technický dluh nebude&nbsp;odstraněn.</p>
+<p>Tyto míry nelze měřit přesně a musí se odhadovat. Přesnost těchto
+odhadů bude záviset na zkušenosti osoby, která bude odhady provádět a
+také na dostupných historických datech. Čím jsou dostupná data
+podrobnější, tím přesnější budou odhady. Zřejmě nejtěžší bude odhad
+výše úroků, protože vývojáři jen těžko vezmou v potaz všechny
+možnosti, jak je může technický dluh&nbsp;ovlivnit.</p>
+<h2>Důvody vzniku technického&nbsp;dluhu</h2>
+<p>Přirozeným důvodem vzniku technického dluhu, tak jak jej definoval
+Cunningham je nedostatečná znalost problematiky ze strany
+vývojářů, zejména v počátečních stádiích&nbsp;vývoje.</p>
+<p>Častým důvodem jsou také vnější faktory, které vyvíjejí tlak na
+vývojáře, aby zrychlili dokončení projektu nebo implementaci
+funkcionality. Takovým faktorem může být (technický) management,
+změna požadavků zákazníka (a to i v konečné fázi implementace) nebo
+změna různých vnějších podmínek (tržní, legislativa). Časový skluz
+způsobují i nesprávné odhady (zejména od třetích stran, které se
+přímo nepodílí na vývoji), které neobsahují rezervy, nebo byly
+jednoduše vytvořeny nezkušenou&nbsp;osobou.</p>
+<p>Vývojáři nejsou nezávislí na zbytku organizace, musejí přinášet
+užitek naplňováním business požadavků, které jsou navíc často
+závislé na čase (daná vlastnost softwarového produktu přinese zisk
+nyní, ale už ne později). Často se proto musejí podřídit a přistoupit
+na&nbsp;kompromisy.</p>
+<p>Různé typy technického dluhu vznikají v různých částech systémů z
+různých důvodů. Pokud vývojáři nejsou dostatečně kompetentní, vzniká
+technický dluh všude, navíc aniž by o něm někdo měl&nbsp;ponětí.</p>
+<p>Dluh zdrojového kódu vzniká pokud v týmu nejsou nastavena určitá
+pravidla o tom, jak by měl být kód napsán. Pro tyto účely vznikají v
+týmech stylistické manuály a jsou používány automatické nástroje pro
+úpravu kódu (tzv.&nbsp;lintery).</p>
+<p>Testovací dluh vzniká, když je napsání testů odděleno od implementace
+funkcionality, tedy pokud jsou testy napsány někým jiným, nebo v
+pozdějším vývojovém&nbsp;cyklu.</p>
+<h2>Dopady technického&nbsp;dluhu</h2>
+<p>Vznik technického dluhu není vždy nežádoucí. Mohou nastat situace,
+kdy je možné obhájit zadlužení. Obecně půjde o případy kdy je
+výhodnější dokončit projekt dříve a potřebné úpravy či refactoring
+provést později (náklady na tyto budoucí změny jsou menší, než
+případný ušlý zisk, pokud nebude projekt či funkcionalita dokončena
+včas). Pokud je kritické vstoupit na trh co nejdříve, bude pro
+organizaci lepší nashromáždit technický dluh, než promarnit&nbsp;příležitost.</p>
+<p>Technický dluh není viditelný pro zákazníky a často ani pro
+management, proto není překážkou k používání softwaru. Naopak, čím
+dříve zákazník začne software používat, tím dříve dostanou vývojáři
+zpětnou vazbu (toto je jedna ze zásad <a href="https://agilemanifesto.org/principles.html">agilního
+vývoje</a>). Avšak čím
+je větší, tím jsou změny nebo přidání nové funkcionality složitější.
+Někdy můžou být změny i nemožné. Vývoj se zpomaluje i přesto, že
+efektivita vývojářů je stejná jako předtím. Požadavky zákazníků
+nejsou naplňovány nebo nejsou naplňovány včas. Pokud není technický
+dluh ”splácen”, bude se neustále zvětšovat a může přerůst cenu,
+kterou je zákazník&nbsp;zaplatit.</p>
+<p>Vývojáři jsou ti, kdo jako první pocítí dopady technického dluhu a to
+proto, že s ním přicházejí do styku každý den. Technický dluh ztěžuje
+jejich&nbsp;práci.</p>
+<p>Špatně napsaný zdrojový kód, který nedodržuje konvence je obtížné
+číst a tím se ztěžuje jeho pochopení pro ty, kdo ho nevytvořili ale
+musí na něm provádět&nbsp;úpravy.</p>
+<p>Pokud je architektura špatně zvolena, komponenty jsou nadměrně
+provázané a systém je příliš komplexní, je obtížné přidávat novou
+funkcionalitu a plnit požadavky zákazníků.  Vývojáři nemají jistotu,
+že jakákoliv změna nezpůsobí obtížně nalezitelné defekty. Snižuje se
+stabilita celého&nbsp;systému.</p>
+<h2>Jak čelit technickému&nbsp;dluhu</h2>
+<p>Dopady technického dluhu budou vždy negativní (nikdy nebudou mít
+pozitivní vliv na kvalitu) ale jsou situace, kdy alternativa má ještě
+horší dopad. Vždy tedy půjde o volbu menšího zla. Je také zřejmé, že
+je pro organizaci nejvýhodnější snižovat technický dluh na minimum -
+splácet&nbsp;ho.</p>
+<h3>Identifikace</h3>
+<p>Prvním krokem při splácení technického dluhu je jeho identifikace a
+dokumentace. Uvnitř organizace nebo týmu by měl vzniknout centrální
+seznam všech částí systému, které jsou technickým dluhem postižené.
+Každá položka by měla mít vypsány vlastnosti dluhu, uvedené&nbsp;výše.</p>
+<p>Tento seznam by měl být pravidelně udržovaný a přístupný pro všechny.
+Při plánování vývojového cyklu pak celý tým do tohoto seznamu
+nahlíží, aby měli všichni přehled o technickém dluhu v&nbsp;systému.</p>
+<p>Jeden ze způsobů jak identifikovat technický dluh je analýza
+zdrojového kódu pomocí různých&nbsp;nástrojů.</p>
+<p><strong>Cyklomatická složitost</strong> udává počet různých cest, kterými je možné
+programem procházet. Čím větší je složitost komponenty, tím
+složitější je její pochopení, je těžší komponentu upravit a zvyšuje
+se pravděpodobnost defektů. Přespřílišná složitost také může snižovat&nbsp;výkon.</p>
+<p><strong>Provázanost kódu</strong> lze také měřit různými nástroji. Silná provázanost
+způsobuje, že při změně jedné komponenty (třídy, metody) je nutné
+měnit další komponenty. Takové úpravy jsou velice nákladné,
+způsobují nestabilitu systému a vytvářejí&nbsp;defekty.</p>
+<p><a href="http://www.informit.com/articles/article.aspx?p=457502&amp;seqNum=5"><strong>Duplikace
+kódu</strong></a>
+v systému může zvyšovat technický dluh, i když ne
+vždy (někdy může být duplikace výhodná). Často však vede ke
+zvýšené komplexitě, zátěži při vývoji a nižšímu výkonu. Duplikace je
+dobře měřitelná statickou analýzou&nbsp;kódu.</p>
+<p><a href="https://martinfowler.com/bliki/TestCoverage.html"><strong>Pokrytí testy</strong></a>
+měří, které části systému jsou spuštěny při testování.
+Nízké pokrytí je (testovacím) technickým dluhem. Avšak vysoké pokrytí
+nemusí vždy znamenat nízký technický dluh, pokud nejsou testy dobře&nbsp;navrženy.</p>
+<p><strong>Počet defektů</strong> je jasným ukazatelem technického dluhu. Pro sledování
+této metriky je nutné mít co nejpodrobnější databázi&nbsp;defektů.</p>
+<p><strong>Nástroje pro správu verzí</strong> obsahují nejenom technický, ale i sociální
+rozměr. Analýzou projektu lze zjistit nejenom jak zdrojový kód
+vypadá teď, ale i jak se měnil a kdo úpravy&nbsp;prováděl.</p>
+<p>Lze zjistit, jaké části jsou často upravovány. Pokud je komponenta
+často upravována různými vývojáři, může to značit technický dluh.
+Pokud je několik komponent často upravováno zároveň, není systém
+dobře navržen a může to zpomalovat další&nbsp;práci.</p>
+<h3>Určení&nbsp;priorit</h3>
+<p>Technický dluh v systému většinou nelze vyřešit najednou a proto je
+potřeba určit, který technický dluh má největší dopad. Dluh na
+některých částech systému nemusí mít žádný vliv a proto je možné ho
+neodstraňovat. Na základě odhadované výše dluhu, pravděpodobnosti a
+výše úroků lze určit, na jaké položky by se měl tým&nbsp;zaměřit.</p>
+<p>Položky, u kterých benefit z odstranění dluhu (pravděpodobnost vzniku
+× výše úroků) převyšuje jeho výši by měly být odstraněny co&nbsp;nejdříve.</p>
+<p>Čas potřebný na splacení dluhu je potřeba započítat do odhadů na
+další vývojové cykly.  Toto by měli dělat sami vývojáři, protože
+jejich zájem na jeho odstranění je větší než managementu nebo&nbsp;zákazníka.</p>
+<h3>Splácení&nbsp;dluhu</h3>
+<p>Jednoduchým řešením pro splacení dluhu je přerušení vývoje a zaměření
+úsilí celého vývojářského týmu na tuto činnost. Tato možnost je však
+pro zákazníky nepřijatelná, protože nezískávají přidanou hodnotu.
+Tento postup by měl být volen až v krajních případech, kdy další
+rozvoj není možný, bez kompletního předělání celého&nbsp;systému.</p>
+<p>Přijatelnějším řešením pro většinu projektů je postupné splácení
+dluhu. Vývojáři můžou vyčlenit určitý čas, kdy se budou věnovat
+splácení technického dluhu. Tento čas by měl být započítán do odhadů
+při plánování vývojových&nbsp;cyklů.</p>
+<p>Dobrým přístupem je dodržování tzv. Boy-scout rule neboli
+provádět oportunistický refactoring. Pokaždé když vývojář začne
+upravovat nějakou část kódu (aby opravil defekt nebo přidal novou
+funkcionalitu), provede refactoring a splatí pokud možno všechen
+technický dluh na tomto&nbsp;místě.</p>
+<h3>Předcházení&nbsp;vzniku</h3>
+<p>Vývojáři mohou předcházet vzniku technického dluhu tak, že potřebné
+činnosti (např. refactoring) provedou ihned a neodloží jej na
+pozdější čas (což je ne vždy&nbsp;možné).</p>
+<p>Vzniku dluhu lze předcházet tím, že bude zabráněno vnějším vlivům
+vyvíjet tlak na zrychlení časového harmonogramu. Pokud jsou zákazníci
+a/nebo management seznámeni s pojmem technický dluh, mohou lépe
+zhodnotit jaká jsou jeho rizika. Potom mohou rozhodnout, zda riziko
+podstoupit či&nbsp;nikoliv.</p>
+<p>Pokud zákazníci a management rozumí tomuto pojmu, budou také spíše
+naklonění vynaložení prostředků na jeho odstranění (i když pro ně
+tato činnost nepřináší žádný přímý&nbsp;zisk).</p>
+<h2>Zajímavá&nbsp;literatura</h2>
+<p><a href="https://pragprog.com/book/atevol/software-design-x-rays">Software Design
+X-Rays</a> je
+kniha, která se zabývá identifikací technického dluhu pomocí
+analýzy toho, jak vývojáři&nbsp;pracují.</p>
+<p><a href="https://www.managingsoftwaredebt.com/">Managing Software Debt</a> se
+snaží o definitivní popis problematiky technického&nbsp;dluhu.</p>
+<p><a href="http://ieeexplore.ieee.org/document/6280547/">A Balancing Act: What Software Practitioners Have to Say about
+Technical Debt</a> je studie
+zabývající se technickým dluhem, která byla vypracována z interview s
+odborníky z&nbsp;praxe.</p>
+<p><a href="http://www.designsmells.com/">Refactoring for software design smells: managing technical
+debt</a> obsahuje popis 25 &#8220;code smells&#8221; a
+způsoby jak je refaktorovat za účelem snížení technického&nbsp;dluhu.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Technický dluh a jeho dopady na kvalitu&nbsp;softwaru&amp;url=https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="https://luminar.dev//assets/images/avatar.jpg" alt="Max K." />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="https://luminar.dev/author/max.html">Max K.</a></h4>
+                            <p class="post-author-about">I'm a backend engineer at Avast. I work mostly with Python, Scala and Kubernetes.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Prague</span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/Luminaar"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/Luminar_"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://luminar.dev/theme/js/script.js"></script>
+
+</body>
+</html>

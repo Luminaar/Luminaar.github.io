@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/all.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2019-03-05T00:00:00+01:00</updated><entry><title>Technický dluh a jeho dopady na kvalitu softwaru</title><link href="https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" rel="alternate"></link><published>2019-03-05T00:00:00+01:00</published><updated>2019-03-05T00:00:00+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-03-05:/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/</id><summary type="html">&lt;p&gt;Shrnutí poznatků o technickém&amp;nbsp;dluhu&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tento příspěvek je upravenou verzí semestrální práce, kterou
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - CZ</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/cz.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2019-03-05T00:00:00+01:00</updated><entry><title>Technický dluh a jeho dopady na kvalitu softwaru</title><link href="https://luminar.dev/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/" rel="alternate"></link><published>2019-03-05T00:00:00+01:00</published><updated>2019-03-05T00:00:00+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-03-05:/notes/19-03-technicky-dluh-a-jeho-dopady-na-kvalitu-softwaru/</id><summary type="html">&lt;p&gt;Shrnutí poznatků o technickém&amp;nbsp;dluhu&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tento příspěvek je upravenou verzí semestrální práce, kterou
 jsem vypracoval v rámci studia (předmět Řízení kvality &lt;span class="caps"&gt;SW&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;Původní práce měla asi 15 stran a pokoušela se o akademický formát -
 trpný rod, citace, zavádění každého použitého pojmu, překládání běžně
@@ -302,63 +302,4 @@ zabývající se technickým dluhem, která byla vypracována z interview s
 odborníky z&amp;nbsp;praxe.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.designsmells.com/"&gt;Refactoring for software design smells: managing technical
 debt&lt;/a&gt; obsahuje popis 25 &amp;#8220;code smells&amp;#8221; a
-způsoby jak je refaktorovat za účelem snížení technického&amp;nbsp;dluhu.&lt;/p&gt;</content></entry><entry><title>Python Pip —freeze, editables and git</title><link href="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" rel="alternate"></link><published>2018-11-16T07:55:12+01:00</published><updated>2018-11-16T07:55:12+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2018-11-16:/notes/18-11-python-pip-freeze-editables-and-git/</id><summary type="html">&lt;p&gt;Interesting behaviour when using Pip &amp;#8212;freeze on a locally installed package with .git&amp;nbsp;directory.&lt;/p&gt;</summary><content type="html">&lt;p&gt;When developing a Python package, the recommended practice is to install your package in editable mode. This way you can still edit your source code and run your tests on installed version of your package, without having reinstalling it each&amp;nbsp;time.&lt;/p&gt;
-&lt;p&gt;Usually, your project structure will be something like&amp;nbsp;this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;My_project/
-|-- .git
-|-- my_project/
-|   |-- __init__.py
-|   |-- module.py
-|
-|-- setup.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You can run &lt;code&gt;pip install -e .&lt;/code&gt; in the top level directory to install your package&amp;nbsp;locally.&lt;/p&gt;
-&lt;p&gt;After that, an interesting thing happens if you do a &lt;code&gt;pip freeze&lt;/code&gt;. If there is a  &lt;code&gt;.git&lt;/code&gt; directory (or a directory for other &lt;span class="caps"&gt;VCS&lt;/span&gt;), your package will be listed as&amp;nbsp;follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;e&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;com&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="mo"&gt;@07&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="n"&gt;d2ae797515c740a1742fc77bdcd68e577cbe5&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;I.e. it will point to the repository of your project instead of just naming your package. I could not find a mention of this anywhere in the documentation and it surprised me at&amp;nbsp;first.&lt;/p&gt;
-&lt;p&gt;Note: If there is not remote specified for your repository it will fallback to the package name and insert a comment in the&amp;nbsp;output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## !! Could not determine repository location
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="git"></category></entry><entry><title>Python - colorized text in terminal</title><link href="https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" rel="alternate"></link><published>2016-06-27T15:17:58+02:00</published><updated>2016-06-27T15:17:58+02:00</updated><author><name>max</name></author><id>tag:luminar.dev,2016-06-27:/notes/16-06-python-colorized-text-in-terminal/</id><summary type="html">&lt;p&gt;This snippet is useful if you want to make your terminal output&amp;nbsp;colorized.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This snippet is useful if you want to make your terminal output
-colorized. It should work on Unix and Windows with
-&lt;a href="https://support.microsoft.com/cs-cz/kb/101875"&gt;&lt;span class="caps"&gt;ANSI&lt;/span&gt;.&lt;span class="caps"&gt;SYS&lt;/span&gt;&lt;/a&gt;&amp;nbsp;enabled.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;colors&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c1"&gt;# Text mode&lt;/span&gt;
-    &lt;span class="n"&gt;ENDC&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;BOLD&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;UNDERLINE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[4m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;INVERSE&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[7m&amp;#39;&lt;/span&gt;
-
-    &lt;span class="c1"&gt;# Colors&lt;/span&gt;
-    &lt;span class="n"&gt;ORANGE&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[93m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;BLACK&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;30m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;BLUE&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;34m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;GREEN&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;32m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;CYAN&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;36m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;RED&lt;/span&gt;       &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;31m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;PURPLE&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;35m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;BROWN&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;33m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LGRAY&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[0;37m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;DGRAY&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;30m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LBLUE&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;34m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LGREEN&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;32m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LCYAN&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;36m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LRED&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;31m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;LPURPLE&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;35m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;YELLOW&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;33m&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;WHITE&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\033&lt;/span&gt;&lt;span class="s1"&gt;[1;37m&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You can combine colors and text modes, for example, this command will
-print red, underlined&amp;nbsp;text:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RED&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UNDERLINE&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ENDC&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Note: Do not forget to add &lt;code&gt;colors.ENDC&lt;/code&gt; at the end, otherwise the
-rest of the output will be&amp;nbsp;colorized.&lt;/p&gt;</content><category term="python"></category><category term="terminal"></category></entry></feed>
+způsoby jak je refaktorovat za účelem snížení technického&amp;nbsp;dluhu.&lt;/p&gt;</content></entry></feed>
