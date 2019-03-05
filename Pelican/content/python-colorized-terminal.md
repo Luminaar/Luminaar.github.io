@@ -42,5 +42,5 @@ print red, underlined text:
 	:::python
     print(colors.RED + colors.UNDERLINE + 'hello world' + colors.ENDC)
 
-Note: Do not forget to add `colros.ENCD` at the end, otherwise the
+Note: Do not forget to add `colors.ENDC` at the end, otherwise the
 rest of the output will be colorized.
