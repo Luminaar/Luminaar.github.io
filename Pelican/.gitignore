@@ -3,5 +3,6 @@ tmp
 venv
 github-pages
 attila
+.mypy_cache/
 *.swp
 *.swo
