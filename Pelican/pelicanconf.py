@@ -25,7 +25,7 @@ DEFAULT_METADATA = {"author": "max"}
 # Theme
 THEME = "attila"
 HEADER_COVER = "/assets/images/default-bg.jpg"
-
+CSS_OVERRIDE = ["assets/custom.css"]
 
 # Author
 AUTHORS_BIO = {
