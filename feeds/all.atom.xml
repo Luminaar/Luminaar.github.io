@@ -6,7 +6,7 @@ decorator with&amp;nbsp;parameters).&lt;/p&gt;
 &lt;p&gt;Then a I saw this paragraph in the &lt;a href="https://docs.python.org/3/reference/compound_stmts.html#function"&gt;official documentation&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A function definition may be wrapped by one or more &lt;strong&gt;decorator
-expression&lt;/strong&gt;. Decorator &lt;strong&gt;expressions are evaluated when the
+expressions&lt;/strong&gt;. Decorator &lt;strong&gt;expressions are evaluated when the
 function is defined&lt;/strong&gt;, in the scope that contains the function
 definition. &lt;strong&gt;The result must be a callable&lt;/strong&gt;, which is invoked &lt;strong&gt;with
 the function object as the only argument&lt;/strong&gt;. The &lt;strong&gt;returned value is
@@ -15,14 +15,14 @@ Multiple decorators are applied in nested&amp;nbsp;fashion.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I have not found any other explanation of decorators anywhere else in
 the docs. Because there is nothing more to&amp;nbsp;explain!&lt;/p&gt;
-&lt;p&gt;All you need to know, that your &lt;code&gt;@expression&lt;/code&gt; has to return a
+&lt;p&gt;All you need to know is that your &lt;code&gt;@expression&lt;/code&gt; has to return a
 callable which will be called with the wrapped function as an
-argument and the result will be bound to the function name. And
+argument, and result will be bound to the function name. And
 that&amp;#8217;s&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;A simple decorator might be something like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;A simple decorator might look something like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;logs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;logger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Star&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;logger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Start&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;funs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;logger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Stop&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper&lt;/span&gt;

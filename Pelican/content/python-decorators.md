@@ -12,7 +12,7 @@ decorator with parameters).
 Then a I saw this paragraph in the [official documentation](https://docs.python.org/3/reference/compound_stmts.html#function):
 
 > A function definition may be wrapped by one or more **decorator
-> expression**. Decorator **expressions are evaluated when the
+> expressions**. Decorator **expressions are evaluated when the
 > function is defined**, in the scope that contains the function
 > definition. **The result must be a callable**, which is invoked **with
 > the function object as the only argument**. The **returned value is
@@ -22,17 +22,17 @@ Then a I saw this paragraph in the [official documentation](https://docs.python.
 I have not found any other explanation of decorators anywhere else in
 the docs. Because there is nothing more to explain!
 
-All you need to know, that your `@expression` has to return a
+All you need to know is that your `@expression` has to return a
 callable which will be called with the wrapped function as an
-argument and the result will be bound to the function name. And
+argument, and result will be bound to the function name. And
 that's it.
 
-A simple decorator might be something like this:
+A simple decorator might look something like this:
 
 ```python
 def logs(func):
 	def wrapper(*args, **kwargs):
-		logger.info("Star")
+		logger.info("Start")
 		funs(*args, **kwargs)
 		logger.info("Stop")
 	return wrapper

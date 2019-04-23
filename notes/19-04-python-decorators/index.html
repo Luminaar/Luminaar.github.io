@@ -109,7 +109,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
             <span id="home-button" class="nav-button">
@@ -145,7 +145,7 @@ decorator with&nbsp;parameters).</p>
 <p>Then a I saw this paragraph in the <a href="https://docs.python.org/3/reference/compound_stmts.html#function">official documentation</a>:</p>
 <blockquote>
 <p>A function definition may be wrapped by one or more <strong>decorator
-expression</strong>. Decorator <strong>expressions are evaluated when the
+expressions</strong>. Decorator <strong>expressions are evaluated when the
 function is defined</strong>, in the scope that contains the function
 definition. <strong>The result must be a callable</strong>, which is invoked <strong>with
 the function object as the only argument</strong>. The <strong>returned value is
@@ -154,14 +154,14 @@ Multiple decorators are applied in nested&nbsp;fashion.</p>
 </blockquote>
 <p>I have not found any other explanation of decorators anywhere else in
 the docs. Because there is nothing more to&nbsp;explain!</p>
-<p>All you need to know, that your <code>@expression</code> has to return a
+<p>All you need to know is that your <code>@expression</code> has to return a
 callable which will be called with the wrapped function as an
-argument and the result will be bound to the function name. And
+argument, and result will be bound to the function name. And
 that&#8217;s&nbsp;it.</p>
-<p>A simple decorator might be something like&nbsp;this:</p>
+<p>A simple decorator might look something like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">logs</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Star&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Start&quot;</span><span class="p">)</span>
         <span class="n">funs</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Stop&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">wrapper</span>
