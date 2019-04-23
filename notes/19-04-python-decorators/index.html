@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>Python Pip &#8212;freeze, editables and&nbsp;git</title>
+  <title>Python&nbsp;decorators</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -42,31 +42,29 @@
   <![endif]-->
 
 
-  <link href="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" rel="canonical" />
+  <link href="https://luminar.dev/notes/19-04-python-decorators/" rel="canonical" />
 
-    <meta name="description" content="Interesting behaviour when using Pip —freeze on a locally installed package with .git directory.">
+    <meta name="description" content="What I wish I knew when I first tried to understand decorators.">
 
     <meta name="author" content="max">
 
     <meta name="tags" content="python">
-    <meta name="tags" content="git">
 
 
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Max K. Luminar"/>
-<meta property="og:title" content="Python Pip —freeze, editables and git"/>
-<meta property="og:description" content="Interesting behaviour when using Pip —freeze on a locally installed package with .git directory."/>
+<meta property="og:title" content="Python decorators"/>
+<meta property="og:description" content="What I wish I knew when I first tried to understand decorators."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/"/>
+<meta property="og:url" content="https://luminar.dev/notes/19-04-python-decorators/"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2018-11-16 07:55:12+01:00"/>
+<meta property="article:published_time" content="2019-04-23 18:00:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://luminar.dev/author/max.html">
 <meta property="article:section" content="Python"/>
 <meta property="article:tag" content="python"/>
-<meta property="article:tag" content="git"/>
 <meta property="og:image" content="https://luminar.dev//assets/images/default-bg.jpg">
 
 <!-- Twitter Card -->
@@ -75,9 +73,9 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "Python Pip —freeze, editables and git",
-  "headline": "Python Pip —freeze, editables and git",
-  "datePublished": "2018-11-16 07:55:12+01:00",
+  "name": "Python decorators",
+  "headline": "Python decorators",
+  "datePublished": "2019-04-23 18:00:00+02:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
@@ -85,8 +83,8 @@
     "url": "https://luminar.dev/author/max.html"
   },
   "image": "https://luminar.dev//assets/images/default-bg.jpg",
-  "url": "https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/",
-  "description": "Interesting behaviour when using Pip —freeze on a locally installed package with .git directory."
+  "url": "https://luminar.dev/notes/19-04-python-decorators/",
+  "description": "What I wish I knew when I first tried to understand decorators."
 }
 </script>
 </head>
@@ -121,11 +119,11 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Python Pip &#8212;freeze, editables and&nbsp;git</h1>
+        <h1 class="post-title">Python&nbsp;decorators</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="https://luminar.dev/author/max.html">Max K.</a>
-            | <time datetime="2018-11-16">2018-11-16</time>
+            | <time datetime="2019-04-23">2019-04-23</time>
         </span>
         <!-- TODO : Modified check -->
             <div class="post-cover cover" style="background-image: url('https://luminar.dev//assets/images/default-bg.jpg')">
@@ -140,46 +138,76 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>When developing a Python package, the recommended practice is to install your package in editable mode. This way you can still edit your source code and run your tests on installed version of your package, without having reinstalling it each&nbsp;time.</p>
-<p>Usually, your project structure will be something like&nbsp;this:</p>
-<div class="highlight"><pre><span></span>My_project/
-|-- .git
-|-- my_project/
-|   |-- __init__.py
-|   |-- module.py
-|
-|-- setup.py
+                <p>It took me quite a while to understand how decorators work in Python
+and when are they useful. And even after I understood them, I still
+had to look up how to do them properly (for example how to make a
+decorator with&nbsp;parameters).</p>
+<p>Then a I saw this paragraph in the <a href="https://docs.python.org/3/reference/compound_stmts.html#function">official documentation</a>:</p>
+<blockquote>
+<p>A function definition may be wrapped by one or more <strong>decorator
+expression</strong>. Decorator <strong>expressions are evaluated when the
+function is defined</strong>, in the scope that contains the function
+definition. <strong>The result must be a callable</strong>, which is invoked <strong>with
+the function object as the only argument</strong>. The <strong>returned value is
+bound to the function name instead of the function object</strong>.
+Multiple decorators are applied in nested&nbsp;fashion.</p>
+</blockquote>
+<p>I have not found any other explanation of decorators anywhere else in
+the docs. Because there is nothing more to&nbsp;explain!</p>
+<p>All you need to know, that your <code>@expression</code> has to return a
+callable which will be called with the wrapped function as an
+argument and the result will be bound to the function name. And
+that&#8217;s&nbsp;it.</p>
+<p>A simple decorator might be something like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">logs</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Star&quot;</span><span class="p">)</span>
+        <span class="n">funs</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Stop&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@logs</span>  <span class="c1"># Return the wrapper directly</span>
+<span class="k">def</span> <span class="nf">greeter</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello {name}&quot;</span><span class="p">)</span>
 </pre></div>
 
 
-<p>You can run <code>pip install -e .</code> in the top level directory to install your package&nbsp;locally.</p>
-<p>After that, an interesting thing happens if you do a <code>pip freeze</code>. If there is a  <code>.git</code> directory (or a directory for other <span class="caps">VCS</span>), your package will be listed as&nbsp;follows:</p>
-<div class="highlight"><pre><span></span><span class="p">-</span><span class="nf">e</span> <span class="n">git</span><span class="o">+</span><span class="n">git</span><span class="p">@</span><span class="n">github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">user</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">project</span><span class="p">.</span><span class="n">git</span><span class="mo">@07</span><span class="mi">9</span><span class="n">d2ae797515c740a1742fc77bdcd68e577cbe5</span><span class="err">#</span><span class="n">egg</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">project</span>
+<p>Need to pass arguments to the&nbsp;wrapper?</p>
+<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">repeated</span><span class="p">(</span><span class="n">times</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">times</span><span class="p">):</span>
+                    <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">wrapper</span>
+
+        <span class="k">return</span> <span class="n">decorator</span>
+
+    <span class="nd">@repeated</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Call `repeated` to get the wrapper</span>
+    <span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </pre></div>
 
 
-<p>I.e. it will point to the repository of your project instead of just naming your package. I could not find a mention of this anywhere in the documentation and it surprised me at&nbsp;first.</p>
-<p>Note: If there is not remote specified for your repository it will fallback to the package name and insert a comment in the&nbsp;output:</p>
-<div class="highlight"><pre><span></span>## !! Could not determine repository location
-</pre></div>
+<p>The lesson is: read the documentation, it&#8217;s all there. I know I&nbsp;didn&#8217;t&#8230;</p>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=Python Pip &#8212;freeze, editables and&nbsp;git&amp;url=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=Python&nbsp;decorators&amp;url=https://luminar.dev/notes/19-04-python-decorators/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/19-04-python-decorators/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/19-04-python-decorators/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
                 <aside class="post-tags">
-<a href="https://luminar.dev/tag/python.html">python</a><a href="https://luminar.dev/tag/git.html">git</a>                </aside>
+<a href="https://luminar.dev/tag/python.html">python</a>                </aside>
 
                 <div class="clear"></div>
 

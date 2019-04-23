@@ -2,8 +2,7 @@ Title: Python decorators
 Date: 2019-04-23 18:00:00
 Category: Python
 Tags: python
-Summary: What I wish I knew when I first tried to understand
-decorators.
+Summary: What I wish I knew when I first tried to understand decorators.
 
 It took me quite a while to understand how decorators work in Python
 and when are they useful. And even after I understood them, I still
