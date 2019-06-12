@@ -11,13 +11,13 @@ for each version where you can find the full list.
 
 ## Python 3.5
 Released in September 2015. Comes pre-installed on Debian 9
-(Stretch) and Ubuntu 16.4. Complete list of changes is
+(Stretch) and Ubuntu 16.04. Complete list of changes is
 [here](https://docs.python.org/3.5/whatsnew/3.5.html).
 
 ### New syntax
-Coroutines defined with `async` keyword, `await` keyword. In this
-version these keywords are not reserved yet. They will be become
-proper keywords in Python 3.7.
+Coroutines can now be defined with `async` keyword, `await` keyword.
+In this version these keywords are not reserved yet. They will be
+become proper keywords in Python 3.7.
 
 [async for](https://docs.python.org/3.5/reference/compound_stmts.html#async-for)
 and [async with](https://docs.python.org/3.5/reference/compound_stmts.html#async-with),
@@ -34,10 +34,10 @@ code, which can be executed directly by the Python interpreter.
 
 ### Improvements in stdlib
 [collections.OrderedDict](https://docs.python.org/3.5/library/collections.html#collections.OrderedDict)
-is significantly faster.
+is significantly faster now.
 
-`os` module has a new method [scandir()](https://docs.python.org/3.5/library/os.html#os.scandir)
-for [better and faster way of directory traversal](https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471).
+`os` module has a new function - [scandir()](https://docs.python.org/3.5/library/os.html#os.scandir)
+- for [better and faster way of directory traversal](https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471).
 
 
 ## Python 3.6
