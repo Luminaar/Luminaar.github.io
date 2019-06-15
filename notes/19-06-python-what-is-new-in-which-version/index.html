@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Python - what is new in which&nbsp;version?</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://luminar.dev/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://luminar.dev/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Full Atom Feed" />
+          <link href="https://luminar.dev/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Categories Atom Feed" />
+
+  <link href="https://luminar.dev/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://luminar.dev/theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+
+
+    <link href="https://luminar.dev/assets/custom.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" rel="canonical" />
+
+    <meta name="description" content="A summary of new features and improvements in Python versions from 3.5 to 3.8">
+
+    <meta name="author" content="max">
+
+    <meta name="tags" content="python">
+    <meta name="tags" content="python3">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Max K. Luminar"/>
+<meta property="og:title" content="Python - what is new in which version?"/>
+<meta property="og:description" content="A summary of new features and improvements in Python versions from 3.5 to 3.8"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-06-10 15:17:58+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://luminar.dev/author/max.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="python3"/>
+<meta property="og:image" content="https://luminar.dev//assets/images/default-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Python - what is new in which version?",
+  "headline": "Python - what is new in which version?",
+  "datePublished": "2019-06-10 15:17:58+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "max",
+    "url": "https://luminar.dev/author/max.html"
+  },
+  "image": "https://luminar.dev//assets/images/default-bg.jpg",
+  "url": "https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/",
+  "description": "A summary of new features and improvements in Python versions from 3.5 to 3.8"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="https://luminar.dev/about/">About</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://luminar.dev/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Python - what is new in which&nbsp;version?</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://luminar.dev/author/max.html">Max K.</a>
+            | <time datetime="2019-06-10">2019-06-10</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://luminar.dev//assets/images/default-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>In this post I would like to summarize which features can be used in which
+Python3 versions. I only choose features and changes that are relevant or
+interesting to me. There is a link to &#8220;What&#8217;s new&#8221; page for each version where
+you can find the full&nbsp;list.</p>
+<h2>Python&nbsp;3.5</h2>
+<p>Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
+16.04. Complete list of changes is <a href="https://docs.python.org/3.5/whatsnew/3.5.html">here</a>.</p>
+<h3>New&nbsp;syntax</h3>
+<p>Coroutines can now be defined with <code>async</code> keyword, <code>await</code> keyword.  In this
+version these keywords are not reserved yet. They will be become proper reserved
+keywords in Python&nbsp;3.7.</p>
+<p><code>async</code> can also be used in <a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-for">async
+for</a> and
+<a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-with">async
+with</a>
+statements for asynchronous <code>for</code> loops and context&nbsp;managers.</p>
+<h3>New library&nbsp;modules</h3>
+<p><a href="https://docs.python.org/3.5/library/typing.html#module-typing">typing</a> module
+adds support for Type Hints (<a href="https://www.python.org/dev/peps/pep-0484/"><span class="caps">PEP484</span></a>).</p>
+<p>Syntax for function annotation was introduced back in Python3.0
+(<a href="https://www.python.org/dev/peps/pep-3107/"><span class="caps">PEP3107</span></a>). This module provides
+some standard tools (such as types - Any, Union, Tuple, Callable, etc. - that
+can be used in type&nbsp;annotations).</p>
+<p><a href="https://docs.python.org/3.5/library/zipapp.html#module-zipapp">zipapp</a> provides
+tools to manage the creation of zip files containing Python code, which can be
+executed directly by the Python&nbsp;interpreter.</p>
+<h3>Improvements in&nbsp;stdlib</h3>
+<p><a href="https://docs.python.org/3.5/library/collections.html#collections.OrderedDict">collections.OrderedDict</a>
+is significantly faster&nbsp;now.</p>
+<p><code>os</code> module has a new function -
+<a href="https://docs.python.org/3.5/library/os.html#os.scandir">scandir()</a>
+- for <a href="https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471">better and faster way of directory
+  traversal</a>.</p>
+<h2>Python&nbsp;3.6</h2>
+<p>Released in December 2016. Comes pre-installed on Ubuntu 18.04. Complete list
+of changes is <a href="https://docs.python.org/3.8/whatsnew/3.6.html">here</a>.</p>
+<h3>New&nbsp;syntax</h3>
+<p>Formatted string literals
+(<a href="https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings">f-strings</a>).
+Defined in <a href="https://www.python.org/dev/peps/pep-0498/"><span class="caps">PEP498</span></a>.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Max&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello, {name}!&quot;</span><span class="p">)</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">Max</span><span class="err">!</span>
+</pre></div>
+
+
+<p>Support for variable type hints
+(<a href="https://www.python.org/dev/peps/pep-0498/"><span class="caps">PEP526</span></a>).</p>
+<p>Underscores in numeric literals: <code>1_000_000</code>
+(<a href="https://www.python.org/dev/peps/pep-0515/"><span class="caps">PEP515</span></a>).</p>
+<p>Asynchronous generators (<a href="https://www.python.org/dev/peps/pep-0525/"><span class="caps">PEP525</span></a>)
+and comprehensions (<a href="https://www.python.org/dev/peps/pep-0530/"><span class="caps">PEP530</span></a>).</p>
+<h3>New library&nbsp;modules</h3>
+<p><a href="https://docs.python.org/3.8/library/secrets.html#module-secrets">secrets</a> for
+generating cryptographically strong random numbers suitable for managing data
+such as passwords, account authentication, security tokens, and related secrets.
+Described in <a href="https://www.python.org/dev/peps/pep-0505/"><span class="caps">PEP506</span></a>.</p>
+<h3>Implementation&nbsp;improvements</h3>
+<p>The new implementation of dictionaries is 20% to 25% smaller and preserves
+insertion order (but this <strong>should not</strong> be relied upon yet).
+See this great <a href="https://www.youtube.com/watch?v=p33CVV29OG8">talk by Raymond Hettinger</a>
+in which he explains how dictionaries changed over&nbsp;time.</p>
+<h3>Improvements in&nbsp;stdlib</h3>
+<p><a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio">asyncio</a> is no
+longer provisional and the <span class="caps">API</span> is considered&nbsp;stable.</p>
+<p>A new <a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519">file system path protocol</a> added
+to support <a href="https://docs.python.org/3.8/glossary.html#term-path-like-object">path-like object</a>.</p>
+<p>The <a href="https://docs.python.org/3.8/library/datetime.html#module-datetime">datetime</a>
+module has gained support for <a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep495">Local Time Disambiguation</a>.</p>
+<p><a href="https://docs.python.org/3.8/library/json.html">json</a> functions <code>load()</code> and
+<code>loads()</code> now support binary&nbsp;input.</p>
+<p>New function <a href="https://docs.python.org/3.8/library/random.html#random.choices">random.choices()</a>
+returns a list of elements of specified size from the given population with
+optional&nbsp;weights.</p>
+<p>Class <code>unittest.mock.Mock</code> has new methods <code>assert_called</code> and
+<code>assert_called_once</code>.</p>
+<h2>Python&nbsp;3.7</h2>
+<p>Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
+18.04 and 19.04. Complete list of changes is
+<a href="https://docs.python.org/3.8/whatsnew/3.7.html">here</a>.</p>
+<h3>New syntax&nbsp;features</h3>
+<p>Postponed evaluation of type annotations
+(<a href="https://www.python.org/dev/peps/pep-0526/"><span class="caps">PEP526</span></a>).</p>
+<ul>
+<li>Annotations can now support forward&nbsp;references</li>
+<li>Annotations are cheaper and faster to&nbsp;store</li>
+</ul>
+<p><code>async</code> and <code>await</code> are now reserved&nbsp;keywords.</p>
+<h3>New library&nbsp;modules</h3>
+<p><a href="https://docs.python.org/3.8/library/dataclasses.html#module-dataclasses">dataclasses</a>
+provides a decorator and functions for automatically adding generated special
+methods such as <code>__init__()</code> and <code>__repr__()</code> to user-defined classes. It is useful
+when you need to create a simple class that only holds data but has no&nbsp;behaviour.</p>
+<h3>New built-in&nbsp;features</h3>
+<p><a href="https://docs.python.org/3.8/library/functions.html#breakpoint">breakpoint()</a> function for&nbsp;debuggers.</p>
+<p>Dictionaries now officially preserve insertion order of&nbsp;elements.</p>
+<h3>Improvements in&nbsp;stdlib</h3>
+<p><a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio">asyncio</a>
+received a lot of new features and improvements (high-level <code>asyncio.run()</code>
+function for running coroutines, many&nbsp;others).</p>
+<p><a href="https://docs.python.org/3.8/library/time.html#module-time">time</a> module now has
+support for <a href="https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564">nanosecond resolution</a>.</p>
+<h3>Deprications</h3>
+<p>Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
+1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
+Python3.7 on those platforms but you have to manually link a new OpenSSL&nbsp;version.</p>
+<h2>Python&nbsp;3.8</h2>
+<p>Will be released sometime in 2019. Will come pre-installed on Debian 9, Ubuntu
+19.04. Complete list of changes is <a href="https://docs.python.org/3.8/whatsnew/3.8.html">here</a>.</p>
+<h3>New&nbsp;syntax</h3>
+<p><a href="https://www.python.org/dev/peps/pep-0572/">Assignment expressions</a> (the &#8220;walrus operator&#8221;, <code>:=</code>):</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">:</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;List is too long ({n} elements, expected &lt;= 10)&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a href="https://www.python.org/dev/peps/pep-0570/">Positional only arguments</a>: There is
+new syntax (<code>/</code>) to indicate that some function parameters must be specified&nbsp;positionally.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+    <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">%=</span> <span class="n">z</span>
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+
+
+<p>This is in addition to <a href="https://www.python.org/dev/peps/pep-3102/">keyword only
+arguments</a>.</p>
+<h3>Library&nbsp;improvements</h3>
+<p><code>json.tool</code> has a new option (<code>--json-lines</code>) to parse every input line as
+separate <span class="caps">JSON</span>&nbsp;object.</p>
+<p>New class <code>unittest.mock.AsyncMock</code> for asynchronous&nbsp;mocking.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Python - what is new in which&nbsp;version?&amp;url=https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://luminar.dev/tag/python.html">python</a><a href="https://luminar.dev/tag/python3.html">python3</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="https://luminar.dev//assets/images/avatar.jpg" alt="Max K." />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="https://luminar.dev/author/max.html">Max K.</a></h4>
+                            <p class="post-author-about">I'm a backend engineer at Avast. I work mostly with Python, Scala and Kubernetes.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Prague</span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/Luminaar"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/Luminar_"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://luminar.dev/theme/js/script.js"></script>
+
+</body>
+</html>

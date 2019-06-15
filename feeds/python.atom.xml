@@ -1,5 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - Python</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/python.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2019-04-23T18:00:00+02:00</updated><entry><title>Python decorators</title><link href="https://luminar.dev/notes/19-04-python-decorators/" rel="alternate"></link><published>2019-04-23T18:00:00+02:00</published><updated>2019-04-23T18:00:00+02:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-04-23:/notes/19-04-python-decorators/</id><summary type="html">&lt;p&gt;What I wish I knew when I first tried to understand&amp;nbsp;decorators.&lt;/p&gt;</summary><content type="html">&lt;p&gt;It took me quite a while to understand how decorators work in Python
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - Python</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/python.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2019-06-10T15:17:58+02:00</updated><entry><title>Python - what is new in which version?</title><link href="https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" rel="alternate"></link><published>2019-06-10T15:17:58+02:00</published><updated>2019-06-10T15:17:58+02:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-06-10:/notes/19-06-python-what-is-new-in-which-version/</id><summary type="html">&lt;p&gt;A summary of new features and improvements in Python versions from 3.5 to&amp;nbsp;3.8&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this post I would like to summarize which features can be used in which
+Python3 versions. I only choose features and changes that are relevant or
+interesting to me. There is a link to &amp;#8220;What&amp;#8217;s new&amp;#8221; page for each version where
+you can find the full&amp;nbsp;list.&lt;/p&gt;
+&lt;h2&gt;Python&amp;nbsp;3.5&lt;/h2&gt;
+&lt;p&gt;Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
+16.04. Complete list of changes is &lt;a href="https://docs.python.org/3.5/whatsnew/3.5.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;New&amp;nbsp;syntax&lt;/h3&gt;
+&lt;p&gt;Coroutines can now be defined with &lt;code&gt;async&lt;/code&gt; keyword, &lt;code&gt;await&lt;/code&gt; keyword.  In this
+version these keywords are not reserved yet. They will be become proper reserved
+keywords in Python&amp;nbsp;3.7.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;async&lt;/code&gt; can also be used in &lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-for"&gt;async
+for&lt;/a&gt; and
+&lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-with"&gt;async
+with&lt;/a&gt;
+statements for asynchronous &lt;code&gt;for&lt;/code&gt; loops and context&amp;nbsp;managers.&lt;/p&gt;
+&lt;h3&gt;New library&amp;nbsp;modules&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/typing.html#module-typing"&gt;typing&lt;/a&gt; module
+adds support for Type Hints (&lt;a href="https://www.python.org/dev/peps/pep-0484/"&gt;&lt;span class="caps"&gt;PEP484&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Syntax for function annotation was introduced back in Python3.0
+(&lt;a href="https://www.python.org/dev/peps/pep-3107/"&gt;&lt;span class="caps"&gt;PEP3107&lt;/span&gt;&lt;/a&gt;). This module provides
+some standard tools (such as types - Any, Union, Tuple, Callable, etc. - that
+can be used in type&amp;nbsp;annotations).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/zipapp.html#module-zipapp"&gt;zipapp&lt;/a&gt; provides
+tools to manage the creation of zip files containing Python code, which can be
+executed directly by the Python&amp;nbsp;interpreter.&lt;/p&gt;
+&lt;h3&gt;Improvements in&amp;nbsp;stdlib&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/collections.html#collections.OrderedDict"&gt;collections.OrderedDict&lt;/a&gt;
+is significantly faster&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;os&lt;/code&gt; module has a new function -
+&lt;a href="https://docs.python.org/3.5/library/os.html#os.scandir"&gt;scandir()&lt;/a&gt;
+- for &lt;a href="https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471"&gt;better and faster way of directory
+  traversal&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Python&amp;nbsp;3.6&lt;/h2&gt;
+&lt;p&gt;Released in December 2016. Comes pre-installed on Ubuntu 18.04. Complete list
+of changes is &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;New&amp;nbsp;syntax&lt;/h3&gt;
+&lt;p&gt;Formatted string literals
+(&lt;a href="https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings"&gt;f-strings&lt;/a&gt;).
+Defined in &lt;a href="https://www.python.org/dev/peps/pep-0498/"&gt;&lt;span class="caps"&gt;PEP498&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Max&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello, {name}!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Max&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Support for variable type hints
+(&lt;a href="https://www.python.org/dev/peps/pep-0498/"&gt;&lt;span class="caps"&gt;PEP526&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Underscores in numeric literals: &lt;code&gt;1_000_000&lt;/code&gt;
+(&lt;a href="https://www.python.org/dev/peps/pep-0515/"&gt;&lt;span class="caps"&gt;PEP515&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Asynchronous generators (&lt;a href="https://www.python.org/dev/peps/pep-0525/"&gt;&lt;span class="caps"&gt;PEP525&lt;/span&gt;&lt;/a&gt;)
+and comprehensions (&lt;a href="https://www.python.org/dev/peps/pep-0530/"&gt;&lt;span class="caps"&gt;PEP530&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;New library&amp;nbsp;modules&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/secrets.html#module-secrets"&gt;secrets&lt;/a&gt; for
+generating cryptographically strong random numbers suitable for managing data
+such as passwords, account authentication, security tokens, and related secrets.
+Described in &lt;a href="https://www.python.org/dev/peps/pep-0505/"&gt;&lt;span class="caps"&gt;PEP506&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Implementation&amp;nbsp;improvements&lt;/h3&gt;
+&lt;p&gt;The new implementation of dictionaries is 20% to 25% smaller and preserves
+insertion order (but this &lt;strong&gt;should not&lt;/strong&gt; be relied upon yet).
+See this great &lt;a href="https://www.youtube.com/watch?v=p33CVV29OG8"&gt;talk by Raymond Hettinger&lt;/a&gt;
+in which he explains how dictionaries changed over&amp;nbsp;time.&lt;/p&gt;
+&lt;h3&gt;Improvements in&amp;nbsp;stdlib&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio"&gt;asyncio&lt;/a&gt; is no
+longer provisional and the &lt;span class="caps"&gt;API&lt;/span&gt; is considered&amp;nbsp;stable.&lt;/p&gt;
+&lt;p&gt;A new &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519"&gt;file system path protocol&lt;/a&gt; added
+to support &lt;a href="https://docs.python.org/3.8/glossary.html#term-path-like-object"&gt;path-like object&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://docs.python.org/3.8/library/datetime.html#module-datetime"&gt;datetime&lt;/a&gt;
+module has gained support for &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep495"&gt;Local Time Disambiguation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/json.html"&gt;json&lt;/a&gt; functions &lt;code&gt;load()&lt;/code&gt; and
+&lt;code&gt;loads()&lt;/code&gt; now support binary&amp;nbsp;input.&lt;/p&gt;
+&lt;p&gt;New function &lt;a href="https://docs.python.org/3.8/library/random.html#random.choices"&gt;random.choices()&lt;/a&gt;
+returns a list of elements of specified size from the given population with
+optional&amp;nbsp;weights.&lt;/p&gt;
+&lt;p&gt;Class &lt;code&gt;unittest.mock.Mock&lt;/code&gt; has new methods &lt;code&gt;assert_called&lt;/code&gt; and
+&lt;code&gt;assert_called_once&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Python&amp;nbsp;3.7&lt;/h2&gt;
+&lt;p&gt;Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
+18.04 and 19.04. Complete list of changes is
+&lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;New syntax&amp;nbsp;features&lt;/h3&gt;
+&lt;p&gt;Postponed evaluation of type annotations
+(&lt;a href="https://www.python.org/dev/peps/pep-0526/"&gt;&lt;span class="caps"&gt;PEP526&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Annotations can now support forward&amp;nbsp;references&lt;/li&gt;
+&lt;li&gt;Annotations are cheaper and faster to&amp;nbsp;store&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;async&lt;/code&gt; and &lt;code&gt;await&lt;/code&gt; are now reserved&amp;nbsp;keywords.&lt;/p&gt;
+&lt;h3&gt;New library&amp;nbsp;modules&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/dataclasses.html#module-dataclasses"&gt;dataclasses&lt;/a&gt;
+provides a decorator and functions for automatically adding generated special
+methods such as &lt;code&gt;__init__()&lt;/code&gt; and &lt;code&gt;__repr__()&lt;/code&gt; to user-defined classes. It is useful
+when you need to create a simple class that only holds data but has no&amp;nbsp;behaviour.&lt;/p&gt;
+&lt;h3&gt;New built-in&amp;nbsp;features&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/functions.html#breakpoint"&gt;breakpoint()&lt;/a&gt; function for&amp;nbsp;debuggers.&lt;/p&gt;
+&lt;p&gt;Dictionaries now officially preserve insertion order of&amp;nbsp;elements.&lt;/p&gt;
+&lt;h3&gt;Improvements in&amp;nbsp;stdlib&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio"&gt;asyncio&lt;/a&gt;
+received a lot of new features and improvements (high-level &lt;code&gt;asyncio.run()&lt;/code&gt;
+function for running coroutines, many&amp;nbsp;others).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/time.html#module-time"&gt;time&lt;/a&gt; module now has
+support for &lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564"&gt;nanosecond resolution&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Deprications&lt;/h3&gt;
+&lt;p&gt;Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
+1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
+Python3.7 on those platforms but you have to manually link a new OpenSSL&amp;nbsp;version.&lt;/p&gt;
+&lt;h2&gt;Python&amp;nbsp;3.8&lt;/h2&gt;
+&lt;p&gt;Will be released sometime in 2019. Will come pre-installed on Debian 9, Ubuntu
+19.04. Complete list of changes is &lt;a href="https://docs.python.org/3.8/whatsnew/3.8.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;New&amp;nbsp;syntax&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.python.org/dev/peps/pep-0572/"&gt;Assignment expressions&lt;/a&gt; (the &amp;#8220;walrus operator&amp;#8221;, &lt;code&gt;:=&lt;/code&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;List is too long ({n} elements, expected &amp;lt;= 10)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://www.python.org/dev/peps/pep-0570/"&gt;Positional only arguments&lt;/a&gt;: There is
+new syntax (&lt;code&gt;/&lt;/code&gt;) to indicate that some function parameters must be specified&amp;nbsp;positionally.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;%=&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is in addition to &lt;a href="https://www.python.org/dev/peps/pep-3102/"&gt;keyword only
+arguments&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Library&amp;nbsp;improvements&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;json.tool&lt;/code&gt; has a new option (&lt;code&gt;--json-lines&lt;/code&gt;) to parse every input line as
+separate &lt;span class="caps"&gt;JSON&lt;/span&gt;&amp;nbsp;object.&lt;/p&gt;
+&lt;p&gt;New class &lt;code&gt;unittest.mock.AsyncMock&lt;/code&gt; for asynchronous&amp;nbsp;mocking.&lt;/p&gt;</content><category term="python"></category><category term="python3"></category></entry><entry><title>Python decorators</title><link href="https://luminar.dev/notes/19-04-python-decorators/" rel="alternate"></link><published>2019-04-23T18:00:00+02:00</published><updated>2019-04-23T18:00:00+02:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-04-23:/notes/19-04-python-decorators/</id><summary type="html">&lt;p&gt;What I wish I knew when I first tried to understand&amp;nbsp;decorators.&lt;/p&gt;</summary><content type="html">&lt;p&gt;It took me quite a while to understand how decorators work in Python
 and when are they useful. And even after I understood them, I still
 had to look up how to do them properly (for example how to make a
 decorator with&amp;nbsp;parameters).&lt;/p&gt;
