@@ -15,16 +15,23 @@ Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
 
 ### New syntax
 Coroutines can now be defined with `async` keyword, `await` keyword.  In this
-version these keywords are not reserved yet. They will be become proper keywords
-in Python 3.7.
+version these keywords are not reserved yet. They will be become proper reserved
+keywords in Python 3.7.
 
-[async for](https://docs.python.org/3.5/reference/compound_stmts.html#async-for)
-and [async with](https://docs.python.org/3.5/reference/compound_stmts.html#async-with),
-statements.
+`async` can also be used in [async
+for](https://docs.python.org/3.5/reference/compound_stmts.html#async-for) and
+[async
+with](https://docs.python.org/3.5/reference/compound_stmts.html#async-with)
+statements for asynchronous `for` loops and context managers.
 
 ### New library modules
 [typing](https://docs.python.org/3.5/library/typing.html#module-typing) module
 adds support for Type Hints ([PEP484](https://www.python.org/dev/peps/pep-0484/)).
+
+Syntax for function annotation was introduced back in Python3.0
+([PEP3107](https://www.python.org/dev/peps/pep-3107/)). This module provides
+some standard tools (such as types - Any, Union, Tuple, Callable, etc. - that
+can be used in type annotations).
 
 [zipapp](https://docs.python.org/3.5/library/zipapp.html#module-zipapp) provides
 tools to manage the creation of zip files containing Python code, which can be
@@ -41,14 +48,19 @@ is significantly faster now.
 
 
 ## Python 3.6
-Released in December 2016. Comes pre-installed on Ubuntu 18.04.  Complete list
+Released in December 2016. Comes pre-installed on Ubuntu 18.04. Complete list
 of changes is [here](https://docs.python.org/3.8/whatsnew/3.6.html).
-
 
 ### New syntax
 Formatted string literals
 ([f-strings](https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings)).
 Defined in [PEP498](https://www.python.org/dev/peps/pep-0498/).
+
+```python
+>>> name = "Max"
+>>> print(f"Hello, {name}!")
+Hello, Max!
+```
 
 Support for variable type hints
 ([PEP526](https://www.python.org/dev/peps/pep-0498/)).
@@ -62,7 +74,7 @@ Asynchronous generators ([PEP525](https://www.python.org/dev/peps/pep-0525/))
 and comprehensions ([PEP530](https://www.python.org/dev/peps/pep-0530/)).
 
 ### New library modules
-[secrets](https://docs.python.org/3.8/library/secrets.html#module-secrets) or
+[secrets](https://docs.python.org/3.8/library/secrets.html#module-secrets) for
 generating cryptographically strong random numbers suitable for managing data
 such as passwords, account authentication, security tokens, and related secrets.
 Described in [PEP506](https://www.python.org/dev/peps/pep-0505/).
@@ -70,6 +82,8 @@ Described in [PEP506](https://www.python.org/dev/peps/pep-0505/).
 ### Implementation improvements
 The new implementation of dictionaries is 20% to 25% smaller and preserves
 insertion order (but this **should not** be relied upon yet).
+See this great [talk by Raymond Hettinger](https://www.youtube.com/watch?v=p33CVV29OG8)
+in which he explains how dictionaries changed over time.
 
 ### Improvements in stdlib
 [asyncio](https://docs.python.org/3.8/library/asyncio.html#module-asyncio) is no
@@ -92,8 +106,8 @@ Class `unittest.mock.Mock` has new methods `assert_called` and
 `assert_called_once`.
 
 ## Python 3.7
-Released in June 2018. Comes pre-installed on Debian 10 (Buster) and Unstable
-(Sid), Ubuntu 18.04 and 19.04. Complete list of changes is
+Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
+18.04 and 19.04. Complete list of changes is
 [here](https://docs.python.org/3.8/whatsnew/3.7.html).
 
 ### New syntax features
@@ -108,7 +122,7 @@ Postponed evaluation of type annotations
 ### New library modules
 [dataclasses](https://docs.python.org/3.8/library/dataclasses.html#module-dataclasses)
 provides a decorator and functions for automatically adding generated special
-methods such as __init__() and __repr__() to user-defined classes. It is useful
+methods such as `__init__()` and `__repr__()` to user-defined classes. It is useful
 when you need to create a simple class that only holds data but has no
 behaviour.
 
@@ -127,7 +141,7 @@ support for [nanosecond resolution](https://docs.python.org/3.8/whatsnew/3.7.htm
 
 ### Deprications
 Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
-1.0.1 are no longer supported. At least version 1.0.2 is required. You can build
+1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
 Python3.7 on those platforms but you have to manually link a new OpenSSL
 version.
 
@@ -155,6 +169,9 @@ def pow(x, y, z=None, /):
         r %= z
     return r
 ```
+
+This is in addition to [keyword only
+arguments](https://www.python.org/dev/peps/pep-3102/).
 
 ### Library improvements
 `json.tool` has a new option (`--json-lines`) to parse every input line as
