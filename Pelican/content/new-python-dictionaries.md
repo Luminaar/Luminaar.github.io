@@ -10,6 +10,9 @@ Changes in standard library:
 
 - csv.DictReader uses OrderedDict in 3.7 but dict in 3.8
 
+Relevant PEP
+https://www.python.org/dev/peps/pep-0468/
+
 
 How OrderedDict is different:
 
