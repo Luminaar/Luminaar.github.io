@@ -14,24 +14,19 @@ Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
 16.04. Complete list of changes is [here](https://docs.python.org/3.5/whatsnew/3.5.html).
 
 ### New syntax
-Coroutines can now be defined with `async` keyword, `await` keyword.  In this
-version these keywords are not reserved yet. They will be become proper reserved
-keywords in Python 3.7.
+Coroutines can now be defined with `async` keyword and awaited with `await`
+keyword. These keywords are not reserved yet. They will be
+become proper reserved keywords in Python 3.7.
 
-`async` can also be used in [async
-for](https://docs.python.org/3.5/reference/compound_stmts.html#async-for) and
-[async
-with](https://docs.python.org/3.5/reference/compound_stmts.html#async-with)
+`async` can also be used in [async for](https://docs.python.org/3.5/reference/compound_stmts.html#async-for)
+and [async with](https://docs.python.org/3.5/reference/compound_stmts.html#async-with)
 statements for asynchronous `for` loops and context managers.
 
 ### New library modules
-[typing](https://docs.python.org/3.5/library/typing.html#module-typing) module
-adds support for Type Hints ([PEP484](https://www.python.org/dev/peps/pep-0484/)).
-
-Syntax for function annotation was introduced back in Python3.0
-([PEP3107](https://www.python.org/dev/peps/pep-3107/)). This module provides
-some standard tools (such as types - Any, Union, Tuple, Callable, etc. - that
-can be used in type annotations).
+[typing](https://docs.python.org/3.5/library/typing.html#module-typing) module adds support for Type Hints ([PEP484](https://www.python.org/dev/peps/pep-0484/)).
+While syntax for function annotation was introduced back in Python3.0 ([PEP3107](https://www.python.org/dev/peps/pep-3107/)),
+this module provides some standard tools (such as types Any, Union, Tuple,
+Callable, etc.) that can be used in type annotations.
 
 [zipapp](https://docs.python.org/3.5/library/zipapp.html#module-zipapp) provides
 tools to manage the creation of zip files containing Python code, which can be
@@ -41,10 +36,9 @@ executed directly by the Python interpreter.
 [collections.OrderedDict](https://docs.python.org/3.5/library/collections.html#collections.OrderedDict)
 is significantly faster now.
 
-`os` module has a new function -
-[scandir()](https://docs.python.org/3.5/library/os.html#os.scandir)
-- for [better and faster way of directory
-  traversal](https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471).
+[os.scandir()](s://docs.python.org/3.5/library/os.html#os.scandir) is a new
+function for [better and faster way of directory
+traversal](https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471).
 
 
 ## Python 3.6
@@ -80,26 +74,25 @@ such as passwords, account authentication, security tokens, and related secrets.
 Described in [PEP506](https://www.python.org/dev/peps/pep-0505/).
 
 ### Implementation improvements
-The new implementation of dictionaries is 20% to 25% smaller and preserves
-insertion order (but this **should not** be relied upon yet).
-See this great [talk by Raymond Hettinger](https://www.youtube.com/watch?v=p33CVV29OG8)
-in which he explains how dictionaries changed over time.
+The new implementation of dictionaries is 20% to 25% more compact and preserves
+insertion order (but this **should not** be relied upon yet). See this great
+[talk by Raymond Hettinger](https://www.youtube.com/watch?v=p33CVV29OG8) in which he explains how dictionaries changed over time.
 
 ### Improvements in stdlib
 [asyncio](https://docs.python.org/3.8/library/asyncio.html#module-asyncio) is no
 longer provisional and the API is considered stable.
 
-A new [file system path protocol](https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519) added
+A new [file system path
+protocol](https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519) was added
 to support [path-like object](https://docs.python.org/3.8/glossary.html#term-path-like-object).
 
 The [datetime](https://docs.python.org/3.8/library/datetime.html#module-datetime)
 module has gained support for [Local Time Disambiguation](https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep495).
 
-[json](https://docs.python.org/3.8/library/json.html) functions `load()` and
-`loads()` now support binary input.
+`json.load()` and `json.loads()` now support binary input.
 
-New function [random.choices()](https://docs.python.org/3.8/library/random.html#random.choices)
-returns a list of elements of specified size from the given population with
+A new function [random.choices()](https://docs.python.org/3.8/library/random.html#random.choices)
+returns a list of specified size with elements from a population with
 optional weights.
 
 Class `unittest.mock.Mock` has new methods `assert_called` and
@@ -107,12 +100,10 @@ Class `unittest.mock.Mock` has new methods `assert_called` and
 
 ## Python 3.7
 Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
-18.04 and 19.04. Complete list of changes is
-[here](https://docs.python.org/3.8/whatsnew/3.7.html).
+18.04 and 19.04. Complete list of changes is [here](https://docs.python.org/3.8/whatsnew/3.7.html).
 
 ### New syntax features
-Postponed evaluation of type annotations
-([PEP526](https://www.python.org/dev/peps/pep-0526/)).
+Postponed evaluation of type annotations ([PEP526](https://www.python.org/dev/peps/pep-0526/)).
 
 * Annotations can now support forward references
 * Annotations are cheaper and faster to store
@@ -124,7 +115,7 @@ Postponed evaluation of type annotations
 provides a decorator and functions for automatically adding generated special
 methods such as `__init__()` and `__repr__()` to user-defined classes. It is useful
 when you need to create a simple class that only holds data but has no
-behaviour.
+behavior.
 
 ### New built-in features
 [breakpoint()](https://docs.python.org/3.8/library/functions.html#breakpoint) function for debuggers.
@@ -136,10 +127,9 @@ Dictionaries now officially preserve insertion order of elements.
 received a lot of new features and improvements (high-level `asyncio.run()`
 function for running coroutines, many others).
 
-[time](https://docs.python.org/3.8/library/time.html#module-time) module now has
-support for [nanosecond resolution](https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564).
+[time](https://docs.python.org/3.8/library/time.html#module-time) module now has support for [nanosecond resolution](https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564).
 
-### Deprications
+### Deprecations
 Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
 1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
 Python3.7 on those platforms but you have to manually link a new OpenSSL
@@ -170,8 +160,7 @@ def pow(x, y, z=None, /):
     return r
 ```
 
-This is in addition to [keyword only
-arguments](https://www.python.org/dev/peps/pep-3102/).
+This is in addition to [keyword only arguments](https://www.python.org/dev/peps/pep-3102/).
 
 ### Library improvements
 `json.tool` has a new option (`--json-lines`) to parse every input line as

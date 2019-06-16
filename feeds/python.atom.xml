@@ -7,31 +7,26 @@ you can find the full&amp;nbsp;list.&lt;/p&gt;
 &lt;p&gt;Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
 16.04. Complete list of changes is &lt;a href="https://docs.python.org/3.5/whatsnew/3.5.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;New&amp;nbsp;syntax&lt;/h3&gt;
-&lt;p&gt;Coroutines can now be defined with &lt;code&gt;async&lt;/code&gt; keyword, &lt;code&gt;await&lt;/code&gt; keyword.  In this
-version these keywords are not reserved yet. They will be become proper reserved
-keywords in Python&amp;nbsp;3.7.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;async&lt;/code&gt; can also be used in &lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-for"&gt;async
-for&lt;/a&gt; and
-&lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-with"&gt;async
-with&lt;/a&gt;
+&lt;p&gt;Coroutines can now be defined with &lt;code&gt;async&lt;/code&gt; keyword and awaited with &lt;code&gt;await&lt;/code&gt;
+keyword. These keywords are not reserved yet. They will be
+become proper reserved keywords in Python&amp;nbsp;3.7.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;async&lt;/code&gt; can also be used in &lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-for"&gt;async for&lt;/a&gt;
+and &lt;a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-with"&gt;async with&lt;/a&gt;
 statements for asynchronous &lt;code&gt;for&lt;/code&gt; loops and context&amp;nbsp;managers.&lt;/p&gt;
 &lt;h3&gt;New library&amp;nbsp;modules&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/typing.html#module-typing"&gt;typing&lt;/a&gt; module
-adds support for Type Hints (&lt;a href="https://www.python.org/dev/peps/pep-0484/"&gt;&lt;span class="caps"&gt;PEP484&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Syntax for function annotation was introduced back in Python3.0
-(&lt;a href="https://www.python.org/dev/peps/pep-3107/"&gt;&lt;span class="caps"&gt;PEP3107&lt;/span&gt;&lt;/a&gt;). This module provides
-some standard tools (such as types - Any, Union, Tuple, Callable, etc. - that
-can be used in type&amp;nbsp;annotations).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/typing.html#module-typing"&gt;typing&lt;/a&gt; module adds support for Type Hints (&lt;a href="https://www.python.org/dev/peps/pep-0484/"&gt;&lt;span class="caps"&gt;PEP484&lt;/span&gt;&lt;/a&gt;).
+While syntax for function annotation was introduced back in Python3.0 (&lt;a href="https://www.python.org/dev/peps/pep-3107/"&gt;&lt;span class="caps"&gt;PEP3107&lt;/span&gt;&lt;/a&gt;),
+this module provides some standard tools (such as types Any, Union, Tuple,
+Callable, etc.) that can be used in type&amp;nbsp;annotations.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/zipapp.html#module-zipapp"&gt;zipapp&lt;/a&gt; provides
 tools to manage the creation of zip files containing Python code, which can be
 executed directly by the Python&amp;nbsp;interpreter.&lt;/p&gt;
 &lt;h3&gt;Improvements in&amp;nbsp;stdlib&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/collections.html#collections.OrderedDict"&gt;collections.OrderedDict&lt;/a&gt;
 is significantly faster&amp;nbsp;now.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;os&lt;/code&gt; module has a new function -
-&lt;a href="https://docs.python.org/3.5/library/os.html#os.scandir"&gt;scandir()&lt;/a&gt;
-- for &lt;a href="https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471"&gt;better and faster way of directory
-  traversal&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="s://docs.python.org/3.5/library/os.html#os.scandir"&gt;os.scandir()&lt;/a&gt; is a new
+function for &lt;a href="https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471"&gt;better and faster way of directory
+traversal&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Python&amp;nbsp;3.6&lt;/h2&gt;
 &lt;p&gt;Released in December 2016. Comes pre-installed on Ubuntu 18.04. Complete list
 of changes is &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -57,31 +52,28 @@ generating cryptographically strong random numbers suitable for managing data
 such as passwords, account authentication, security tokens, and related secrets.
 Described in &lt;a href="https://www.python.org/dev/peps/pep-0505/"&gt;&lt;span class="caps"&gt;PEP506&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Implementation&amp;nbsp;improvements&lt;/h3&gt;
-&lt;p&gt;The new implementation of dictionaries is 20% to 25% smaller and preserves
-insertion order (but this &lt;strong&gt;should not&lt;/strong&gt; be relied upon yet).
-See this great &lt;a href="https://www.youtube.com/watch?v=p33CVV29OG8"&gt;talk by Raymond Hettinger&lt;/a&gt;
-in which he explains how dictionaries changed over&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;The new implementation of dictionaries is 20% to 25% more compact and preserves
+insertion order (but this &lt;strong&gt;should not&lt;/strong&gt; be relied upon yet). See this great
+&lt;a href="https://www.youtube.com/watch?v=p33CVV29OG8"&gt;talk by Raymond Hettinger&lt;/a&gt; in which he explains how dictionaries changed over&amp;nbsp;time.&lt;/p&gt;
 &lt;h3&gt;Improvements in&amp;nbsp;stdlib&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio"&gt;asyncio&lt;/a&gt; is no
 longer provisional and the &lt;span class="caps"&gt;API&lt;/span&gt; is considered&amp;nbsp;stable.&lt;/p&gt;
-&lt;p&gt;A new &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519"&gt;file system path protocol&lt;/a&gt; added
+&lt;p&gt;A new &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519"&gt;file system path
+protocol&lt;/a&gt; was added
 to support &lt;a href="https://docs.python.org/3.8/glossary.html#term-path-like-object"&gt;path-like object&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://docs.python.org/3.8/library/datetime.html#module-datetime"&gt;datetime&lt;/a&gt;
 module has gained support for &lt;a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep495"&gt;Local Time Disambiguation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/json.html"&gt;json&lt;/a&gt; functions &lt;code&gt;load()&lt;/code&gt; and
-&lt;code&gt;loads()&lt;/code&gt; now support binary&amp;nbsp;input.&lt;/p&gt;
-&lt;p&gt;New function &lt;a href="https://docs.python.org/3.8/library/random.html#random.choices"&gt;random.choices()&lt;/a&gt;
-returns a list of elements of specified size from the given population with
+&lt;p&gt;&lt;code&gt;json.load()&lt;/code&gt; and &lt;code&gt;json.loads()&lt;/code&gt; now support binary&amp;nbsp;input.&lt;/p&gt;
+&lt;p&gt;A new function &lt;a href="https://docs.python.org/3.8/library/random.html#random.choices"&gt;random.choices()&lt;/a&gt;
+returns a list of specified size with elements from a population with
 optional&amp;nbsp;weights.&lt;/p&gt;
 &lt;p&gt;Class &lt;code&gt;unittest.mock.Mock&lt;/code&gt; has new methods &lt;code&gt;assert_called&lt;/code&gt; and
 &lt;code&gt;assert_called_once&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Python&amp;nbsp;3.7&lt;/h2&gt;
 &lt;p&gt;Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
-18.04 and 19.04. Complete list of changes is
-&lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+18.04 and 19.04. Complete list of changes is &lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;New syntax&amp;nbsp;features&lt;/h3&gt;
-&lt;p&gt;Postponed evaluation of type annotations
-(&lt;a href="https://www.python.org/dev/peps/pep-0526/"&gt;&lt;span class="caps"&gt;PEP526&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Postponed evaluation of type annotations (&lt;a href="https://www.python.org/dev/peps/pep-0526/"&gt;&lt;span class="caps"&gt;PEP526&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Annotations can now support forward&amp;nbsp;references&lt;/li&gt;
 &lt;li&gt;Annotations are cheaper and faster to&amp;nbsp;store&lt;/li&gt;
@@ -91,7 +83,7 @@ optional&amp;nbsp;weights.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/dataclasses.html#module-dataclasses"&gt;dataclasses&lt;/a&gt;
 provides a decorator and functions for automatically adding generated special
 methods such as &lt;code&gt;__init__()&lt;/code&gt; and &lt;code&gt;__repr__()&lt;/code&gt; to user-defined classes. It is useful
-when you need to create a simple class that only holds data but has no&amp;nbsp;behaviour.&lt;/p&gt;
+when you need to create a simple class that only holds data but has no&amp;nbsp;behavior.&lt;/p&gt;
 &lt;h3&gt;New built-in&amp;nbsp;features&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/functions.html#breakpoint"&gt;breakpoint()&lt;/a&gt; function for&amp;nbsp;debuggers.&lt;/p&gt;
 &lt;p&gt;Dictionaries now officially preserve insertion order of&amp;nbsp;elements.&lt;/p&gt;
@@ -99,9 +91,8 @@ when you need to create a simple class that only holds data but has no&amp;nbsp;
 &lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio"&gt;asyncio&lt;/a&gt;
 received a lot of new features and improvements (high-level &lt;code&gt;asyncio.run()&lt;/code&gt;
 function for running coroutines, many&amp;nbsp;others).&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/time.html#module-time"&gt;time&lt;/a&gt; module now has
-support for &lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564"&gt;nanosecond resolution&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Deprications&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.8/library/time.html#module-time"&gt;time&lt;/a&gt; module now has support for &lt;a href="https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564"&gt;nanosecond resolution&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Deprecations&lt;/h3&gt;
 &lt;p&gt;Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
 1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
 Python3.7 on those platforms but you have to manually link a new OpenSSL&amp;nbsp;version.&lt;/p&gt;
@@ -125,8 +116,7 @@ new syntax (&lt;code&gt;/&lt;/code&gt;) to indicate that some function parameter
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This is in addition to &lt;a href="https://www.python.org/dev/peps/pep-3102/"&gt;keyword only
-arguments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is in addition to &lt;a href="https://www.python.org/dev/peps/pep-3102/"&gt;keyword only arguments&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Library&amp;nbsp;improvements&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;json.tool&lt;/code&gt; has a new option (&lt;code&gt;--json-lines&lt;/code&gt;) to parse every input line as
 separate &lt;span class="caps"&gt;JSON&lt;/span&gt;&amp;nbsp;object.&lt;/p&gt;
@@ -183,13 +173,13 @@ that&amp;#8217;s&amp;nbsp;it.&lt;/p&gt;
 
 &lt;p&gt;The lesson is: read the documentation, it&amp;#8217;s all there. I know I&amp;nbsp;didn&amp;#8217;t&amp;#8230;&lt;/p&gt;</content><category term="python"></category></entry><entry><title>Python Pip —freeze, editables and git</title><link href="https://luminar.dev/notes/18-11-python-pip-freeze-editables-and-git/" rel="alternate"></link><published>2018-11-16T07:55:12+01:00</published><updated>2018-11-16T07:55:12+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2018-11-16:/notes/18-11-python-pip-freeze-editables-and-git/</id><summary type="html">&lt;p&gt;Interesting behaviour when using Pip &amp;#8212;freeze on a locally installed package with .git&amp;nbsp;directory.&lt;/p&gt;</summary><content type="html">&lt;p&gt;When developing a Python package, the recommended practice is to install your package in editable mode. This way you can still edit your source code and run your tests on installed version of your package, without having reinstalling it each&amp;nbsp;time.&lt;/p&gt;
 &lt;p&gt;Usually, your project structure will be something like&amp;nbsp;this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;My_project/
-|-- .git
-|-- my_project/
-|   |-- __init__.py
-|   |-- module.py
-|
-|-- setup.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;My_project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="c1"&gt;-- .git&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="c1"&gt;-- my_project/&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="c1"&gt;-- __init__.py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="c1"&gt;-- module.py&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="c1"&gt;-- setup.py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -201,7 +191,7 @@ that&amp;#8217;s&amp;nbsp;it.&lt;/p&gt;
 
 &lt;p&gt;I.e. it will point to the repository of your project instead of just naming your package. I could not find a mention of this anywhere in the documentation and it surprised me at&amp;nbsp;first.&lt;/p&gt;
 &lt;p&gt;Note: If there is not remote specified for your repository it will fallback to the package name and insert a comment in the&amp;nbsp;output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;## !! Could not determine repository location
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;##&lt;/span&gt; &lt;span class="o"&gt;!!&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;determine&lt;/span&gt; &lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="k"&gt;location&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="git"></category></entry><entry><title>Python - colorized text in terminal</title><link href="https://luminar.dev/notes/16-06-python-colorized-text-in-terminal/" rel="alternate"></link><published>2016-06-27T15:17:58+02:00</published><updated>2016-06-27T15:17:58+02:00</updated><author><name>max</name></author><id>tag:luminar.dev,2016-06-27:/notes/16-06-python-colorized-text-in-terminal/</id><summary type="html">&lt;p&gt;This snippet is useful if you want to make your terminal output&amp;nbsp;colorized.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This snippet is useful if you want to make your terminal output
 colorized. It should work on Unix and Windows with
 &lt;a href="https://support.microsoft.com/cs-cz/kb/101875"&gt;&lt;span class="caps"&gt;ANSI&lt;/span&gt;.&lt;span class="caps"&gt;SYS&lt;/span&gt;&lt;/a&gt;&amp;nbsp;enabled.&lt;/p&gt;

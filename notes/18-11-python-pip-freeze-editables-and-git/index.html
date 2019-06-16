@@ -142,13 +142,13 @@
             <section class="post-content">
                 <p>When developing a Python package, the recommended practice is to install your package in editable mode. This way you can still edit your source code and run your tests on installed version of your package, without having reinstalling it each&nbsp;time.</p>
 <p>Usually, your project structure will be something like&nbsp;this:</p>
-<div class="highlight"><pre><span></span>My_project/
-|-- .git
-|-- my_project/
-|   |-- __init__.py
-|   |-- module.py
-|
-|-- setup.py
+<div class="highlight"><pre><span></span><span class="n">My_project</span><span class="o">/</span>
+<span class="o">|</span><span class="c1">-- .git</span>
+<span class="o">|</span><span class="c1">-- my_project/</span>
+<span class="o">|</span>   <span class="o">|</span><span class="c1">-- __init__.py</span>
+<span class="o">|</span>   <span class="o">|</span><span class="c1">-- module.py</span>
+<span class="o">|</span>
+<span class="o">|</span><span class="c1">-- setup.py</span>
 </pre></div>
 
 
@@ -160,7 +160,7 @@
 
 <p>I.e. it will point to the repository of your project instead of just naming your package. I could not find a mention of this anywhere in the documentation and it surprised me at&nbsp;first.</p>
 <p>Note: If there is not remote specified for your repository it will fallback to the package name and insert a comment in the&nbsp;output:</p>
-<div class="highlight"><pre><span></span>## !! Could not determine repository location
+<div class="highlight"><pre><span></span><span class="o">##</span> <span class="o">!!</span> <span class="n">Could</span> <span class="k">not</span> <span class="n">determine</span> <span class="n">repository</span> <span class="k">location</span>
 </pre></div>
             </section>
 
