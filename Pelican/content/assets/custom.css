@@ -3,3 +3,21 @@
 body {
 	font: 400 2em / 1.5em 'Lora', serif
 }
+
+h3 {
+	color: #7b7a7a;
+	font-weight: 500;
+}
+
+h4 {
+	color: #9e9e9e;
+	font-weight: 400;
+}
+
+h5 {
+	color: #9e9e9e;
+    font-weight: lighter;
+    font-size: 1em;
+    text-decoration: underline;
+    text-transform: lowercase;
+}
