@@ -1,4 +1,4 @@
-from pelicanconf import *
+# from pelicanconf import *
 
 AUTHOR = "Max K."
 SITENAME = "Max K. Luminar"

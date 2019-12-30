@@ -1,24 +1,23 @@
 # -*- coding: utf-8 -*-
 
-import datetime
 import os
 import shutil
 import sys
 from datetime import datetime
 
 from invoke import task
-from invoke.util import cd
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 
 CONFIG = {"deploy_path": "output", "publish_path": "..", "port": 8000}
 
 
 @task
-def clean(c):
+def clean(_):
     """Remove generated files"""
-    if os.path.isdir(CONFIG["deploy_path"]):
-        shutil.rmtree(CONFIG["deploy_path"])
-        os.makedirs(CONFIG["deploy_path"])
+    path = str(CONFIG["deploy_path"])
+    if os.path.isdir(path):
+        shutil.rmtree(path)
+        os.makedirs(path)
 
 
 @task
@@ -40,7 +39,7 @@ def regenerate(c):
 
 
 @task
-def serve(c):
+def serve(_):
     """Serve site at http://localhost:8000/"""
 
     class AddressReuseTCPServer(RootedHTTPServer):
