@@ -14,8 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="origin" />
   <meta name="generator" content="Pelican" />
-  <link href="https://luminar.dev/" rel="canonical" />
-
+<link href="https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" rel="canonical" />
   <!-- Feed -->
         <link href="https://luminar.dev/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Full Atom Feed" />
           <link href="https://luminar.dev/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Max K. Luminar Categories Atom Feed" />
@@ -42,7 +41,6 @@
   <![endif]-->
 
 
-  <link href="https://luminar.dev/notes/19-06-python-what-is-new-in-which-version/" rel="canonical" />
 
     <meta name="description" content="A summary of new features and improvements in Python versions from 3.5 to 3.8">
 
@@ -176,7 +174,7 @@ of changes is <a href="https://docs.python.org/3.8/whatsnew/3.6.html">here</a>.<
 (<a href="https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings">f-strings</a>).
 Defined in <a href="https://www.python.org/dev/peps/pep-0498/"><span class="caps">PEP498</span></a>.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Max&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello, {name}!&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="p">)</span>
 <span class="n">Hello</span><span class="p">,</span> <span class="n">Max</span><span class="err">!</span>
 </pre></div>
 
@@ -243,15 +241,15 @@ Python3.7 on those platforms but you have to manually link a new OpenSSL&nbsp;ve
 <h3>New&nbsp;syntax</h3>
 <p><a href="https://www.python.org/dev/peps/pep-0572/">Assignment expressions</a> (the &#8220;walrus operator&#8221;, <code>:=</code>):</p>
 <div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="p">:</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;List is too long ({n} elements, expected &lt;= 10)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;List is too long (</span><span class="si">{n}</span><span class="s2"> elements, expected &lt;= 10)&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <p><a href="https://www.python.org/dev/peps/pep-0570/">Positional only arguments</a>: There is
 new syntax (<code>/</code>) to indicate that some function parameters must be specified&nbsp;positionally.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
-    <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">z</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">r</span> <span class="o">%=</span> <span class="n">z</span>
     <span class="k">return</span> <span class="n">r</span>
 </pre></div>
@@ -325,6 +323,7 @@ separate <span class="caps">JSON</span>&nbsp;object.</p>
     </footer>
   </section>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://luminar.dev/theme/js/script.js"></script>
 
 </body>

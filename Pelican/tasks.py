@@ -21,7 +21,7 @@ def clean(_):
 
 
 @task
-def build(c):
+def preview(c):
     """Build local version of site"""
     c.run(f"pelican -s pelicanconf.py -o {CONFIG['deploy_path']}")
 
@@ -54,14 +54,7 @@ def serve(_):
 
 
 @task
-def reserve(c):
-    """`build`, then `serve`"""
-    build(c)
-    serve(c)
-
-
-@task
-def preview(c):
+def build(c):
     """Build production version of site"""
     c.run(f"pelican -s publishconf.py -o {CONFIG['publish_path']}")
 
@@ -73,8 +66,8 @@ def publish(c):
     now = datetime.now().strftime("%Y-%m-%d")
 
     clean(c)
+    build(c)
 
-    c.run(f"pelican -s publishconf.py -o {CONFIG['publish_path']}")
     with c.cd(CONFIG["publish_path"]):
         c.run("git add .")
         c.run(f"git commit -m 'Published on {now}'")

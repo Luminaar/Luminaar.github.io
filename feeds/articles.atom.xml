@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - Articles</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/articles.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2019-12-30T14:37:29+01:00</updated><entry><title>Article list from November of 2019</title><link href="https://luminar.dev/notes/19-12-article-list-from-november-of-2019/" rel="alternate"></link><published>2019-12-30T14:37:29+01:00</published><updated>2019-12-30T14:37:29+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2019-12-30:/notes/19-12-article-list-from-november-of-2019/</id><summary type="html">&lt;p&gt;Some of the articles I&amp;#8217;ve read in November of&amp;nbsp;2019&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is a list of articles I&amp;#8217;ve read last&amp;nbsp;month:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ryxcommar.com/2019/11/02/making-good-code-great/?fbclid=IwAR1UZZy2T4Q2iT6h3Rqc9INnEDwWVKQRWvvzLX2VJMaoRdFNAcX7Fv3kFik"&gt;Making Good Code Great – r y x, r&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;A couple of tips on how to write nicer Python&amp;nbsp;code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.7mind.io/constructive-test-taxonomy.html"&gt;Unit, Functional, Integration? You are doing it wrong | 7mind.io blog&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;A new way to look at types of tests in software. I&amp;#8217;m planning to come back
+    to this&amp;nbsp;later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://reactionwheel.net/2015/01/80s-vc.html"&gt;Heat Death: Venture Capital in the 1980s | Reaction Wheel&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Are we in a bubble? The answer is not that simple. This article provides a
+    history of venture capital in 80s&amp;#8217; and 90s&amp;#8217; and compares it to todays&amp;nbsp;situation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://reactionwheel.net/2019/02/boiling-frogs.html"&gt;Boiling Frogs | Reaction&amp;nbsp;Wheel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ethankent.dev/posts/types_are_for_people/"&gt;Types Are for People, not Computers - Ethan Kent&amp;#8217;s&amp;nbsp;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.acolyer.org/2019/11/20/local-first-software/"&gt;Local-first software: you own your data, in spite of the cloud – the morning paper&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;A summary of a scientific paper that describes what local-first
+    applications should look and why it is a good&amp;nbsp;idea.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://typesetinthefuture.com/2016/06/19/bladerunner/"&gt;Blade Runner | Typeset In The Future&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;An in-depth look at typography and design of the original Bladerunner&amp;nbsp;film.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.loc.gov/preservation/resources/rfs/TOC.html"&gt;Recommended Formats Statement – table of contents | Resources (Preservation, Library of Congress)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Which data formats and media should I choose if I want my data to&amp;nbsp;last?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://software.rajivprab.com/2019/06/02/cracking-the-senior-software-interview/"&gt;Cracking the Senior Software Interview – Software the Hard&amp;nbsp;way&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://software.rajivprab.com/2019/04/28/rethinking-software-testing-perspectives-from-the-world-of-hardware/"&gt;Rethinking Software Testing: Perspectives from the world of Hardware – Software the Hard&amp;nbsp;way&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://logicmag.io/nature/oil-is-the-new-data/"&gt;Oil is the New Data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;How &amp;#8220;big tech&amp;#8221; is collaborating with &amp;#8220;big oil&amp;#8221; to kill us&amp;nbsp;faster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This list is generated automatically from bookmarks in my browser. The notes are
+added&amp;nbsp;manually.&lt;/p&gt;</content><category term="Articles"></category><category term="Articles"></category></entry></feed>
