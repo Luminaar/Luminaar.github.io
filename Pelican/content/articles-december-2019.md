@@ -1,0 +1,49 @@
+Title: Article list from December of 2019
+Date: 2020-01-01 21:23:05
+Category: Articles
+Tags: Articles
+Summary: Some of the articles I've read in December of 2019
+
+Here is a list of articles I've read last month:
+
+* [Microservices: Rethinking the Way We Treat Data and Services | Confluent](https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/)
+    * A series of articles on building micro-services with persistent
+       event-stores. The first article is especially interesting - it describes
+       a "data dichotomy" (services want to hide data, data systems want to
+       expose everyting). First couple of articles are more general, then it
+       gets specific about how to implement such systems with Apache Kafka
+* [Why computers suck and how learning from OpenBSD can make them marginally less horrible – Telegraph](https://telegra.ph/Why-OpenBSD-is-marginally-less-horrible-12-05)
+    * Why endless backward compatibility is bad and OpenBSD is good thanks to
+       not keeping it
+* [Doing Windows, Part 1: MS-DOS and Its Discontents The Digital Antiquarian](https://www.filfre.net/2018/06/doing-windows-part-1-ms-dos-and-its-discontents/)
+    * How MS-DOS and Windows was created. Actually a 9 part series of articles
+       that are fairly long (took me a couple of days to get through)
+* [Tailwind: style your site without writing any CSS! - Julia Evans](https://jvns.ca/blog/2018/11/01/tailwind--write-css-without-the-css/)
+    * This is a new way of thinking about web-design for me - CSS frameworks. Instead of writing CSS,
+       you just use a lot of pre-defined classes in your HTML to style your
+       website. I would like to try it out in the future
+* [I Ditched Google for DuckDuckGo. Here's Why You Should Too | WIRED](https://www.wired.com/story/i-ditched-google-for-duckduckgo-heres-why-you-should-too/)
+    * A couple of reasons to use DDG instead of Google (which I'm doing anyway for more than a year now)
+* [How To Think Real Good | Meaningness](https://meaningness.com/metablog/how-to-think)
+    * A bit ranty article about what goes into making good decisions (I guess).
+       I'm planning to come back to this and read more of the website. This also
+       got me curious about the "rationalist community" (e.g. [lesswrong.com](https://www.lesswrong.com/))
+* [Noam Chomsky: Znovu se vrací řeči o tom, že máme „příliš mnoho demokracie“ – A2larm](https://a2larm.cz/2019/11/noam-chomsky-znovu-se-vraci-reci-o-tom-ze-mame-prilis-mnoho-demokracie/)
+    * A Czech translation of an afterword to Hate Inc. by Matt Taibbi - an
+       interview with Noam Chomsky. I'm planning to read Hate Inc. and a couple
+       of other books in mentioned in this article (Private Government by
+       Elizabeth Andersons, Manufacturing Consent by Noam Chomsky and some
+       others)
+* [Life Under the Algorithm | The New Republic](https://newrepublic.com/article/155666/life-algorithm)
+* [Nadia Eghbal | Reimagining the PhD](https://nadiaeghbal.com/phd)
+* [What is energy, actually? – Jean-Marc Jancovici](https://jancovici.com/en/energy-transition/energy-and-us/what-is-energy-actually/)
+    * This is a pretty dense article that describes relationships between GDP
+       and energy production/consumption
+* [Can the Internet Survive Climate Change? | The New Republic](https://newrepublic.com/article/155993/can-internet-survive-climate-change)
+    * I have never really considered the environmental effects of internet
+       infrastructure and usage until I read this article
+* [How to Give People Advice They’ll Be Delighted to Take - The New York Times](https://www.nytimes.com/2019/10/21/smarter-living/how-to-give-better-advice.html)
+* [Jemné umění blahosklonného povýšení - Martin “adent” Malý - Medium](https://medium.com/@adent/jemne-umeni-blahosklonneho-povyseni-6ba4b01e919e)
+
+
+This list is generated automatically from bookmarks in my browser. The notes are added manually.
