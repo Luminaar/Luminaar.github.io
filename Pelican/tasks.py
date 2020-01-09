@@ -4,11 +4,56 @@ import os
 import shutil
 import sys
 from datetime import datetime
+from pathlib import Path
+from textwrap import dedent
+from typing import List, Optional
 
 from invoke import task
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 
 CONFIG = {"deploy_path": "output", "publish_path": "..", "port": 8000}
+
+
+def article_header(
+    title: str,
+    summary: Optional[str] = None,
+    category: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+):
+    date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    if not tags:
+        tags = []
+    return dedent(
+        f"""\
+        Title: {title}
+        Date: {date}
+        Category: {category}
+        Tags: {', '.join(tags)}
+        Summary: {summary}"""
+    )
+
+
+@task
+def new_article(_):
+    """Create a new article."""
+
+    file_name = input("File name: ")
+    if not file_name:
+        print("File name is required")
+        return
+
+    title = input("Title: ")
+    if not file_name:
+        print("Title is required")
+        return
+
+    summary = input("Summary (optional): ")
+    category = input("Category (optional): ")
+    tags = input("Comma-separated tags (optional): ").split(",")
+
+    script_path = Path(os.path.dirname(os.path.abspath(__file__)))
+    article_path = script_path / "content" / (file_name + ".md")
+    article_path.write_text(article_header(title, summary, category, tags))
 
 
 @task
