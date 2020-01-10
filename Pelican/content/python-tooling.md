@@ -6,6 +6,7 @@ Summary:
 
 # Outline
 Goals:
+
 - describe different classes and tools
 - compare pros and cons for different tools in each class
 - decide, which tools we want to use - which are mandatory
@@ -46,6 +47,7 @@ Git.
 Another aspect of code formatting is import sorting:
 
 - isort
+	- needs a bit of configuration to work well with black
 - ...
 
 ## Linters
@@ -66,7 +68,13 @@ Another aspect of code formatting is import sorting:
 
 ## Static type-checkers
 - mypy - https://mypy.readthedocs.io/
+	- Guido is involved
+	- "official", actively developed
 - pyre - https://pyre-check.org/
+- pyright
+	- From readme: `Pyright is a side project with no dedicated team. There is
+	no guarantee of continued development on the project. If you find it useful,
+	feel free to use it and contribute to the code base.`
 
 
 ## Other
@@ -122,3 +130,5 @@ Plugin for pytest - pytest-mypy, pytest-pylint
 When do the tools need to be run?
 - Before commiting - hooks in Github? local hooks?
 - In Teamcity - failing builds
+
+https://pre-commit.com/
