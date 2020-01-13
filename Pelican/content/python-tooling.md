@@ -79,19 +79,13 @@ Another aspect of code formatting is import sorting:
 
 ## Other
 - rope - renaming/refactoring
+	- only partial Python3 support
 - Vulture - unused code
 - mccabe - code complexity measure
 - dodgy - looks for things that  should not be in the code - SCM diff checkings,
 passwords, secret keys, ... (not very mature)
 - bandit - https://bandit.readthedocs.io/
 	- looking for security issues
-
-## Intellisense
-Most people use IDEs. VSCode has it's own language server, PyCharm iplements its
-own intellisense.
-
-If you are using Vim - good luck ;) Vim setup is out of scope of this
-artice, but it is possible (I'm using Vim for Python development every day).
 
 ## Tool bundles
 There are several projects that bundle several tools togehter
@@ -101,9 +95,14 @@ There are several projects that bundle several tools togehter
 	- pycodestyle, pydoctyle, pyflakes, mccabe, pylint
 
 ## IDEs
+Vim - good luck with that ;) Vim setup is out of scope of this
+article, but it is possible (I'm using Vim for Python development every day).
+
 PyCharm implements a lot of functionality and does not rely on external tools
 for most things.
 
+- implements it's own language server, type checking, refactoring, linting,
+formatter
 - has some support for other tools:
 	- black plugin
 	- pylint - can be used as an external tool
@@ -111,7 +110,7 @@ for most things.
 VSCode supports most tools
 
 - autopep8 by default, but supports black
-- isort for imports
+- uses isort for imports
 - Pylint enabled by default
 	- other linters supported:
 		- Flake8
@@ -123,8 +122,7 @@ VSCode supports most tools
 
 # Which do we mandate?
 Black, isort
-Pylint?
-Plugin for pytest - pytest-mypy, pytest-pylint
+Pylint
 
 # Python tooling in CI/CD workflows
 When do the tools need to be run?
