@@ -5,6 +5,8 @@ Tags: python
 Summary: Overview of development tools for Python
 
 
+> This post is a work in progress. Don't mind the typos and other errors
+
 When I started doing research for this post I expected it to be a much more
 complicated topic (same as packaging for example). Turns out there are not that
 many tools - there is almost only one way to do things.
