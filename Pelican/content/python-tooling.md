@@ -2,7 +2,7 @@ Title: Python tooling
 Date: 2020-01-09 13:32:47
 Category: Python
 Tags: python
-Summary: Overview of development tools for Python
+Summary: Overview of development tools for Python - linters, formatters and other. Short description of how we are using some of these tools in production.
 
 
 
