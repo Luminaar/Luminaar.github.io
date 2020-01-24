@@ -136,30 +136,37 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <blockquote>
-<p>This post is a work in progress. Don&#8217;t mind the typos and other&nbsp;errors</p>
-</blockquote>
+                <h1>Introduction</h1>
+<p>This post started as a talk for the Python Guild (a monthly gathering of Python
+developers at Avast). I decided to research and put together a summary of
+different tools related to Python development. Turns out there are not that&nbsp;many.</p>
+<p>After I gave the talk there was a short discussion and a couple of interesting
+ideas were&nbsp;proposed.</p>
+<p>I realized that a more interesting topic would be how to use all these tools in
+everyday work. That&#8217;s why I decided to expand this post a bit. First section
+contains a list of tools categorized in different categories. In the second
+section I will put some thoughts on how these tools can be used in different&nbsp;scenarios.</p>
+<hr>
+<h1>The&nbsp;tools</h1>
 <p>When I started doing research for this post I expected it to be a much more
 complicated topic (same as packaging for example). Turns out there are not that
 many tools - there is almost only one way to do&nbsp;things.</p>
-<p>I this post I will categorize different tools into five categories, describe and
-compare them. I have tried to use almost all of the tools at least a little.
-At the end I propose a way to incorporate the tools in <span class="caps">CI</span>/<span class="caps">CD</span> pipelines for
-python&nbsp;projects.</p>
-<h1>Formatters</h1>
+<p>I this section I will categorize different tools into five categories, describe and
+compare them. I know a lot more about tools that I use everyday but I&#8217;ve
+experimented with most of the others&nbsp;too.</p>
+<h2>Formatters</h2>
 <p><a href="https://www.python.org/dev/peps/pep-0008/"><span class="caps">PEP8</span></a> (Style guide for Python code)
 and <a href="https://www.python.org/dev/peps/pep-0257/"><span class="caps">PEP257</span></a> (Docstring conventions)
 are two PEPs that describe how Python code should look. The <span class="caps">PEP8</span> is not meant to
 be dogmatic and adhering to it is not the only necessary prerequisite for good
-Python code, but it is a&nbsp;start.</p>
+Python code, but it is a start. Because formatting code by hand is tedious,
+using some kind of formatter is almost a&nbsp;necessity.</p>
 <p>When working in a team, it&#8217;s is better when everyones code looks the same.
-Ideally it shouldn&#8217;t be obvious who wrote the code from just looking at&nbsp;it.</p>
-<p>And because formatting code by hand is tedious, using some kind of formatter
-almost a necessity. If everyone is using the same formatter, there will not be
-any &#8220;stylistic&#8221; comments in code review and no unnecessary diffs if two people
-work on the same&nbsp;module.</p>
+Ideally it shouldn&#8217;t be obvious who wrote the code from just looking at it. If
+everyone is using the same formatter, there will not be any &#8220;stylistic&#8221; comments
+in code review and no unnecessary diffs if two people work on the same&nbsp;module.</p>
 <p>There are several code formatters for Python&nbsp;code:</p>
-<h2><a href="https://github.com/psf/black">black</a></h2>
+<h3><a href="https://github.com/psf/black">black</a></h3>
 <blockquote>
 <p>The Uncompromising Code&nbsp;Formatter</p>
 </blockquote>
@@ -169,7 +176,8 @@ is a good thing because you don&#8217;t have to synchronize configuration across
 developers in the&nbsp;team.</p>
 <p>When formatting it makes sure that the <span class="caps">AST</span> of the code did not change (it will
 not break your&nbsp;code).</p>
-<p>In my experiments it worked pretty well with <code>pycodestyle</code> (see&nbsp;Linters).</p>
+<p>In my experiments it worked pretty well with <code>pycodestyle</code> (see Linters)
+although you may have to disable some&nbsp;checks.</p>
 <p>Pros:</p>
 <ul>
 <li>no need to keep config files in sync between&nbsp;developers</li>
@@ -184,23 +192,24 @@ not break your&nbsp;code).</p>
 <li>a bit unusual line length by default (88&nbsp;characters)</li>
 <li>in tiny amount of cases the formatting could be nicer (it still makes
     sense, but I would do in&nbsp;differently)</li>
-<li>is a new&nbsp;project</li>
+<li>is a new project and formatting can sometimes change between&nbsp;versions</li>
 </ul>
-<h2><a href="https://github.com/google/yapf"><span class="caps">YAPF</span></a></h2>
-<p><span class="caps">YAPF</span> is developed by google and takes a similar approach to <code>black</code> and <code>gofmt</code>
+<h3><a href="https://github.com/google/yapf"><span class="caps">YAPF</span></a></h3>
+<p><span class="caps">YAPF</span> is developed by Google and takes a similar approach to <code>black</code> and <code>gofmt</code>
 but has much more configuration&nbsp;options.</p>
 <p>Pros:</p>
 <ul>
 <li>good support in IDEs (can be enabled in VSCode, has plugin in&nbsp;PyCharm)</li>
+<li>very configurable (if that&#8217;s what you&nbsp;need)</li>
 </ul>
 <p>Cons:</p>
 <ul>
 <li>is developed but still considered Alpha (since&nbsp;2015)</li>
 </ul>
-<h2><a href="https://github.com/hhatto/autopep8">autopep8</a></h2>
+<h3><a href="https://github.com/hhatto/autopep8">autopep8</a></h3>
 <p>Autopep8 fixes errors returned by <code>pycodestyle</code>. It can be configured to ignore
 certain&nbsp;errors.</p>
-<h2><a href="https://github.com/timothycrosley/isort">isort</a></h2>
+<h3><a href="https://github.com/timothycrosley/isort">isort</a></h3>
 <p>Another aspect of code formatting is import sorting. Isort will split imports in
 a module into types (builtin, local, third party) and sort them&nbsp;alphabetically.</p>
 <p>Pros:
@@ -209,23 +218,28 @@ a module into types (builtin, local, third party) and sort them&nbsp;alphabetica
 <ul>
 <li>needs a bit of configuration to work well with Black (see <a href="https://github.com/timothycrosley/isort/issues/694#issuecomment-564261886">this
 issue</a>)</li>
-<li>sometimes changes its mind and causes&nbsp;diffs</li>
+<li>sometimes changes its mind (depending on active environemnt and available
+packages) and causes&nbsp;diffs</li>
 </ul>
-<h1>Linters</h1>
+<h2>Linters</h2>
 <p>Linters are tools that analyze your code and report&nbsp;problems.</p>
-<h2><a href="https://pycodestyle.readthedocs.io/">pycodestyle</a></h2>
+<h3><a href="https://pycodestyle.readthedocs.io/">pycodestyle</a></h3>
 <p>Check if the code conforms to <span class="caps">PEP8</span> standard. Is used by <code>autopep8</code> to find
 errors but can be used also with <code>black</code>.</p>
-<h2><a href="https://github.com/PyCQA/pyflakes">pyflakes</a></h2>
-<p>Analyzes sytax tree of modules and looks for various errors. It does not check
-for stylisic&nbsp;errors.</p>
+<h3><a href="https://github.com/PyCQA/pyflakes">pyflakes</a></h3>
+<p>Analyzes syntax tree of modules and looks for various errors. It does not check
+for stylistic&nbsp;errors.</p>
 <p>It is fast but the checks it can do are more limited. Is is also
-not as configurable. It is a good choice for a first&nbsp;linter.</p>
-<h2><a href="https://github.com/PyCQA/pylint">pylint</a></h2>
-<p>According to the Readme: Static code analysis tool that looks for programming
+not as configurable. It is a good choice for if you need a linter to run in your&nbsp;editor.</p>
+<h3><a href="https://github.com/PyCQA/pylint">pylint</a></h3>
+<p>From&nbsp;Readme:</p>
+<blockquote>
+<p>Static code analysis tool that looks for programming
 errors, helps enforcing a coding standard, finds code smells and suggests&nbsp;refactorings.</p>
-<p>It is very configurable, has <strong>a lot</strong> of checkers. It also has extensive
-documentation with <span class="caps">HOW</span>-TOs, tutorials and technical&nbsp;reference.</p>
+</blockquote>
+<p>It is very configurable, has <strong>a lot</strong> of checkers (modules that check certain
+things). It also has extensive documentation with <span class="caps">HOW</span>-TOs, tutorials and
+technical&nbsp;reference.</p>
 <p>Pros:</p>
 <ul>
 <li>powerful</li>
@@ -237,31 +251,36 @@ documentation with <span class="caps">HOW</span>-TOs, tutorials and technical&nb
 <li>too noisy with default settings (best is to disable everything first, then
    enable only what you need). Here is an <a href="https://github.com/datawire/quark/blob/master/.pylintrc">example&nbsp;config</a></li>
 </ul>
-<h1>Static&nbsp;type-checkers</h1>
+<h2>Static&nbsp;type-checkers</h2>
 <p>Python has type annotation syntax since version <a href="https://www.python.org/dev/peps/pep-3107/">3.0</a>
 and support for type hints since version 3.5 in
 <a href="https://docs.python.org/3.5/library/typing.html#module-typing">typing</a> library.
 Type annotation are not mandatory (<a href="https://www.python.org/dev/peps/pep-0484/#non-goals">and never will be</a>)
 and any type checking is left to third party&nbsp;tools.</p>
 <p>Here are some of the more well-known tools for static type&nbsp;checking:</p>
-<h2><a href="https://mypy.readthedocs.io/">mypy</a></h2>
+<h3><a href="https://mypy.readthedocs.io/">mypy</a></h3>
 <p>This one feels more &#8220;official&#8221; because Guido is involved in it&#8217;s development and
 it lives in &#8220;python&#8221; Github&nbsp;organization.</p>
 <p>It can give you some benefits even with no type annotations in your code. It is
 not bulletproof and sometimes needs help but it does catch&nbsp;errors.</p>
-<h2><a href="https://pyre-check.org/">pyre</a></h2>
+<h3><a href="https://pyre-check.org/">pyre</a></h3>
 <p>Pyre is developed by Facebook but I have not tried&nbsp;it.</p>
-<h2><a href="https://github.com/microsoft/pyright">pyright</a></h2>
+<h3><a href="https://github.com/microsoft/pyright">pyright</a></h3>
 <p>Pyright is developed by Microsoft but its Readme&nbsp;states:</p>
 <blockquote>
 <p>Pyright is a side project with no dedicated team. There is
 no guarantee of continued development on the project. If you find it useful,
 feel free to use it and contribute to the code&nbsp;base.</p>
 </blockquote>
-<h1>Other&nbsp;tools</h1>
+<h2>Other&nbsp;tools</h2>
 <p>Here are some tools that don&#8217;t belong in any of the categories. Although
-interesting, most of these tools are not well known are very&nbsp;mature:</p>
+interesting, most of these tools are not well known or very&nbsp;mature:</p>
 <ul>
+<li><a href="https://github.com/davidhalter/jedi">jedi</a> - autocompletion and static
+analysis library<ul>
+<li>can be integrated with many different editors (Vim, Emacs, Sublime,&nbsp;VSCode,&#8230;)</li>
+</ul>
+</li>
 <li><a href="https://github.com/python-rope/rope">rope</a> - renaming/refactoring<ul>
 <li>only partial Python3&nbsp;support</li>
 </ul>
@@ -278,8 +297,8 @@ interesting, most of these tools are not well known are very&nbsp;mature:</p>
 </li>
 <li><a href="https://github.com/myint/eradicate">eradicate</a> - removes commented-out&nbsp;code</li>
 </ul>
-<h1>Tool&nbsp;bundles</h1>
-<p>There are several projects that bundle several tools&nbsp;togehter</p>
+<h2>Tool&nbsp;bundles</h2>
+<p>There are a couple of projects that bundle several tools&nbsp;togehter:</p>
 <ul>
 <li><a href="https://github.com/PyCQA/prospector">prospector</a><ul>
 <li>Pylint, pyflakes, pycodestyle, mccabe, dodgy and some others by&nbsp;default</li>
@@ -295,45 +314,180 @@ interesting, most of these tools are not well known are very&nbsp;mature:</p>
 </ul>
 </li>
 </ul>
-<h1>IDEs</h1>
-<p>All mentioned tools can be used by themselves from commandline or <span class="caps">CI</span>/<span class="caps">CD</span> (see
+<h2>IDEs</h2>
+<p>All mentioned tools can be used by themselves from command-line or <span class="caps">CI</span>/<span class="caps">CD</span> (see
 below), but mostly we want to have them run in real time while we are writing
 code. We are not cave-people banging rocks together - everyone should use some
 kind of <span class="caps">IDE</span>.</p>
-<h2>PyCharm</h2>
-<p>PyCharm has its language server that implements intellisense, refactoring,
-linting, import sorting etc. But it has support for &#8220;external tools&#8221; - tools
-that will be run from inside the <span class="caps">IDE</span>.</p>
-<h2>Visual Studio&nbsp;Code</h2>
+<h3>PyCharm</h3>
+<p>PyCharm has its own language server that implements intellisense, refactoring,
+linting, import sorting etc. But it has support for &#8220;external tools&#8221; that will
+be run from inside the <span class="caps">IDE</span>.</p>
+<h3>Visual Studio&nbsp;Code</h3>
 <p>VSCode has great <a href="https://code.visualstudio.com/docs/python/python-tutorial">support for Python</a>.
-It also has its own language server, but it integrates extenal tools for
+It also has its own language server, but it integrates external tools for
 different&nbsp;tasks:</p>
 <ul>
 <li>Formatting<ul>
 <li><code>autopep8</code> is enabled by default, but <code>black</code> can be enabled in&nbsp;settings</li>
 </ul>
 </li>
-<li>Uses <code>isort</code> for import&nbsp;sorting</li>
-<li><code>pylint</code> is enabled by default but other linters are enabled:<ul>
+<li><code>isort</code> is used by default for import&nbsp;sorting</li>
+<li><code>pylint</code> is enabled by default but other linters can be used enabled:<ul>
 <li>Flake8</li>
 <li>mypy</li>
 <li>pycodestyle</li>
-<li>prospector (combines other&nbsp;tools)</li>
+<li>prospector</li>
 <li>pylama</li>
 <li>bandit</li>
 </ul>
 </li>
 </ul>
-<h2>(Neo)vim</h2>
+<h3>(Neo)vim</h3>
 <p>Vim is not an <span class="caps">IDE</span>, but it can be setup for Python development pretty well.
 Here are <a href="https://medium.com/@hanspinckaers/setting-up-vim-as-an-ide-for-python-773722142d1d">some</a>
 <a href="https://github.com/rapphil/vim-python-ide/">resources</a> on how to do that.
 <a href="https://github.com/Luminaar/dotfiles/blob/master/nvim/init.vim">Here</a> is my&nbsp;setup.</p>
 <p>It is a lot of work but it can be done. I&#8217;m using Vim for Python development
 every day at&nbsp;work.</p>
-<h1>Python tooling in <span class="caps">CI</span>/<span class="caps">CD</span>&nbsp;workflows</h1>
-<p>Besides using tools in development, we would like to also have some checks setup
-in Teamcity that enforce code&nbsp;quality.</p>
+<h1>Using Python&nbsp;tools</h1>
+<h2>What are we&nbsp;using?</h2>
+<p>Over time and after some discussion our team settled on following tools (by
+settled I mean that most of us are using them and we recommend them to&nbsp;newcomers):</p>
+<ul>
+<li><code>black</code> for code&nbsp;formatting</li>
+<li><code>isort</code> configured to work with&nbsp;black</li>
+<li><code>pylint</code> and <code>pycodestyle</code> with configuration in our package definition (more
+    on that&nbsp;later)</li>
+<li>optionally <code>mypy</code> (we are using type annotations in our&nbsp;code)</li>
+</ul>
+<p>What is not completely clear is how to best &#8220;enforce&#8221; usage of those&nbsp;tools.</p>
+<h2>How to use the&nbsp;tools</h2>
+<p>There are two main&nbsp;use-cases:</p>
+<ul>
+<li>local&nbsp;development</li>
+<li>centralized checks in <span class="caps">CI</span></li>
+</ul>
+<p>When I&#8217;m writing code, I want it to be formatted (<code>black</code>, <code>isort</code>) and I want
+my <span class="caps">IDE</span> to catch errors as I&#8217;m making them (<code>pylint</code>, language&nbsp;server).</p>
+<p>After pushing my code, I want <span class="caps">CI</span> system to check that the code adheres to our
+coding standard (so that reviewers don&#8217;t need to waste time checking my
+formatting) and check that there are no errors (run tests and static&nbsp;analysis).</p>
+<p>I want the centralized checks to be handled for me so that I don&#8217;t have to worry
+about (or forget) setting them up with each new project. But I also would like
+to be able run the same checks locally to catch any errors before I push my code
+(so I don&#8217;t have to wait for a build to&nbsp;fail).</p>
+<p>So the requirements&nbsp;are:</p>
+<ol>
+<li>some tools integrated with the&nbsp;editor</li>
+<li>centralized checks in <span class="caps">CI</span> that do not depend on developers remembering to set
+    them&nbsp;up</li>
+<li>ability to run the same checks&nbsp;locally</li>
+</ol>
+<h3>Tools integrated with the&nbsp;editor</h3>
+<p>This is not something that we as a team can control directly. Everyone uses
+different editors and environment. What we have done is agreeing on a common set
+of tools which everyone should&nbsp;use.</p>
+<p>We have a document called <code>Python Stack</code> that contains this information. This
+document is a kind of a decision log for us. It is also useful for beginners and
+newcomers in our&nbsp;team.</p>
+<h3>Centralized checks in <span class="caps">CI</span></h3>
+<p>As a team we have decided what checks will be run in <span class="caps">CI</span> (Teamcity in our case)
+and we are letting the system enforce it. Because each project in Teamcity is
+created from a template, we don&#8217;t need to worry about setting the checks up&nbsp;ourselves.</p>
+<p>These checks require some configuration and with that comes a question of where
+to put it. In our team we put all our code in Python packages that have a
+<code>setup.cfg</code> file. This file can be used to store configuration for <code>pylint</code>,
+<code>pycodestyle</code> and many other&nbsp;tools.</p>
+<p>To make packaging more comfortable, we use <a href="https://cookiecutter.readthedocs.io/">cookicutter
+templates</a>. That way configuration is the
+same for all projects but can be customized if needed. Checks in Teamcity then
+rely on this configuration. This is a compromise between centralized control and
+freedom to customize&nbsp;things.</p>
+<p>Here is an example of a package configuration (from my <a href="https://github.com/Luminaar/k8secret">personal
+project</a> but it is based on what we use in&nbsp;production).</p>
+<p><code>setup.py</code> looks like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="n">setup</span><span class="p">()</span>
+</pre></div>
+
+
+<p>and <code>setup.cfg</code> file looks like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="c1"># ...</span>
+
+<span class="k">[options]</span>
+
+<span class="na">setup_requires</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    pytest-runner &gt;= 5.0, &lt;6.0</span>
+
+<span class="c1"># ...</span>
+
+<span class="na">tests_require</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    pytest &gt;=5.0, &lt;6.0</span>
+<span class="s">    pytest-cov &gt;=2.8.1, &lt;3.0</span>
+<span class="s">    pytest-pylint &gt;=0.14.1, &lt;1.0</span>
+<span class="s">    pytest-pycodestyle &gt;=2.0.0, &lt;3.0</span>
+
+<span class="c1"># ...</span>
+
+<span class="k">[aliases]</span>
+<span class="na">test</span><span class="o">=</span><span class="s">pytest</span>
+
+<span class="k">[tool:pytest]</span>
+<span class="na">addopts</span> <span class="o">=</span> <span class="s">--verbose --pylint --pylint-rcfile=setup.cfg --cov=k8secrets --cov-report html --pycodestyle</span>
+
+<span class="k">[pycodestyle]</span>
+<span class="c1"># Black tries to enforce 88 characters but will leave</span>
+<span class="c1"># long strings unchanged. We leave some room for that</span>
+<span class="na">max-line-length</span><span class="o">=</span><span class="s">120</span>
+<span class="na">ignore</span><span class="o">=</span><span class="s">E4,E7,W3</span>
+
+<span class="c1"># Configuration for pylint</span>
+<span class="k">[MASTER]</span>
+<span class="na">ignore</span><span class="o">=</span><span class="s">CVS</span>
+<span class="na">good-names</span><span class="o">=</span><span class="s">logger,e,i,j,n,m,f,_</span>
+
+<span class="k">[MESSAGES CONTROL]</span>
+<span class="na">disable</span><span class="o">=</span><span class="s">all</span>
+<span class="na">enable</span><span class="o">=</span><span class="s">unused-import,</span>
+<span class="s">       fixme,</span>
+<span class="s">       useless-object-inheritance,</span>
+<span class="s">       unused-variable,</span>
+<span class="s">       unused-argument,</span>
+<span class="s">       unexpected-keyword-arg,</span>
+<span class="s">       string,</span>
+<span class="s">       unreachable,</span>
+<span class="s">       invalid-name,</span>
+<span class="s">       logging-not-lazy,</span>
+<span class="s">       unnecesary-pass</span>
+</pre></div>
+
+
+<h3>Running <span class="caps">CI</span> checks&nbsp;locally</h3>
+<p>If you look at the package configuration you will see a lot of different
+<code>pytest</code> related&nbsp;dependencies.</p>
+<p><code>pytest-runner</code> allows us to run tests with <code>setuptools</code> like&nbsp;this:</p>
+<p><code>python setup.py test</code></p>
+<p>This will install the package and its dependencies and run tests. This is done
+independently in its own&nbsp;environment.</p>
+<p><code>pytest-cov</code>, <code>pytest-pylint</code> and <code>pytest-pycodestyle</code> are plugins that run code
+coverage, pylint and pycodestyle respectively, together with&nbsp;tests.</p>
+<p>This works both locally and in Teamcity, so you can run <span class="caps">CI</span> checks before pushing
+your code. One option is to add a pre-commit hook to the Git repository that
+will not allow commiting code that did not pass the checks. This is up to each
+developer and needs to be done for each project. There are some tools that help
+with this, such as <a href="https://pre-commit.com/">pre-commit.com</a>.</p>
+<p>One issue with setup that I personally have is, that I always run my tests with
+setuptools (<code>python setup.py test</code>) and that runs both tests and linters
+every time. I haven&#8217;t found a good solution yet. For now I just turn off the
+linters temporarily (I run linters with the same settings right in my editor).
+This is of course not ideal, because I can easily forget to turn the linters back
+on and they will not run in <span class="caps">CI</span>.</p>
+<h1>Conclusion</h1>
+<p>There really isn&#8217;t one. I&#8217;ve described some tools and hove we use some of them
+in our team. There is still a lot that can be improved and that will happen
+incrementally over time. For now, we are happy with how everything&nbsp;works.</p>
             </section>
 
             <section class="post-info">
