@@ -151,7 +151,7 @@ section I will put some thoughts on how these tools can be used in different&nbs
 <p>When I started doing research for this post I expected it to be a much more
 complicated topic (same as packaging for example). Turns out there are not that
 many tools - there is almost only one way to do&nbsp;things.</p>
-<p>I this section I will categorize different tools into five categories, describe and
+<p>Is this section I will categorize different tools into five categories, describe and
 compare them. I know a lot more about tools that I use everyday but I&#8217;ve
 experimented with most of the others&nbsp;too.</p>
 <h2>Formatters</h2>
@@ -161,7 +161,7 @@ are two PEPs that describe how Python code should look. The <span class="caps">P
 be dogmatic and adhering to it is not the only necessary prerequisite for good
 Python code, but it is a start. Because formatting code by hand is tedious,
 using some kind of formatter is almost a&nbsp;necessity.</p>
-<p>When working in a team, it&#8217;s is better when everyones code looks the same.
+<p>When working in a team, it&#8217;s is better when everyone&#8217;s code looks the same.
 Ideally it shouldn&#8217;t be obvious who wrote the code from just looking at it. If
 everyone is using the same formatter, there will not be any &#8220;stylistic&#8221; comments
 in code review and no unnecessary diffs if two people work on the same&nbsp;module.</p>
@@ -174,8 +174,9 @@ in code review and no unnecessary diffs if two people work on the same&nbsp;modu
 pretty much the only thing you can configure and even that is discouraged). This
 is a good thing because you don&#8217;t have to synchronize configuration across
 developers in the&nbsp;team.</p>
-<p>When formatting it makes sure that the <span class="caps">AST</span> of the code did not change (it will
-not break your&nbsp;code).</p>
+<p>When formatting it makes sure that the <span class="caps">AST</span> (<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax
+tree</a>) of the code did not
+change (it will not break your&nbsp;code).</p>
 <p>In my experiments it worked pretty well with <code>pycodestyle</code> (see Linters)
 although you may have to disable some&nbsp;checks.</p>
 <p>Pros:</p>
@@ -399,7 +400,7 @@ created from a template, we don&#8217;t need to worry about setting the checks u
 to put it. In our team we put all our code in Python packages that have a
 <code>setup.cfg</code> file. This file can be used to store configuration for <code>pylint</code>,
 <code>pycodestyle</code> and many other&nbsp;tools.</p>
-<p>To make packaging more comfortable, we use <a href="https://cookiecutter.readthedocs.io/">cookicutter
+<p>To make packaging more comfortable, we use <a href="https://cookiecutter.readthedocs.io/">cookiecutter
 templates</a>. That way configuration is the
 same for all projects but can be customized if needed. Checks in Teamcity then
 rely on this configuration. This is a compromise between centralized control and
@@ -517,11 +518,10 @@ incrementally over time. For now, we are happy with how everything&nbsp;works.</
                         </figure>
                     <div class="post-author-bio">
                         <h4 class="post-author-name"><a href="https://luminar.dev/author/max.html">Max K.</a></h4>
-                            <p class="post-author-about">I'm a backend engineer at Avast. I work mostly with Python, Scala and Kubernetes.</p>
+                            <p class="post-author-about">I'm a software engineer at Avast where I do a lot of Python programming on back-end systems. Besides coding, I spend a lot of time on spreading Python know-how both in our team an across the company.</p>
                             <span class="post-author-location"><i class="ic ic-location"></i> Prague</span>
                         <!-- Social linkes in alphabet order. -->
                             <span class="post-author-github"><a target="_blank" href="https://github.com/Luminaar"><i class="ic ic-link"></i> GitHub</a></span>
-                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/Luminar_"><i class="ic ic-twitter"></i> Twitter</a></span>
                     </div>
                     <div class="clear"></div>
                 </aside>

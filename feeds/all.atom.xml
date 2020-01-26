@@ -14,7 +14,7 @@ section I will put some thoughts on how these tools can be used in different&amp
 &lt;p&gt;When I started doing research for this post I expected it to be a much more
 complicated topic (same as packaging for example). Turns out there are not that
 many tools - there is almost only one way to do&amp;nbsp;things.&lt;/p&gt;
-&lt;p&gt;I this section I will categorize different tools into five categories, describe and
+&lt;p&gt;Is this section I will categorize different tools into five categories, describe and
 compare them. I know a lot more about tools that I use everyday but I&amp;#8217;ve
 experimented with most of the others&amp;nbsp;too.&lt;/p&gt;
 &lt;h2&gt;Formatters&lt;/h2&gt;
@@ -24,7 +24,7 @@ are two PEPs that describe how Python code should look. The &lt;span class="caps
 be dogmatic and adhering to it is not the only necessary prerequisite for good
 Python code, but it is a start. Because formatting code by hand is tedious,
 using some kind of formatter is almost a&amp;nbsp;necessity.&lt;/p&gt;
-&lt;p&gt;When working in a team, it&amp;#8217;s is better when everyones code looks the same.
+&lt;p&gt;When working in a team, it&amp;#8217;s is better when everyone&amp;#8217;s code looks the same.
 Ideally it shouldn&amp;#8217;t be obvious who wrote the code from just looking at it. If
 everyone is using the same formatter, there will not be any &amp;#8220;stylistic&amp;#8221; comments
 in code review and no unnecessary diffs if two people work on the same&amp;nbsp;module.&lt;/p&gt;
@@ -37,8 +37,9 @@ in code review and no unnecessary diffs if two people work on the same&amp;nbsp;
 pretty much the only thing you can configure and even that is discouraged). This
 is a good thing because you don&amp;#8217;t have to synchronize configuration across
 developers in the&amp;nbsp;team.&lt;/p&gt;
-&lt;p&gt;When formatting it makes sure that the &lt;span class="caps"&gt;AST&lt;/span&gt; of the code did not change (it will
-not break your&amp;nbsp;code).&lt;/p&gt;
+&lt;p&gt;When formatting it makes sure that the &lt;span class="caps"&gt;AST&lt;/span&gt; (&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"&gt;abstract syntax
+tree&lt;/a&gt;) of the code did not
+change (it will not break your&amp;nbsp;code).&lt;/p&gt;
 &lt;p&gt;In my experiments it worked pretty well with &lt;code&gt;pycodestyle&lt;/code&gt; (see Linters)
 although you may have to disable some&amp;nbsp;checks.&lt;/p&gt;
 &lt;p&gt;Pros:&lt;/p&gt;
@@ -262,7 +263,7 @@ created from a template, we don&amp;#8217;t need to worry about setting the chec
 to put it. In our team we put all our code in Python packages that have a
 &lt;code&gt;setup.cfg&lt;/code&gt; file. This file can be used to store configuration for &lt;code&gt;pylint&lt;/code&gt;,
 &lt;code&gt;pycodestyle&lt;/code&gt; and many other&amp;nbsp;tools.&lt;/p&gt;
-&lt;p&gt;To make packaging more comfortable, we use &lt;a href="https://cookiecutter.readthedocs.io/"&gt;cookicutter
+&lt;p&gt;To make packaging more comfortable, we use &lt;a href="https://cookiecutter.readthedocs.io/"&gt;cookiecutter
 templates&lt;/a&gt;. That way configuration is the
 same for all projects but can be customized if needed. Checks in Teamcity then
 rely on this configuration. This is a compromise between centralized control and

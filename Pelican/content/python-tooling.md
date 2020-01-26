@@ -30,7 +30,7 @@ When I started doing research for this post I expected it to be a much more
 complicated topic (same as packaging for example). Turns out there are not that
 many tools - there is almost only one way to do things.
 
-I this section I will categorize different tools into five categories, describe and
+Is this section I will categorize different tools into five categories, describe and
 compare them. I know a lot more about tools that I use everyday but I've
 experimented with most of the others too.
 
@@ -42,7 +42,7 @@ be dogmatic and adhering to it is not the only necessary prerequisite for good
 Python code, but it is a start. Because formatting code by hand is tedious,
 using some kind of formatter is almost a necessity.
 
-When working in a team, it's is better when everyones code looks the same.
+When working in a team, it's is better when everyone's code looks the same.
 Ideally it shouldn't be obvious who wrote the code from just looking at it. If
 everyone is using the same formatter, there will not be any "stylistic" comments
 in code review and no unnecessary diffs if two people work on the same module.
@@ -58,8 +58,9 @@ pretty much the only thing you can configure and even that is discouraged). This
 is a good thing because you don't have to synchronize configuration across
 developers in the team.
 
-When formatting it makes sure that the AST of the code did not change (it will
-not break your code).
+When formatting it makes sure that the AST ([abstract syntax
+tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)) of the code did not
+change (it will not break your code).
 
 In my experiments it worked pretty well with `pycodestyle` (see Linters)
 although you may have to disable some checks.
@@ -321,7 +322,7 @@ to put it. In our team we put all our code in Python packages that have a
 `setup.cfg` file. This file can be used to store configuration for `pylint`,
 `pycodestyle` and many other tools.
 
-To make packaging more comfortable, we use [cookicutter
+To make packaging more comfortable, we use [cookiecutter
 templates](https://cookiecutter.readthedocs.io/). That way configuration is the
 same for all projects but can be customized if needed. Checks in Teamcity then
 rely on this configuration. This is a compromise between centralized control and
