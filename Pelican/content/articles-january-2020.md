@@ -2,7 +2,8 @@ Title: Article list from January of 2020
 Date: 2020-02-02 18:53:07
 Category: Articles
 Tags: Articles
-Summary: Some of the articles I've read in January of 2020
+Summary: A list of articles I've read in January of 2020 with commentary.
+
 
 Last months' list is much longer than the one before that - 38 articles opposed
 to 13 in December of last year (though I did a lot of filtering then).
@@ -14,7 +15,6 @@ is just another way to kill time. But this is arguably better than scrolling
 through Twitter or Facebook.
 
 This time I will break the list down into categories.
-
 
 
 ### Sustainability
