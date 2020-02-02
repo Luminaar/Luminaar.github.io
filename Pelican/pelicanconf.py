@@ -38,7 +38,7 @@ AUTHORS_BIO = {
             "I'm a software engineer at Avast "
             "where I do a lot of Python programming on back-end systems. "
             "Besides coding, I spend a lot of time on spreading Python know-how "
-            "both in our team an across the company."
+            "both in our team and across the company."
         ),
         "github": "Luminaar",
     }

@@ -1,5 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - Articles</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/articles.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2020-01-01T21:23:05+01:00</updated><entry><title>Article list from December of 2019</title><link href="https://luminar.dev/notes/20-01-article-list-from-december-of-2019/" rel="alternate"></link><published>2020-01-01T21:23:05+01:00</published><updated>2020-01-01T21:23:05+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-01-01:/notes/20-01-article-list-from-december-of-2019/</id><summary type="html">&lt;p&gt;Some of the articles I&amp;#8217;ve read in December of&amp;nbsp;2019&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is a list of articles I&amp;#8217;ve read last&amp;nbsp;month:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar - Articles</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/articles.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2020-02-02T18:53:07+01:00</updated><entry><title>Article list from January of 2020</title><link href="https://luminar.dev/notes/20-02-article-list-from-january-of-2020/" rel="alternate"></link><published>2020-02-02T18:53:07+01:00</published><updated>2020-02-02T18:53:07+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-02-02:/notes/20-02-article-list-from-january-of-2020/</id><summary type="html">&lt;p&gt;Some of the articles I&amp;#8217;ve read in January of&amp;nbsp;2020&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last months&amp;#8217; list is much longer than the one before that - 38 articles opposed
+to 13 in December of last year (though I did a lot of filtering&amp;nbsp;then).&lt;/p&gt;
+&lt;p&gt;A lot of articles fall into &amp;#8220;not that interesting&amp;#8221; category. I tend to just
+bookmark everything I see an often the articles are not that great. I read them
+anyway because I&amp;#8217;m bored on my way to/from work. The truth is, reading articles
+is just another way to kill time. But this is arguably better than scrolling
+through Twitter or&amp;nbsp;Facebook.&lt;/p&gt;
+&lt;p&gt;This time I will break the list down into&amp;nbsp;categories.&lt;/p&gt;
+&lt;h3&gt;Sustainability&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LOW&lt;/span&gt;-&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt; is pretty interesting and I&amp;#8217;ve subscribed to them.
+While everyone talks vaguely about technology solving global warming,
+authors of this magazine are skeptical about high-tech solutions and are looking
+for low-tech&amp;nbsp;ones.&lt;/p&gt;
+&lt;p&gt;Articles linked below are interesting because they are hosted on a
+static, solar-powered website that goes down if there is not enough&amp;nbsp;power.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solar.lowtechmagazine.com/2019/06/wooden-wind-turbines.html"&gt;How to Make Wind Power Sustainable Again - &lt;span class="caps"&gt;LOW&lt;/span&gt;←&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This article is about the unsustainability of modern wind turbines. Turbines are
+made of carbon-fiber and other materials can not be recycled and are
+difficult to get rid of. Authors explore ways to make wind power more&amp;nbsp;sustainable.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://solar.lowtechmagazine.com/2019/10/mist-showers-sustainable-decadence.html"&gt;Mist Showers: Sustainable Decadence? - &lt;span class="caps"&gt;LOW&lt;/span&gt;←&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As someone who likes to take looong hot sowers, I found this article a bit
+disconcerting. But in the end, I got curious if there is a way to save a bunch of
+water and energy while keeping some level of comfort with mist showers. This
+article claims there&amp;nbsp;is.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://jeffhuang.com/designed_to_last/"&gt;This Page is Designed to Last: A Manifesto for Preserving Content on the&amp;nbsp;Web&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This article is not really about the environment but the sustainability of
+content on the Internet. I&amp;#8217;m thinking about this topic more and more lately.
+Wouldn&amp;#8217;t it be great if the Internet was more like a library than a &lt;span class="caps"&gt;TV&lt;/span&gt;?&lt;/p&gt;
+&lt;h3&gt;Software&amp;nbsp;development&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://jvns.ca/blog/brag-documents/"&gt;Get your work recognized: write a brag document - Julia&amp;nbsp;Evans&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m coming back to this blog once in a while and always find something
+interesting. I enjoy Julia&amp;#8217;s posts a lot. The idea of a &amp;#8220;brag document&amp;#8221; is
+brilliant and I&amp;#8217;m going to put one together for myself soon. If only just for&amp;nbsp;myself.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://overreacted.io/goodbye-clean-code/"&gt;Goodbye, Clean Code — Overreacted&lt;/a&gt;
+and &lt;a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction"&gt;The Wrong Abstraction — Sandi&amp;nbsp;Metz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes clean code™ is not the same as the best code. The author shows an
+example where code duplication is better than an unnecessary abstraction
+(that does more harm than good in the long&amp;nbsp;run).&lt;/p&gt;
+&lt;p&gt;This is something we are starting to deal at work right now - modules in one
+of our back-end applications are very similar (but not identical)
+and we can&amp;#8217;t agree whether abstraction will help us or&amp;nbsp;not.&lt;/p&gt;
+&lt;p&gt;New-comers argue that we should abstract, &amp;#8220;old&amp;#8221; guys say they have been down
+this road before and it was not good (we are talking senior engineers on
+both sides&amp;nbsp;here).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/"&gt;Evidence Based Scheduling – Joel on&amp;nbsp;Software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Joel claims to have found a successful, scientific method for scheduling of
+software projects. I would love to try this method out in our team sometimes.
+One thing I find difficult is tracking time spent on different tasks in a way
+that would support this method and not be a&amp;nbsp;nuisance.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mister-gold.pro/posts/en/asciidoc-vs-markdown/"&gt;Stop Using Markdown For Documentation · Mister&amp;nbsp;Gold&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m using Markdown for everything, including documentation (usually in
+the form of READMEs) but even before finishing this article I&amp;#8217;ve realized how
+bad it is for this purpose. I will try &lt;code&gt;asciidoc&lt;/code&gt; sometime in the
+future when I need to write some serious&amp;nbsp;documentation.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gregoryszorc.com/blog/2020/01/13/mercurial%27s-journey-to-and-reflections-on-python-3/"&gt;Gregory Szorc&amp;#8217;s Digital Home | Mercurial&amp;#8217;s Journey to and Reflections on Python&amp;nbsp;3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m a huge Python fan but I will be first to agree that it has some major flaws,
+especially when it comes Python 2/3 migration. It was interesting to read about
+painful transition in a really big&amp;nbsp;project.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://teetotality.blog/posts/how-this-blog-was-made/"&gt;How This Blog Was Made |
+Teetotality&lt;/a&gt;, &lt;a href="http://teetotality.blog/posts/why-ipfs/"&gt;Why build
+this blog - or anything - on &lt;span class="caps"&gt;IPFS&lt;/span&gt;? |
+Teetotality&lt;/a&gt; and &lt;a href="https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f"&gt;A Beginner’s Guide to &lt;span class="caps"&gt;IPFS&lt;/span&gt; -&amp;nbsp;By&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I got curious about &lt;span class="caps"&gt;IPFS&lt;/span&gt; after reading the first article. I&amp;#8217;m not sure it is
+useful to me now but it is certainly something I would like to keep an eye out
+for (related to the sustainable Internet). It also reminded me about
+an experimental build tool and dependency management for Scala called
+&lt;a href="https://fury.build/"&gt;Fury&lt;/a&gt; which uses &lt;span class="caps"&gt;IPFS&lt;/span&gt; to distribute&amp;nbsp;packages.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tonsky.me/blog/performance-first/"&gt;Performance first @&amp;nbsp;tonsky.me&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The author disagrees with the&amp;nbsp;quote&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Premature optimization is the root of all&amp;nbsp;evil.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and I&amp;#8217;m wondering if he is right. Maybe if making software wasn&amp;#8217;t so cheap,
+there would be more good&amp;nbsp;software.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://archive.is/zkmaE"&gt;Docker is the dangerous gamble which we will regret | Smash&amp;nbsp;Company&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m using Docker a lot at work but this article made me realize I know nothing
+about&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://honzajavorek.cz/blog/how-i-deploy?fbclid=IwAR3QI-qGGHu6VPcJwLhWUhwAh-9CsJ9OnwdJeqxjaEAKufMfjEqRLa5PD0U"&gt;How I deploy — Honza&amp;nbsp;Javorek&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Honza talks about different ways he tries to make his life easier when creating
+websites (blogs, documentation, web apps) like static site generators, free &lt;span class="caps"&gt;CI&lt;/span&gt;
+and FaaS platforms and&amp;nbsp;more.&lt;/p&gt;
+&lt;p&gt;He is a big fan of &lt;a href="https://zeit.co/home"&gt;Zeit.co&lt;/a&gt; and made me want to try it
+out&amp;nbsp;again.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://programmingisterrible.com/post/65781074112/devils-dictionary-of-programming"&gt;Devil&amp;#8217;s Dictionary of Programming — programming is&amp;nbsp;terrible&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A funny&amp;nbsp;joke.&lt;/p&gt;
+&lt;h3&gt;Political&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://thepointmag.com/examined-life/treat-yourself/"&gt;Treat Yourself | The Point&amp;nbsp;Magazine&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I don&amp;#8217;t remember where I got this one but my first thought after looking at the
+title was &amp;#8220;let&amp;#8217;s see what kind of self-help nonsense they will try to sell me
+this time&amp;#8221;. Only after getting a couple of pages into this essay did I realize
+it is a critique of self-care as well as of constant &amp;#8220;struggle&amp;#8221; and
+&amp;#8220;resistance&amp;#8221; against capitalism that is common among Millenials (whatever
+that means). I&amp;#8217;m still unpacking this one and will probably read it for the
+third and maybe even fourth time. There is just something in there I can&amp;#8217;t put
+my finger&amp;nbsp;on.&lt;/p&gt;
+&lt;p&gt;I came across &lt;a href="https://newrepublic.com/"&gt;The New Republic&lt;/a&gt; and read a couple of
+articles in one sitting. I not sure how what to think about the magazine. I&amp;#8217;ve
+subscribed to their newsletter but it&amp;#8217;s mostly paid promotions and offers of
+$4000 all-inclusive trips to Cuba (to meet with local intellectuals and to
+support the revolution, I&amp;nbsp;guess?).&lt;/p&gt;
+&lt;p&gt;I think I&amp;#8217;m reading too much about politics in the &lt;span class="caps"&gt;USA&lt;/span&gt; and need to focus on
+Europe more. Which I will do in the&amp;nbsp;future.&lt;/p&gt;
+&lt;p&gt;Here are the articles from &lt;span class="caps"&gt;TNR&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://newrepublic.com/article/155999/loneliness-resistance-protester?utm_source=newsletter&amp;amp;utm_medium=email&amp;amp;utm_campaign=audm"&gt;The Loneliness of the Resistance Protester | The New&amp;nbsp;Republic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://newrepublic.com/article/155273/state-siege?utm_source=newsletter&amp;amp;utm_medium=email&amp;amp;utm_campaign=audm"&gt;State Under Siege | The New&amp;nbsp;Republic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://newrepublic.com/article/155643/trump-articles-of-impeachment-high-crimes?utm_source=newsletter&amp;amp;utm_medium=email&amp;amp;utm_campaign=audm"&gt;High Crimes | The New&amp;nbsp;Republic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://a2larm.cz/2020/01/pirati-jako-deti-ok-boomers-klise-nam-jejich-politiku-ale-nevysvetli/"&gt;Piráti jako děti? Ok, boomers. Klišé nám jejich politiku ale nevysvětlí –&amp;nbsp;A2larm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I keep getting promoted posts from A2larm on Facebook. The articles are hit and
+miss. This one is about the Czech Pirate Party and how everyone treats them as
+if they are children and are new to politics when in fact they&amp;#8217;ve been here for more
+than 10 years and did a lot of work on different levels of&amp;nbsp;government.&lt;/p&gt;
+&lt;h3&gt;Not that&amp;nbsp;interesting&lt;/h3&gt;
+&lt;p&gt;In no particular&amp;nbsp;order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://archive.is/1Zdow"&gt;Docker in Production: An Update – The &lt;span class="caps"&gt;HFT&lt;/span&gt;&amp;nbsp;Guy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.haskellforall.com/2020/01/why-dhall-advertises-absence-of-turing.html?m=1"&gt;Haskell for all: Why Dhall advertises the absence of&amp;nbsp;Turing-completeness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nodramadevops.com/2019/12/key-practices-for-achieving-large-professional-goals/"&gt;Key practices for achieving large professional goals | #NoDrama&amp;nbsp;DevOps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nature.com/news/sex-redefined-1.16943"&gt;Sex redefined : Nature News &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;Comment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.pgbovine.net/python-tutor-ten-years.htm"&gt;Philip Guo - Ten years and nearly ten million users: my experience being a solo maintainer of open-source software in&amp;nbsp;academia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@rossformaine/i-was-googles-head-of-international-relations-here-s-why-i-left-49313d23065"&gt;I Was Google’s Head of International Relations. Here’s Why I&amp;nbsp;Left.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://quillette.com/2020/01/04/build-your-own-intellectual-oasis/"&gt;Build Your Own Intellectual Oasis -&amp;nbsp;Quillette&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.acolyer.org/2020/01/08/ironies-of-automation/"&gt;Ironies of automation – the morning&amp;nbsp;paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://thenewstack.io/how-the-u-s-air-force-deployed-kubernetes-and-istio-on-an-f-16-in-45-days/"&gt;How the &lt;span class="caps"&gt;U.S.&lt;/span&gt; Air Force Deployed Kubernetes and Istio on an F-16 in 45 days - The New&amp;nbsp;Stack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.alexhudson.com/2020/01/13/the-no-code-delusion/"&gt;The &amp;#8216;No Code&amp;#8217; Delusion – Alex&amp;nbsp;Hudson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://flownet.com/gat/jpl-lisp.html"&gt;flownet.com/gat/jpl-lisp.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://words.steveklabnik.com/a-sad-day-for-rust"&gt;A sad day for&amp;nbsp;Rust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://slack.engineering/search-at-slack-431f8c80619e#.qo83512sm"&gt;Search at Slack - Several People Are&amp;nbsp;Coding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nodramadevops.com/2020/01/the-context-people-and-tools-need-to-work-with-your-cloud/"&gt;The context people and tools need to work with your Cloud | #NoDrama&amp;nbsp;DevOps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.bbc.com/news/technology-50604035"&gt;Burnout: &amp;#8216;Sick and tired of feeling sick and tired&amp;#8217; - &lt;span class="caps"&gt;BBC&lt;/span&gt;&amp;nbsp;News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://codahale.com//work-is-work/"&gt;Work Is Work |&amp;nbsp;codahale.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://danluu.com/wat/"&gt;Normalization of&amp;nbsp;deviance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://thepointmag.com/examined-life/who-wants-to-play-the-status-game-agnes-callard/"&gt;Who Wants to Play the Status Game? | The Point&amp;nbsp;Magazine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes and&amp;nbsp;takeaways&lt;/h2&gt;
+&lt;p&gt;This list is generated automatically from bookmarks in my browser. The text is
+written manually. I&amp;#8217;ve used &lt;a href="grammarly.com"&gt;Grammarly&lt;/a&gt; for the first time and
+I&amp;#8217;m glad it didn&amp;#8217;t find too many errors. If only there was a way to integrate it
+into&amp;nbsp;Vim&amp;#8230;&lt;/p&gt;
+&lt;p&gt;I like looking back at the articles I&amp;#8217;ve read and re-reading some of them. There
+is always something I would like to come back to but I rarely do. Here are
+takeaways from this month (maybe this will help me to remember to look at them&amp;nbsp;later):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a brag&amp;nbsp;document&lt;/li&gt;
+&lt;li&gt;Look more into sustainable&amp;nbsp;Internet&lt;/li&gt;
+&lt;li&gt;Read more about European&amp;nbsp;politics&lt;/li&gt;
+&lt;li&gt;Check out &lt;a href="https://zeit.co/home"&gt;Zeit.co&lt;/a&gt;&amp;nbsp;again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will continue to log articles I read but maybe with more focus on quality over&amp;nbsp;quantity.&lt;/p&gt;</content><category term="Articles"></category><category term="Articles"></category></entry><entry><title>Article list from December of 2019</title><link href="https://luminar.dev/notes/20-01-article-list-from-december-of-2019/" rel="alternate"></link><published>2020-01-01T21:23:05+01:00</published><updated>2020-01-01T21:23:05+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-01-01:/notes/20-01-article-list-from-december-of-2019/</id><summary type="html">&lt;p&gt;Some of the articles I&amp;#8217;ve read in December of&amp;nbsp;2019&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here is a list of articles I&amp;#8217;ve read last&amp;nbsp;month:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/"&gt;Microservices: Rethinking the Way We Treat Data and Services | Confluent&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;A series of articles on building micro-services with persistent
