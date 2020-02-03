@@ -9,7 +9,7 @@ Last months' list is much longer than the one before that - 38 articles opposed
 to 13 in December of last year (though I did a lot of filtering then).
 
 A lot of articles fall into "not that interesting" category. I tend to just
-bookmark everything I see an often the articles are not that great. I read them
+bookmark everything I see and often the articles are not that great. I read them
 anyway because I'm bored on my way to/from work. The truth is, reading articles
 is just another way to kill time. But this is arguably better than scrolling
 through Twitter or Facebook.
@@ -19,7 +19,7 @@ This time I will break the list down into categories.
 
 ### Sustainability
 LOW-TECH MAGAZINE is pretty interesting and I've subscribed to them.
-While everyone talks vaguely about technology solving global warming,
+While everyone talks vaguely about technology solving climate change,
 authors of this magazine are skeptical about high-tech solutions and are looking
 for low-tech ones.
 
@@ -29,7 +29,7 @@ static, solar-powered website that goes down if there is not enough power.
 [How to Make Wind Power Sustainable Again - LOW←TECH MAGAZINE](https://solar.lowtechmagazine.com/2019/06/wooden-wind-turbines.html)
 
 This article is about the unsustainability of modern wind turbines. Turbines are
-made of carbon-fiber and other materials can not be recycled and are
+made of carbon-fiber and other materials that can't be recycled and are
 difficult to get rid of. Authors explore ways to make wind power more
 sustainable.
 
@@ -44,7 +44,7 @@ article claims there is.
 
 This article is not really about the environment but the sustainability of
 content on the Internet. I'm thinking about this topic more and more lately.
-Wouldn't it be great if the Internet was more like a library than a TV?
+Wouldn't it be great if the Internet was more like a library than television?
 
 
 ### Software development
@@ -52,8 +52,7 @@ Wouldn't it be great if the Internet was more like a library than a TV?
 
 I'm coming back to this blog once in a while and always find something
 interesting. I enjoy Julia's posts a lot. The idea of a "brag document" is
-brilliant and I'm going to put one together for myself soon. If only just for
-myself.
+brilliant and I'm going to put one together soon. If only just for myself.
 
 
 [Goodbye, Clean Code — Overreacted](https://overreacted.io/goodbye-clean-code/)
@@ -101,10 +100,10 @@ Teetotality](https://teetotality.blog/posts/how-this-blog-was-made/), [Why build
 this blog - or anything - on IPFS? |
 Teetotality](http://teetotality.blog/posts/why-ipfs/) and [A Beginner’s Guide to IPFS - By](https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f)
 
-I got curious about IPFS after reading the first article. I'm not sure it is
-useful to me now but it is certainly something I would like to keep an eye out
-for (related to the sustainable Internet). It also reminded me about
-an experimental build tool and dependency management for Scala called
+I got curious about IPFS (Interplanetary File System) after reading the first
+article. I'm not sure it is useful to me now but it is something I'm going to
+watch closely (this is related to the sustainable Internet). It also reminded me
+about an experimental build and dependency management tool for Scala called
 [Fury](https://fury.build/) which uses IPFS to distribute packages.
 
 
@@ -112,9 +111,9 @@ an experimental build tool and dependency management for Scala called
 
 The author disagrees with the quote
 
-> Premature optimization is the root of all evil.
+> Premature optimization is the root of all evil
 
-and I'm wondering if he is right. Maybe if making software wasn't so cheap,
+and I'm wondering if he is right. Maybe if making software wasn't so cheap
 there would be more good software.
 
 
@@ -145,14 +144,13 @@ A funny joke.
 I don't remember where I got this one but my first thought after looking at the
 title was "let's see what kind of self-help nonsense they will try to sell me
 this time". Only after getting a couple of pages into this essay did I realize
-it is a critique of self-care as well as of constant "struggle" and
-"resistance" against capitalism that is common among Millenials (whatever
-that means). I'm still unpacking this one and will probably read it for the
-third and maybe even fourth time. There is just something in there I can't put
-my finger on.
+it is a critique of self-care as well as of constant feeling of being oppressed
+by capitalism that is common among Millenials (whoever they might be). I'm still
+unpacking this one and will probably read it for the third and maybe even fourth
+time. There is just something in there I can't put my finger on.
 
 I came across [The New Republic](https://newrepublic.com/) and read a couple of
-articles in one sitting. I not sure how what to think about the magazine. I've
+articles in one sitting. I'm not sure what to think about the magazine. I've
 subscribed to their newsletter but it's mostly paid promotions and offers of
 $4000 all-inclusive trips to Cuba (to meet with local intellectuals and to
 support the revolution, I guess?).
@@ -170,7 +168,7 @@ Here are the articles from TNR:
 
 I keep getting promoted posts from A2larm on Facebook. The articles are hit and
 miss. This one is about the Czech Pirate Party and how everyone treats them as
-if they are children and are new to politics when in fact they've been here for more
+if they are children and new to politics when in fact they've been here for more
 than 10 years and did a lot of work on different levels of government.
 
 

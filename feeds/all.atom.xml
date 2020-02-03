@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/all.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2020-02-02T18:53:07+01:00</updated><entry><title>Article list from January of 2020</title><link href="https://luminar.dev/notes/20-02-article-list-from-january-of-2020/" rel="alternate"></link><published>2020-02-02T18:53:07+01:00</published><updated>2020-02-02T18:53:07+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-02-02:/notes/20-02-article-list-from-january-of-2020/</id><summary type="html">&lt;p&gt;A list of articles I&amp;#8217;ve read in January of 2020 with&amp;nbsp;commentary.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last months&amp;#8217; list is much longer than the one before that - 38 articles opposed
 to 13 in December of last year (though I did a lot of filtering&amp;nbsp;then).&lt;/p&gt;
 &lt;p&gt;A lot of articles fall into &amp;#8220;not that interesting&amp;#8221; category. I tend to just
-bookmark everything I see an often the articles are not that great. I read them
+bookmark everything I see and often the articles are not that great. I read them
 anyway because I&amp;#8217;m bored on my way to/from work. The truth is, reading articles
 is just another way to kill time. But this is arguably better than scrolling
 through Twitter or&amp;nbsp;Facebook.&lt;/p&gt;
 &lt;p&gt;This time I will break the list down into&amp;nbsp;categories.&lt;/p&gt;
 &lt;h3&gt;Sustainability&lt;/h3&gt;
 &lt;p&gt;&lt;span class="caps"&gt;LOW&lt;/span&gt;-&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt; is pretty interesting and I&amp;#8217;ve subscribed to them.
-While everyone talks vaguely about technology solving global warming,
+While everyone talks vaguely about technology solving climate change,
 authors of this magazine are skeptical about high-tech solutions and are looking
 for low-tech&amp;nbsp;ones.&lt;/p&gt;
 &lt;p&gt;Articles linked below are interesting because they are hosted on a
 static, solar-powered website that goes down if there is not enough&amp;nbsp;power.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://solar.lowtechmagazine.com/2019/06/wooden-wind-turbines.html"&gt;How to Make Wind Power Sustainable Again - &lt;span class="caps"&gt;LOW&lt;/span&gt;←&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This article is about the unsustainability of modern wind turbines. Turbines are
-made of carbon-fiber and other materials can not be recycled and are
+made of carbon-fiber and other materials that can&amp;#8217;t be recycled and are
 difficult to get rid of. Authors explore ways to make wind power more&amp;nbsp;sustainable.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://solar.lowtechmagazine.com/2019/10/mist-showers-sustainable-decadence.html"&gt;Mist Showers: Sustainable Decadence? - &lt;span class="caps"&gt;LOW&lt;/span&gt;←&lt;span class="caps"&gt;TECH&lt;/span&gt; &lt;span class="caps"&gt;MAGAZINE&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;As someone who likes to take looong hot sowers, I found this article a bit
@@ -26,12 +26,12 @@ article claims there&amp;nbsp;is.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://jeffhuang.com/designed_to_last/"&gt;This Page is Designed to Last: A Manifesto for Preserving Content on the&amp;nbsp;Web&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This article is not really about the environment but the sustainability of
 content on the Internet. I&amp;#8217;m thinking about this topic more and more lately.
-Wouldn&amp;#8217;t it be great if the Internet was more like a library than a &lt;span class="caps"&gt;TV&lt;/span&gt;?&lt;/p&gt;
+Wouldn&amp;#8217;t it be great if the Internet was more like a library than&amp;nbsp;television?&lt;/p&gt;
 &lt;h3&gt;Software&amp;nbsp;development&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://jvns.ca/blog/brag-documents/"&gt;Get your work recognized: write a brag document - Julia&amp;nbsp;Evans&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m coming back to this blog once in a while and always find something
 interesting. I enjoy Julia&amp;#8217;s posts a lot. The idea of a &amp;#8220;brag document&amp;#8221; is
-brilliant and I&amp;#8217;m going to put one together for myself soon. If only just for&amp;nbsp;myself.&lt;/p&gt;
+brilliant and I&amp;#8217;m going to put one together soon. If only just for&amp;nbsp;myself.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://overreacted.io/goodbye-clean-code/"&gt;Goodbye, Clean Code — Overreacted&lt;/a&gt;
 and &lt;a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction"&gt;The Wrong Abstraction — Sandi&amp;nbsp;Metz&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Sometimes clean code™ is not the same as the best code. The author shows an
@@ -61,17 +61,17 @@ painful transition in a really big&amp;nbsp;project.&lt;/p&gt;
 Teetotality&lt;/a&gt;, &lt;a href="http://teetotality.blog/posts/why-ipfs/"&gt;Why build
 this blog - or anything - on &lt;span class="caps"&gt;IPFS&lt;/span&gt;? |
 Teetotality&lt;/a&gt; and &lt;a href="https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f"&gt;A Beginner’s Guide to &lt;span class="caps"&gt;IPFS&lt;/span&gt; -&amp;nbsp;By&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I got curious about &lt;span class="caps"&gt;IPFS&lt;/span&gt; after reading the first article. I&amp;#8217;m not sure it is
-useful to me now but it is certainly something I would like to keep an eye out
-for (related to the sustainable Internet). It also reminded me about
-an experimental build tool and dependency management for Scala called
+&lt;p&gt;I got curious about &lt;span class="caps"&gt;IPFS&lt;/span&gt; (Interplanetary File System) after reading the first
+article. I&amp;#8217;m not sure it is useful to me now but it is something I&amp;#8217;m going to
+watch closely (this is related to the sustainable Internet). It also reminded me
+about an experimental build and dependency management tool for Scala called
 &lt;a href="https://fury.build/"&gt;Fury&lt;/a&gt; which uses &lt;span class="caps"&gt;IPFS&lt;/span&gt; to distribute&amp;nbsp;packages.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://tonsky.me/blog/performance-first/"&gt;Performance first @&amp;nbsp;tonsky.me&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The author disagrees with the&amp;nbsp;quote&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Premature optimization is the root of all&amp;nbsp;evil.&lt;/p&gt;
+&lt;p&gt;Premature optimization is the root of all&amp;nbsp;evil&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;and I&amp;#8217;m wondering if he is right. Maybe if making software wasn&amp;#8217;t so cheap,
+&lt;p&gt;and I&amp;#8217;m wondering if he is right. Maybe if making software wasn&amp;#8217;t so cheap
 there would be more good&amp;nbsp;software.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://archive.is/zkmaE"&gt;Docker is the dangerous gamble which we will regret | Smash&amp;nbsp;Company&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m using Docker a lot at work but this article made me realize I know nothing
@@ -89,13 +89,12 @@ out&amp;nbsp;again.&lt;/p&gt;
 &lt;p&gt;I don&amp;#8217;t remember where I got this one but my first thought after looking at the
 title was &amp;#8220;let&amp;#8217;s see what kind of self-help nonsense they will try to sell me
 this time&amp;#8221;. Only after getting a couple of pages into this essay did I realize
-it is a critique of self-care as well as of constant &amp;#8220;struggle&amp;#8221; and
-&amp;#8220;resistance&amp;#8221; against capitalism that is common among Millenials (whatever
-that means). I&amp;#8217;m still unpacking this one and will probably read it for the
-third and maybe even fourth time. There is just something in there I can&amp;#8217;t put
-my finger&amp;nbsp;on.&lt;/p&gt;
+it is a critique of self-care as well as of constant feeling of being oppressed
+by capitalism that is common among Millenials (whoever they might be). I&amp;#8217;m still
+unpacking this one and will probably read it for the third and maybe even fourth
+time. There is just something in there I can&amp;#8217;t put my finger&amp;nbsp;on.&lt;/p&gt;
 &lt;p&gt;I came across &lt;a href="https://newrepublic.com/"&gt;The New Republic&lt;/a&gt; and read a couple of
-articles in one sitting. I not sure how what to think about the magazine. I&amp;#8217;ve
+articles in one sitting. I&amp;#8217;m not sure what to think about the magazine. I&amp;#8217;ve
 subscribed to their newsletter but it&amp;#8217;s mostly paid promotions and offers of
 $4000 all-inclusive trips to Cuba (to meet with local intellectuals and to
 support the revolution, I&amp;nbsp;guess?).&lt;/p&gt;
@@ -110,7 +109,7 @@ Europe more. Which I will do in the&amp;nbsp;future.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://a2larm.cz/2020/01/pirati-jako-deti-ok-boomers-klise-nam-jejich-politiku-ale-nevysvetli/"&gt;Piráti jako děti? Ok, boomers. Klišé nám jejich politiku ale nevysvětlí –&amp;nbsp;A2larm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I keep getting promoted posts from A2larm on Facebook. The articles are hit and
 miss. This one is about the Czech Pirate Party and how everyone treats them as
-if they are children and are new to politics when in fact they&amp;#8217;ve been here for more
+if they are children and new to politics when in fact they&amp;#8217;ve been here for more
 than 10 years and did a lot of work on different levels of&amp;nbsp;government.&lt;/p&gt;
 &lt;h3&gt;Not that&amp;nbsp;interesting&lt;/h3&gt;
 &lt;p&gt;In no particular&amp;nbsp;order:&lt;/p&gt;
