@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/all.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2020-02-02T18:53:07+01:00</updated><entry><title>Article list from January of 2020</title><link href="https://luminar.dev/notes/20-02-article-list-from-january-of-2020/" rel="alternate"></link><published>2020-02-02T18:53:07+01:00</published><updated>2020-02-02T18:53:07+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-02-02:/notes/20-02-article-list-from-january-of-2020/</id><summary type="html">&lt;p&gt;A list of articles I&amp;#8217;ve read in January of 2020 with&amp;nbsp;commentary.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last months&amp;#8217; list is much longer than the one before that - 38 articles opposed
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Max K. Luminar</title><link href="https://luminar.dev/" rel="alternate"></link><link href="https://luminar.dev/feeds/all.atom.xml" rel="self"></link><id>https://luminar.dev/</id><updated>2020-03-16T21:47:00+01:00</updated><entry><title>Article list from February of 2020</title><link href="https://luminar.dev/notes/20-03-article-list-from-february-of-2020/" rel="alternate"></link><published>2020-03-16T21:47:00+01:00</published><updated>2020-03-16T21:47:00+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-03-16:/notes/20-03-article-list-from-february-of-2020/</id><summary type="html">&lt;p&gt;Some of the articles I&amp;#8217;ve read in February of 2020. Better late than&amp;nbsp;never.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;ve kept up the pace in February, but I can feel that just reading articles is
+not going to be enough for me. They are an ok way to pass the time on a train
+but don&amp;#8217;t bring much benefit. For now, I will continue doing this (keeping
+a list of articles), but I would like to start reading more books. But that&amp;#8217;s
+going to take some&amp;nbsp;preparation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://www.robinsloan.com/notes/home-cooked-app/"&gt;An app can be a home-cooked meal&lt;/a&gt;
+and &lt;a href="https://web.archive.org/web/20040411202042/http://www.shirky.com/writings/situated_software.html"&gt;Shirky: Situated
+Software&lt;/a&gt;
+are related to the theme of sustainable software. I&amp;#8217;m not planning on writing
+any applications yet. Thought I started about something else - ditching Facebook
+for keeping in contact with my group of close friends in favor of something
+smaller, private. And possibly&amp;nbsp;self-hosted.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://changelog.com/podcast/201"&gt;Why SQLite succeeded as a database with Richard Hipp, creator of SQLite (The Changelog #201) |&amp;gt; News and podcasts for developers |&amp;gt; Changelog&lt;/a&gt;
+is a podcast, althought there is a transcript. I always knew SQLite existed but this
+interview got me interested. I am now looking for ways to use it in some&amp;nbsp;project.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://eev.ee/blog/2020/02/01/old-css-new-css/?fbclid=IwAR1oxGs11ixev9c6qaK1yy8oiZvc4lB7dyxebGpcrec6bFxM0qzJqz03WqM"&gt;Old &lt;span class="caps"&gt;CSS&lt;/span&gt;, new &lt;span class="caps"&gt;CSS&lt;/span&gt; / fuzzy
+notepad&lt;/a&gt;
+sent shivers down my spine. How could the web ever get to where it is&amp;nbsp;today?&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f"&gt;Why Discord is switching from Go to Rust - Discord&amp;nbsp;Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve wanted to get into more programming languages for a long time. Go seemed
+like something I would enjoy, but lately, Rust seems more and more appealing.
+We now have some code done in Rust, and I&amp;#8217;m tempted to give it a&amp;nbsp;go.&lt;/p&gt;
+&lt;p&gt;And now we even have some coding done in Rust at work, I&amp;#8217;m tempted to get into
+it even more. Now just to find some spare&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.bbc.com/worklife/article/20200121-why-procrastination-is-about-managing-emotions-not-time"&gt;Why procrastination is about managing emotions, not time - &lt;span class="caps"&gt;BBC&lt;/span&gt; Worklife&lt;/a&gt;
+and &lt;a href="https://en.m.wikipedia.org/wiki/Acceptance_and_commitment_therapy"&gt;Acceptance and commitment therapy - Wikipedia&lt;/a&gt;
+got my attention because I&amp;#8217;d never thought about procrastination like that. In
+all the years of trying to battle procrastionation. I always treated like a time
+management problem (like most&amp;nbsp;people).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://newrepublic.com/article/156202/silicon-valley-economy-here-its-nightmare?utm_source=newsletter&amp;amp;utm_medium=email&amp;amp;utm_campaign=audm"&gt;The Silicon Valley Economy Is Here. And It’s a Nightmare. | The New
+Republic&lt;/a&gt;
+and &lt;a href="https://newrepublic.com/article/156411/end-gop"&gt;End the &lt;span class="caps"&gt;GOP&lt;/span&gt; | The New
+Republic&lt;/a&gt; are only the only two
+articles from The New Republic that I found reading this month. I&amp;#8217;m honestly
+disappointed with &lt;span class="caps"&gt;TNR&lt;/span&gt;&amp;#8217;s mailing list. It&amp;#8217;s mostly paid political campaign
+advertising and podcast promotion (I don&amp;#8217;t listen to podcasts). I&amp;#8217;m going to&amp;nbsp;un-subscribe.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://sneak.berlin/20200220/discord-is-not-an-acceptable-choice-for-free-software-projects/"&gt;Jeffrey Paul: Discord Is Not An Acceptable Choice For Free Software Projects&lt;/a&gt;
+I&amp;#8217;ve never used Discord, and I don&amp;#8217;t plan to. Now I also have a reason&amp;nbsp;why.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://latacora.micro.blog/2020/02/19/stop-using-encrypted.html"&gt;Latacora - Stop Using Encrypted
+Email&lt;/a&gt; - I
+wasn&amp;#8217;t and I won&amp;#8217;t&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;February was the month that Avast got a lot of flak for selling users data
+through Jumpshot. There was a lot of mostly bad and some ok press. &lt;a href="https://sparktoro.com/blog/avasts-shutdown-of-jumpshot-will-harm-the-web-and-the-world/"&gt;Avast&amp;#8217;s
+Shutdown of Jumpshot Will Harm the Web and the World |
+SparkToro&lt;/a&gt;
+and &lt;a href="https://www.euro.cz/blogy/zly-avast-a-velka-lekce-pokrytectvi"&gt;Zlý Avast a velká lekce pokrytectví -&amp;nbsp;Euro.cz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This sounds too good to be true: &lt;a href="https://newatlas.com/energy/hb11-hydrogen-boron-fusion-clean-energy/"&gt;Radical hydrogen-boron reactor leapfrogs
+current nuclear fusion tech&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://threadreaderapp.com/thread/927593460642615296.html"&gt;Thread by @gravislizard: &amp;#8220;almost everything on computers is perceptually slower than it was in 1983 amber-screen library computer in 1998: type in two words and hit F […]&amp;#8221;&lt;/a&gt;
+is just a rant about crappy software that seems to surround us. I can agree with
+that. What I did not enjoy is the format - using long Twitter threads is just
+lazy. Then again, maybe it&amp;#8217;s the best format for angry&amp;nbsp;rants.&lt;/p&gt;
+&lt;p&gt;In no particular&amp;nbsp;order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://commoncog.com/blog/to-get-good-go-after-the-metagame/"&gt;To Get Good, Go After The&amp;nbsp;Metagame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/swlh/seniority-in-software-engineering-aabf9706c4b0"&gt;Seniority in Software Engineering - The Startup -&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cutle.fish/blog/12-signs-youre-working-in-a-feature-factory"&gt;12 Signs You’re Working in a Feature Factory | @johncutlefish&amp;#8217;s&amp;nbsp;blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dagblog.cz/velvoff-debriefieng-i-technologie-964b974643a1"&gt;Velvon debriefing I. — Technologie -&amp;nbsp;dagblog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@cairndubh/functional-obfuscation-cc54198b0acd"&gt;Functional obfuscation - Brian Duff -&amp;nbsp;Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.theatlantic.com/health/archive/2020/02/most-annoying-corporate-buzzwords/606748/"&gt;The Most Annoying Corporate Buzzwords - The&amp;nbsp;Atlantic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.usejournal.com/monoids-to-groupoids-492c35105113"&gt;Did Functional Programming get it wrong? - Noteworthy - The Journal&amp;nbsp;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.acolyer.org/2020/02/12/lets-encrypt-an-automated-certificate-authority-to-encrypt-the-entire-web/"&gt;Let&amp;#8217;s Encrypt: an automated certificate authority to encrypt the entire web – the morning&amp;nbsp;paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://srconstantin.posthaven.com/how-to-make-a-memex"&gt;How to Make A Memex - Sarah&amp;nbsp;Constantin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.acolyer.org/2020/02/14/programs-life-cycles-laws/"&gt;Programs, life cycles, and laws of software evolution – the morning&amp;nbsp;paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.inc.com/geoffrey-james/its-official-open-plan-offices-are-now-dumbest-management-fad-of-all-time.html"&gt;It&amp;#8217;s Official: Open-Plan Offices Are Now the Dumbest Management Fad of All Time |&amp;nbsp;Inc.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.transposit.com/blog/2020.01.30-writing-runbook-documentation-when-youre-an-sre/"&gt;Writing Runbook Documentation When You’re An &lt;span class="caps"&gt;SRE&lt;/span&gt; ·&amp;nbsp;Transposit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.collaborativefund.com/blog/gains/"&gt;Wealth Is What You Don&amp;#8217;t Spend · Collaborative&amp;nbsp;Fund&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/"&gt;Dicts are now ordered, get used to&amp;nbsp;it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://m.nautil.us/issue/81/maps/theres-no-homunculus-in-our-brain-who-guides-us"&gt;There’s No Homunculus In Our Brain Who Guides Us - Issue 81: Maps -&amp;nbsp;Nautilus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.infoq.com/articles/metrics-original-sin/"&gt;The Original Sin of Software&amp;nbsp;Metrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.nelhage.com/post/reflections-on-performance/"&gt;Reflections on software performance - Made of&amp;nbsp;Bugs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://scottlocklin.wordpress.com/2020/02/21/andreessen-horowitz-craps-on-ai-startups-from-a-great-height/"&gt;Andreessen-Horowitz craps on “&lt;span class="caps"&gt;AI&lt;/span&gt;” startups from a great height | Locklin on&amp;nbsp;science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tech.channable.com/posts/2020-02-05-opnieuw.html"&gt;Channable - Opnieuw: A simple and intuitive retrying library for&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Articles"></category><category term="Articles"></category></entry><entry><title>Article list from January of 2020</title><link href="https://luminar.dev/notes/20-02-article-list-from-january-of-2020/" rel="alternate"></link><published>2020-02-02T18:53:07+01:00</published><updated>2020-02-02T18:53:07+01:00</updated><author><name>max</name></author><id>tag:luminar.dev,2020-02-02:/notes/20-02-article-list-from-january-of-2020/</id><summary type="html">&lt;p&gt;A list of articles I&amp;#8217;ve read in January of 2020 with&amp;nbsp;commentary.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last months&amp;#8217; list is much longer than the one before that - 38 articles opposed
 to 13 in December of last year (though I did a lot of filtering&amp;nbsp;then).&lt;/p&gt;
 &lt;p&gt;A lot of articles fall into &amp;#8220;not that interesting&amp;#8221; category. I tend to just
 bookmark everything I see and often the articles are not that great. I read them

@@ -1,5 +1,5 @@
 Title: Article list from February of 2020
-Date: 2020-03-16 19:02:22
+Date: 2020-03-16 21:47:00
 Category: Articles
 Tags: Articles
 Summary: Some of the articles I've read in February of 2020. Better late than never.
