@@ -1,0 +1,69 @@
+Article list from November of 2019
+==================================
+December 30th, 2019
+:description: Some of the articles I've read in November of 2019
+
+Here is a list of articles I've read last month:
+
+https://ryxcommar.com/2019/11/02/making-good-code-great/?fbclid=IwAR1UZZy2T4Q2iT6h3Rqc9INnEDwWVKQRWvvzLX2VJMaoRdFNAcX7Fv3kFik[Making Good Code Great – r y x, r]
+A couple of tips on how to write nicer Python code
+
+- - -
+https://blog.7mind.io/constructive-test-taxonomy.html[Unit, Functional, Integration? You are doing it wrong | 7mind.io blog]
+
+A new way to look at types of tests in software. I'm planning to come back to this later
+
+- - -
+
+http://reactionwheel.net/2015/01/80s-vc.html[Heat Death: Venture Capital in the 1980s | Reaction Wheel]
+
+Are we in a bubble? The answer is not that simple. This article provides a
+history of venture capital in 80s' and 90s' and compares it to todays
+situation.
+
+- - -
+
+http://reactionwheel.net/2019/02/boiling-frogs.html[Boiling Frogs | Reaction Wheel]
+
+- - -
+
+https://ethankent.dev/posts/types_are_for_people/[Types Are for People, not Computers - Ethan Kent's Blog]
+
+- - -
+
+https://blog.acolyer.org/2019/11/20/local-first-software/[Local-first software: you own your data, in spite of the cloud – the morning paper]
+
+A summary of a scientific paper that describes what local-first applications should look and why it is a good idea.
+
+- - -
+
+https://typesetinthefuture.com/2016/06/19/bladerunner/[Blade Runner | Typeset In The Future]
+
+An in-depth look at typography and design of the original Bladerunner film.
+
+- - -
+
+https://www.loc.gov/preservation/resources/rfs/TOC.html[Preservation, Library of Congress Recommended Formats Statement – table of contents | Resources ]
+
+Which data formats and media should I choose if I want my data to last?
+
+- - -
+
+https://software.rajivprab.com/2019/06/02/cracking-the-senior-software-interview/[Cracking the Senior Software Interview – Software the Hard way]
+
+- - -
+
+https://software.rajivprab.com/2019/04/28/rethinking-software-testing-perspectives-from-the-world-of-hardware/[Rethinking Software Testing: Perspectives from the world of Hardware – Software the Hard way]
+
+- - -
+
+https://logicmag.io/nature/oil-is-the-new-data/[Oil is the New Data]
+
+How "big tech" is collaborating with "big oil" to kill us faster
+
+- - -
+
+
+
+This list is generated automatically from bookmarks in my browser. The notes are
+added manually.

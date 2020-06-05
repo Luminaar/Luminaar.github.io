@@ -5,10 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.5">
-<meta name="description" content="A summary of new features and improvements in Python versions from 3.5 to 3.8">
-<meta name="keywords" content="python, python3">
-<meta name="author" content="June 10, 2019">
-<title>Python - what is new in which version?</title>
+<meta name="description" content="Some of the articles I've read in February of 2020. Better late than never.">
+<meta name="author" content="March 16th, 2020">
+<title>Article list from February of 2020</title>
 
 <style>
 #main-header {font-variant-caps: small-caps;font-size: 1.2em;margin: 0.2em;}
@@ -424,389 +423,175 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<style>
-#main-header {font-variant-caps: small-caps;font-size: 1.2em;margin: 0.2em;}
-#main-header a {text-decoration: none;color: #ba3925;}
-#main-header a:hover {color: #822a1c;}
-
-.listingblock .pygments .hll { background-color: #ffffcc }
-.listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
-.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
-.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
-.listingblock .pygments .tok-o { color: #666666 } /* Operator */
-.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
-.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
-.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
-.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
-.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
-.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
-.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
-.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
-.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
-.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
-.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
-.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
-.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
-.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
-.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
-.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
-.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
-.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
-.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
-.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
-.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
-.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
-.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
-.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
-.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
-.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
-.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
-.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
-.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
-.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
-.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
-.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
-.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
-.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
-.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
-.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
-.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
-.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
-.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
-.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
-.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
-.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
-.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
-.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
-</style>
 </head>
 <body class="article">
 <div id="main-header"><a href="/">Back to Luminar.dev</a></div>
 <div id="header">
-<h1>Python - what is new in which version?</h1>
+<h1>Article list from February of 2020</h1>
 <div class="details">
-<span id="author" class="author">June 10, 2019</span><br>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_python_3_5">Python 3.5</a>
-<ul class="sectlevel2">
-<li><a href="#_new_syntax">New syntax</a></li>
-<li><a href="#_new_library_modules">New library modules</a></li>
-<li><a href="#_improvements_in_stdlib">Improvements in stdlib</a></li>
-</ul>
-</li>
-<li><a href="#_python_3_6">Python 3.6</a>
-<ul class="sectlevel2">
-<li><a href="#_new_syntax_2">New syntax</a></li>
-<li><a href="#_new_library_modules_2">New library modules</a></li>
-<li><a href="#_implementation_improvements">Implementation improvements</a></li>
-<li><a href="#_improvements_in_stdlib_2">Improvements in stdlib</a></li>
-</ul>
-</li>
-<li><a href="#_python_3_7">Python 3.7</a>
-<ul class="sectlevel2">
-<li><a href="#_new_syntax_features">New syntax features</a></li>
-<li><a href="#_new_library_modules_3">New library modules</a></li>
-<li><a href="#_new_built_in_features">New built-in features</a></li>
-<li><a href="#_improvements_in_stdlib_3">Improvements in stdlib</a></li>
-<li><a href="#_deprecations">Deprecations</a></li>
-</ul>
-</li>
-<li><a href="#_python_3_8">Python 3.8</a>
-<ul class="sectlevel2">
-<li><a href="#_new_syntax_3">New syntax</a></li>
-<li><a href="#_library_improvements">Library improvements</a></li>
-</ul>
-</li>
-</ul>
+<span id="author" class="author">March 16th, 2020</span><br>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>In this post I would like to summarize which features can be used in which
-Python3 versions. I only choose features and changes that are relevant or
-interesting to me. There is a link to "What&#8217;s new" page for each version where
-you can find the full list.</p>
+<p>I&#8217;ve kept up the pace in February, but I can feel that just reading articles is
+not going to be enough for me. They are an ok way to pass the time on a train
+but don&#8217;t bring much benefit. For now, I will continue doing this (keeping
+a list of articles), but I would like to start reading more books. But that&#8217;s
+going to take some preparation.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_python_3_5">Python 3.5</h2>
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p>Released in September 2015. Comes pre-installed on Debian 9 (Stretch) and Ubuntu
-16.04. Complete list of changes is <a href="https://docs.python.org/3.5/whatsnew/3.5.html">here</a>.</p>
+<p><a href="https://www.robinsloan.com/notes/home-cooked-app/">An app can be a home-cooked meal</a>
+and <a href="https://web.archive.org/web/20040411202042/http://www.shirky.com/writings/situated_software.html">Shirky: Situated Software</a>
+are related to the theme of sustainable software. I&#8217;m not planning on writing
+any applications yet. Thought I started about something else - ditching Facebook
+for keeping in contact with my group of close friends in favor of something
+smaller, private. And possibly self-hosted.</p>
 </div>
-<div class="sect2">
-<h3 id="_new_syntax">New syntax</h3>
+<hr>
 <div class="paragraph">
-<p>Coroutines can now be defined with <code>async</code> keyword and awaited with <code>await</code>
-keyword. These keywords are not reserved yet. They will be
-become proper reserved keywords in Python 3.7.</p>
+<p><a href="https://changelog.com/podcast/201">Why SQLite succeeded as a database with Richard Hipp, creator of SQLite (The Changelog #201)</a>
+is a podcast, althought there is a transcript. I always knew SQLite existed but this
+interview got me interested. I am now looking for ways to use it in some
+project.</p>
 </div>
+<hr>
 <div class="paragraph">
-<p><code>async</code> can also be used in <a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-for">async for</a>
-and <a href="https://docs.python.org/3.5/reference/compound_stmts.html#async-with">async with</a>
-statements for asynchronous <code>for</code> loops and context managers.</p>
+<p><a href="https://eev.ee/blog/2020/02/01/old-css-new-css/?fbclid=IwAR1oxGs11ixev9c6qaK1yy8oiZvc4lB7dyxebGpcrec6bFxM0qzJqz03WqM">Old CSS, new CSS / fuzzy notepad</a>
+sent shivers down my spine. How could the web ever get to where it is
+today?</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_new_library_modules">New library modules</h3>
+<hr>
 <div class="paragraph">
-<p><a href="https://docs.python.org/3.5/library/typing.html#module-typing">typing</a> module adds support for Type Hints (<a href="https://www.python.org/dev/peps/pep-0484/">PEP484</a>).
-While syntax for function annotation was introduced back in Python3.0 (<a href="https://www.python.org/dev/peps/pep-3107/">PEP3107</a>,
-this module provides some standard tools (such as types Any, Union, Tuple,
-Callable, etc.) that can be used in type annotations.</p>
+<p><a href="https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f">Why Discord is switching from Go to Rust - Discord Blog</a></p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.python.org/3.5/library/zipapp.html#module-zipapp">zipapp</a> provides
-tools to manage the creation of zip files containing Python code, which can be
-executed directly by the Python interpreter.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_improvements_in_stdlib">Improvements in stdlib</h3>
-<div class="paragraph">
-<p><a href="https://docs.python.org/3.5/library/collections.html#collections.OrderedDict">collections.OrderedDict</a>
-is significantly faster now.</p>
+<p>I&#8217;ve wanted to get into more programming languages for a long time. Go seemed
+like something I would enjoy, but lately, Rust seems more and more appealing.
+We now have some code done in Rust, and I&#8217;m tempted to give it a go.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.python.org/3.5/library/os.html#os.scandir">os.scandir()</a> is a new
-function for
-<a href="https://docs.python.org/3.5/whatsnew/3.5.html#whatsnew-pep-471">better and
-faster way of directory traversal</a>.</p>
+<p>And now we even have some coding done in Rust at work, I&#8217;m tempted to get into
+it even more. Now just to find some spare time.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_python_3_6">Python 3.6</h2>
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p>Released in December 2016. Comes pre-installed on Ubuntu 18.04. Complete list
-of changes is <a href="https://docs.python.org/3.8/whatsnew/3.6.html">here</a>.</p>
+<p><a href="https://www.bbc.com/worklife/article/20200121-why-procrastination-is-about-managing-emotions-not-time">Why procrastination is about managing emotions, not time - BBC Worklife</a>
+and <a href="https://en.m.wikipedia.org/wiki/Acceptance_and_commitment_therapy">Acceptance and commitment therapy - Wikipedia</a>
+got my attention because I&#8217;d never thought about procrastination like that. In
+all the years of trying to battle procrastionation. I always treated like a time
+management problem (like most people, I imagine).</p>
 </div>
-<div class="sect2">
-<h3 id="_new_syntax_2">New syntax</h3>
+<hr>
 <div class="paragraph">
-<p>Formatted string literals
-(<a href="https://docs.python.org/3.6/reference/lexical_analysis.html#f-strings">f-strings</a>).
-Defined in <a href="https://www.python.org/dev/peps/pep-0498/">PEP498</a>.</p>
+<p><a href="https://newrepublic.com/article/156202/silicon-valley-economy-here-its-nightmare?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=audm">The Silicon Valley Economy Is Here. And It’s a Nightmare</a>
+and <a href="https://newrepublic.com/article/156411/end-gop">End the GOP</a> are only the only two
+articles from The New Republic that I found worth reading this month. I&#8217;m honestly
+disappointed with TNR&#8217;s mailing list. It&#8217;s mostly paid political campaign
+advertising and podcast promotion (I don&#8217;t listen to podcasts). I&#8217;m going to
+un-subscribe.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">name</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Max&quot;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">f</span><span class="tok-s2">&quot;Hello, {name}!&quot;</span><span class="tok-p">)</span>
-<span class="tok-n">Hello</span><span class="tok-p">,</span> <span class="tok-n">Max</span><span class="tok-err">!</span></code></pre>
-</div>
+<hr>
+<div class="paragraph">
+<p><a href="https://sneak.berlin/20200220/discord-is-not-an-acceptable-choice-for-free-software-projects/">Jeffrey Paul: Discord Is Not An Acceptable Choice For Free Software Projects</a></p>
 </div>
 <div class="paragraph">
-<p>Support for variable type hints
-(<a href="https://www.python.org/dev/peps/pep-0498/">PEP526</a>).</p>
+<p>I&#8217;ve never used Discord, and I don&#8217;t plan to. Now I also have a reason why.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><a href="https://latacora.micro.blog/2020/02/19/stop-using-encrypted.html">Latacora - Stop Using Encrypted Email</a></p>
 </div>
 <div class="paragraph">
-<p>Underscores in numeric literals: <code>1_000_000</code>
-(<a href="https://www.python.org/dev/peps/pep-0515/">PEP515</a>).</p>
+<p>I wasn&#8217;t and I won&#8217;t now.</p>
 </div>
+<hr>
 <div class="paragraph">
-<p>Asynchronous generators (<a href="https://www.python.org/dev/peps/pep-0525/">PEP525</a>)
-and comprehensions (<a href="https://www.python.org/dev/peps/pep-0530/">PEP530</a>).</p>
+<p>February was the month that Avast got a lot of flak for selling users data
+through Jumpshot. There was a lot of mostly bad and some ok press. <a href="https://sparktoro.com/blog/avasts-shutdown-of-jumpshot-will-harm-the-web-and-the-world/">Avast&#8217;s Shutdown of Jumpshot Will Harm the Web and the World | SparkToro</a>
+and <a href="https://www.euro.cz/blogy/zly-avast-a-velka-lekce-pokrytectvi">Zlý Avast a velká lekce pokrytectví - Euro.cz</a></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_new_library_modules_2">New library modules</h3>
+<hr>
 <div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/secrets.html#module-secrets">secrets</a> for
-generating cryptographically strong random numbers suitable for managing data
-such as passwords, account authentication, security tokens, and related secrets.
-Described in <a href="https://www.python.org/dev/peps/pep-0505/">PEP506</a>.</p>
+<p>This sounds too good to be true: <a href="https://newatlas.com/energy/hb11-hydrogen-boron-fusion-clean-energy/">Radical hydrogen-boron reactor leapfrogs current nuclear fusion tech</a>.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_implementation_improvements">Implementation improvements</h3>
+<hr>
 <div class="paragraph">
-<p>The new implementation of dictionaries is 20% to 25% more compact and preserves
-insertion order (but this <strong>should not</strong> be relied upon yet). See this great
-<a href="https://www.youtube.com/watch?v=p33CVV29OG8">talk by Raymond Hettinger</a> in which
-he explains how dictionaries changed over time.</p>
+<p><a href="https://threadreaderapp.com/thread/927593460642615296.html">Thread by @gravislizard: "almost everything on computers is perceptually slower than it was in 1983 amber-screen library computer in 1998: type in two words and hit F […</a>"]
+is just a rant about crappy software that seems to surround us. I can agree with
+that. What I did not enjoy is the format - using long Twitter threads is just
+lazy. Then again, maybe it&#8217;s the best format for angry rants.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_improvements_in_stdlib_2">Improvements in stdlib</h3>
+<hr>
 <div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio">asyncio</a> is no
-longer provisional and the API is considered stable.</p>
-</div>
-<div class="paragraph">
-<p>A new <a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep519">file
-system path protocol</a> was added
-to support <a href="https://docs.python.org/3.8/glossary.html#term-path-like-object">path-like object</a>.</p>
-</div>
-<div class="paragraph">
-<p>The <a href="https://docs.python.org/3.8/library/datetime.html#module-datetime">datetime</a>
-module has gained support for <a href="https://docs.python.org/3.8/whatsnew/3.6.html#whatsnew36-pep495">Local Time Disambiguation</a>.</p>
-</div>
-<div class="paragraph">
-<p><code>json.load()</code> and <code>json.loads()</code> now support binary input.</p>
-</div>
-<div class="paragraph">
-<p>A new function <a href="https://docs.python.org/3.8/library/random.html#random.choices">random.choices()</a>
-returns a list of specified size with elements from a population with
-optional weights.</p>
-</div>
-<div class="paragraph">
-<p>Class <code>unittest.mock.Mock</code> has new methods <code>assert_called</code> and
-<code>assert_called_once</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_python_3_7">Python 3.7</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Released in June 2018. Comes pre-installed on Debian 10 (Buster) and  Ubuntu
-18.04 and 19.04. Complete list of changes is <a href="https://docs.python.org/3.8/whatsnew/3.7.html">here</a>.</p>
-</div>
-<div class="sect2">
-<h3 id="_new_syntax_features">New syntax features</h3>
-<div class="paragraph">
-<p>Postponed evaluation of type annotations (<a href="https://www.python.org/dev/peps/pep-0526/">PEP526</a>).</p>
+<p>In no particular order:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Annotations can now support forward references</p>
+<p><a href="https://commoncog.com/blog/to-get-good-go-after-the-metagame/">To Get Good, Go After The Metagame</a></p>
 </li>
 <li>
-<p>Annotations are cheaper and faster to store</p>
+<p><a href="https://medium.com/swlh/seniority-in-software-engineering-aabf9706c4b0">Seniority in Software Engineering - The Startup - Medium</a></p>
+</li>
+<li>
+<p><a href="https://cutle.fish/blog/12-signs-youre-working-in-a-feature-factory">12 Signs You’re Working in a Feature Factory | @johncutlefish&#8217;s blog</a></p>
+</li>
+<li>
+<p><a href="https://dagblog.cz/velvoff-debriefieng-i-technologie-964b974643a1">Velvon debriefing I. — Technologie - dagblog</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@cairndubh/functional-obfuscation-cc54198b0acd">Functional obfuscation - Brian Duff - Medium</a></p>
+</li>
+<li>
+<p><a href="https://www.theatlantic.com/health/archive/2020/02/most-annoying-corporate-buzzwords/606748/">The Most Annoying Corporate Buzzwords - The Atlantic</a></p>
+</li>
+<li>
+<p><a href="https://blog.usejournal.com/monoids-to-groupoids-492c35105113">Did Functional Programming get it wrong? - Noteworthy - The Journal Blog</a></p>
+</li>
+<li>
+<p><a href="https://blog.acolyer.org/2020/02/12/lets-encrypt-an-automated-certificate-authority-to-encrypt-the-entire-web/">Let&#8217;s Encrypt: an automated certificate authority to encrypt the entire web – the morning paper</a></p>
+</li>
+<li>
+<p><a href="https://srconstantin.posthaven.com/how-to-make-a-memex">How to Make A Memex - Sarah Constantin</a></p>
+</li>
+<li>
+<p><a href="https://blog.acolyer.org/2020/02/14/programs-life-cycles-laws/">Programs, life cycles, and laws of software evolution – the morning paper</a></p>
+</li>
+<li>
+<p><a href="https://www.inc.com/geoffrey-james/its-official-open-plan-offices-are-now-dumbest-management-fad-of-all-time.html">It&#8217;s Official: Open-Plan Offices Are Now the Dumbest Management Fad of All Time | Inc.com</a></p>
+</li>
+<li>
+<p><a href="https://www.transposit.com/blog/2020.01.30-writing-runbook-documentation-when-youre-an-sre/">Writing Runbook Documentation When You’re An SRE · Transposit</a></p>
+</li>
+<li>
+<p><a href="https://www.collaborativefund.com/blog/gains/">Wealth Is What You Don&#8217;t Spend · Collaborative Fund</a></p>
+</li>
+<li>
+<p><a href="https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/">Dicts are now ordered, get used to it</a></p>
+</li>
+<li>
+<p><a href="http://m.nautil.us/issue/81/maps/theres-no-homunculus-in-our-brain-who-guides-us">There’s No Homunculus In Our Brain Who Guides Us - Issue 81: Maps - Nautilus</a></p>
+</li>
+<li>
+<p><a href="https://www.infoq.com/articles/metrics-original-sin/">The Original Sin of Software Metrics</a></p>
+</li>
+<li>
+<p><a href="https://blog.nelhage.com/post/reflections-on-performance/">Reflections on software performance - Made of Bugs</a></p>
+</li>
+<li>
+<p><a href="https://scottlocklin.wordpress.com/2020/02/21/andreessen-horowitz-craps-on-ai-startups-from-a-great-height/">Andreessen-Horowitz craps on “AI” startups from a great height | Locklin on science</a></p>
+</li>
+<li>
+<p><a href="https://tech.channable.com/posts/2020-02-05-opnieuw.html">Channable - Opnieuw: A simple and intuitive retrying library for Python</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><code>async</code> and <code>await</code> are now reserved keywords.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_new_library_modules_3">New library modules</h3>
-<div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/dataclasses.html#module-dataclasses">dataclasses</a>
-provides a decorator and functions for automatically adding generated special
-methods such as <code>__init__()</code> and <code>__repr__()</code> to user-defined classes. It is useful
-when you need to create a simple class that only holds data but has no
-behavior.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_new_built_in_features">New built-in features</h3>
-<div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/functions.html#breakpoint">breakpoint()</a> function for debuggers.</p>
-</div>
-<div class="paragraph">
-<p>Dictionaries now officially preserve insertion order of elements.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_improvements_in_stdlib_3">Improvements in stdlib</h3>
-<div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/asyncio.html#module-asyncio">asyncio</a>
-received a lot of new features and improvements (high-level <code>asyncio.run()</code>
-function for running coroutines, many others).</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.python.org/3.8/library/time.html#module-time">time</a> module now has
-support for
-<a href="https://docs.python.org/3.8/whatsnew/3.7.html#whatsnew37-pep564">nanosecond
-resolution</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_deprecations">Deprecations</h3>
-<div class="paragraph">
-<p>Debian 8, Ubuntu 16, CentOS 7.5 and other platforms that use OpenSSL 0.9.8 and
-1.0.1 are no longer supported. At least OpenSSL 1.0.2 is required. You can build
-Python3.7 on those platforms but you have to manually link a new OpenSSL
-version.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_python_3_8">Python 3.8</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Will be released sometime in 2019. Will come pre-installed on Debian 9, Ubuntu
-19.04. Complete list of changes is <a href="https://docs.python.org/3.8/whatsnew/3.8.html">here</a>.</p>
-</div>
-<div class="sect2">
-<h3 id="_new_syntax_3">New syntax</h3>
-<div class="paragraph">
-<p><a href="https://www.python.org/dev/peps/pep-0572/">Assignment expressions</a> (the "walrus operator", <code>:=</code>):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">n</span> <span class="tok-p">:</span><span class="tok-o">=</span> <span class="tok-nb">len</span><span class="tok-p">(</span><span class="tok-n">a</span><span class="tok-p">))</span> <span class="tok-o">&gt;</span> <span class="tok-mi">10</span><span class="tok-p">:</span>
-    <span class="tok-k">print</span><span class="tok-p">(</span><span class="tok-n">f</span><span class="tok-s2">&quot;List is too long ({n} elements, expected &lt;= 10)&quot;</span><span class="tok-p">)</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://www.python.org/dev/peps/pep-0570/">Positional only arguments</a>: There is
-new syntax (<code>/</code>) to indicate that some function parameters must be specified
-positionally.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span class="tok-k">def</span> <span class="tok-nf">pow</span><span class="tok-p">(</span><span class="tok-n">x</span><span class="tok-p">,</span> <span class="tok-n">y</span><span class="tok-p">,</span> <span class="tok-n">z</span><span class="tok-o">=</span><span class="tok-bp">None</span><span class="tok-p">,</span> <span class="tok-o">/</span><span class="tok-p">):</span>
-    <span class="tok-n">r</span> <span class="tok-o">=</span> <span class="tok-n">x</span><span class="tok-o">**</span><span class="tok-n">y</span>
-    <span class="tok-k">if</span> <span class="tok-n">z</span> <span class="tok-ow">is</span> <span class="tok-ow">not</span> <span class="tok-bp">None</span><span class="tok-p">:</span>
-        <span class="tok-n">r</span> <span class="tok-o">%=</span> <span class="tok-n">z</span>
-    <span class="tok-k">return</span> <span class="tok-n">r</span></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This is in addition to <a href="https://www.python.org/dev/peps/pep-3102/">keyword only arguments</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_library_improvements">Library improvements</h3>
-<div class="paragraph">
-<p><code>json.tool</code> has a new option (<code>--json-lines</code>) to parse every input line as
-separate JSON object.</p>
-</div>
-<div class="paragraph">
-<p>New class <code>unittest.mock.AsyncMock</code> for asynchronous mocking.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-05 16:54:28 CEST
+Last updated 2020-06-05 17:28:07 CEST
 </div>
 </div>
 </body>

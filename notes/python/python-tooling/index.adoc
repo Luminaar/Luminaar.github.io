@@ -236,16 +236,16 @@ VSCode has great https://code.visualstudio.com/docs/python/python-tutorial[suppo
 It also has its own language server, but it integrates external tools for
 different tasks:
 
-- Formatting
-	- `autopep8` is enabled by default, but `black` can be enabled in settings
-- `isort` is used by default for import sorting
-- `pylint` is enabled by default but other linters can be used enabled:
-	- Flake8
-	- mypy
-	- pycodestyle
-	- prospector
-	- pylama
-	- bandit
+* Formatting
+	** `autopep8` is enabled by default, but `black` can be enabled in settings
+* `isort` is used by default for import sorting
+* `pylint` is enabled by default but other linters can be used enabled:
+	** Flake8
+	** mypy
+	** pycodestyle
+	** prospector
+	** pylama
+	** bandit
 
 
 ==== (Neo)vim
@@ -347,22 +347,16 @@ and `setup.cfg` file looks like this:
 # ...
 
 [options]
-
-setup_requires =
-	pytest-runner >= 5.0, <6.0
-
 # ...
 
-tests_require ==
+[options.extras_require]
+tests =
     pytest >=5.0, <6.0
     pytest-cov >=2.8.1, <3.0
     pytest-pylint >=0.14.1, <1.0
     pytest-pycodestyle >=2.0.0, <3.0
 
 # ...
-
-[aliases]
-test=pytest
 
 [tool:pytest]
 addopts = --verbose --pylint --pylint-rcfile=setup.cfg --cov=k8secrets --cov-report html --pycodestyle
@@ -395,31 +389,25 @@ enable=unused-import,
 
 
 ==== Running CI checks locally
-If you look at the package configuration you will see a lot of different
-`pytest` related dependencies.
+All test dependencies are defined in the `tests` extra. When working on the
+package we install by running `pip install ".[tests]"`. Then we can run tests
+with `pytest`.
 
-`pytest-runner` allows us to run tests with `setuptools` like this:
-
-`python setup.py test`
-
-This will install the package and its dependencies and run tests. This is done
-independently in its own environment.
+NOTE: In the past we used the `pytest-runner` plugin to run tests with `python
+setup.py test` but this approach and the plugin is https://pypi.org/project/pytest-runner/[deprecated].
 
 `pytest-cov`, `pytest-pylint` and `pytest-pycodestyle` are plugins that run code
 coverage, pylint and pycodestyle respectively, together with tests.
+
+For local `pytest` settings we use the `pytest.ini` file which is ignored in
+Teamcity. This way developers can change `pytest` behavior without changing the
+CI settings.
 
 This works both locally and in Teamcity, so you can run CI checks before pushing
 your code. One option is to add a pre-commit hook to the Git repository that
 will not allow commiting code that did not pass the checks. This is up to each
 developer and needs to be done for each project. There are some tools that help
 with this, such as https://pre-commit.com/[pre-commit.com].
-
-One issue with setup that I personally have is, that I always run my tests with
-setuptools (`python setup.py test`) and that runs both tests and linters
-every time. I haven't found a good solution yet. For now I just turn off the
-linters temporarily (I run linters with the same settings right in my editor).
-This is of course not ideal, because I can easily forget to turn the linters back
-on and they will not run in CI.
 
 == Conclusion
 There really isn't one. I've described some tools and hove we use some of them

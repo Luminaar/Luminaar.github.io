@@ -1,0 +1,32 @@
+Article list from March of 2020
+===============================
+April 6th, 2020
+:keywords: Some of the articles I've read in March of 2020
+
+Here is a list of articles I've read last month:
+
+* https://salmonmode.github.io/2019/03/29/building-good-tests.html[Building Good Tests - Chris NeJame]
+* https://www.theverge.com/2020/2/27/21155254/automation-robots-unemployment-jobs-vs-human-google-amazon[Robots aren’t taking our jobs — they’re becoming our bosses]
+* https://hynek.me/articles/python-in-production/[Python in Production · Homepage of Hynek Schlawack]
+* https://www.project-syndicate.org/commentary/next-global-recession-hits-the-supply-side-by-kenneth-rogoff-2020-03[That 1970s Feeling by Kenneth Rogoff - Project Syndicate]
+* https://segment.com/blog/goodbye-microservices/[Goodbye Microservices: From 100s of problem children to 1 superstar · Segment Blog]
+* https://blog.meadsteve.dev/programming/2020/02/10/types-at-the-edges-in-python/[Types at the edges in Python – MeadSteve's Dev Blog]
+* https://www.cjr.org/first_person/the-infinite-scroll.php?utm_source=pocket&utm_medium=email&utm_campaign=pockethits[The infinite scroll - Columbia Journalism Review]
+* https://www.gkogan.co/blog/simple-systems/?r=0[Simple Systems Have Less Downtime | Greg Kogan]
+* https://gist.github.com/djspiewak/8c3c0eadabf16c2fddda796531c3d5ec[greasing-the-skids.md]
+* https://nedbatchelder.com/blog/202003/how_long_did_it_take_you_to_learn_python.html[Ned Batchelder: How long did it take you to learn Python?]
+
+* https://archiv.ihned.cz/c7-66724300-kmml5-40633e705cc9c0f[Proč nebereme stát za svůj a za hrdinu je v Česku hlavně ten, kdo dokáže všechno ošulit | Hospodářské noviny (iHNed.cz)]
+* https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#3189bbfa4bbe[Understanding Fake Agile]
+* https://www.thenewatlantis.com/publications/we-all-wear-tinfoil-hats-now[We All Wear Tinfoil Hats Now - The New Atlantis]
+* https://www.forbes.com/sites/stevedenning/2019/05/23/understanding-fake-agile/#5291cb824bbe[Understanding Fake Agile]
+* https://fasterthanli.me/blog/2020/i-want-off-mr-golangs-wild-ride/[amos - I want off Mr. Golang's Wild Ride]
+* https://dagblog.cz/velvon-debriefieng-ii-organizace-v%C3%BDvoje-bbec1f5dcaa7[Velvon debriefieng II. — Organizace vývoje - dagblog]
+* https://blog.acolyer.org/2020/02/26/meaningful-availability/[Meaningful availability – the morning paper]
+* https://changelog.com/posts/how-to-build-a-generative-engineering-culture[How to build a generative engineering culture |> News and podcasts for developers |> Changelog]
+* https://medium.com/swlh/how-is-computer-programming-different-today-than-20-years-ago-9d0154d1b6ce[How is computer programming different today than 20 years ago?]
+* https://sobolevn.me/2020/03/do-not-log[Do not log]
+* https://www.djangoproject.com/weblog/2020/mar/12/governance/[New governance model for the Django project | Weblog | Django]
+
+
+This list is generated automatically from bookmarks in my browser.

@@ -1,6 +1,7 @@
 Python - what is new in which version?
 ======================================
 June 10, 2019
+:source-highlighter: pygments
 :description: A summary of new features and improvements in Python versions from 3.5 to 3.8
 :keywords: python, python3
 :toc:

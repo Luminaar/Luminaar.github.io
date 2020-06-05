@@ -959,16 +959,21 @@ different tasks:</p>
 <ul>
 <li>
 <p>Formatting</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><code>autopep8</code> is enabled by default, but <code>black</code> can be enabled in settings</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><code>isort</code> is used by default for import sorting</p>
 </li>
 <li>
 <p><code>pylint</code> is enabled by default but other linters can be used enabled:</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Flake8</p>
 </li>
@@ -986,6 +991,9 @@ different tasks:</p>
 </li>
 <li>
 <p>bandit</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1141,22 +1149,16 @@ production).</p>
 <pre class="pygments highlight"><code data-lang="cfg"><span class="tok-c1"># ...</span>
 
 <span class="tok-k">[options]</span>
-
-<span class="tok-na">setup_requires</span> <span class="tok-o">=</span><span class="tok-s"></span>
-<span class="tok-s">	pytest-runner &gt;= 5.0, &lt;6.0</span>
-
 <span class="tok-c1"># ...</span>
 
-<span class="tok-na">tests_require</span> <span class="tok-o">=</span><span class="tok-s">=</span>
+<span class="tok-k">[options.extras_require]</span>
+<span class="tok-na">tests</span> <span class="tok-o">=</span><span class="tok-s"></span>
 <span class="tok-s">    pytest &gt;=5.0, &lt;6.0</span>
 <span class="tok-s">    pytest-cov &gt;=2.8.1, &lt;3.0</span>
 <span class="tok-s">    pytest-pylint &gt;=0.14.1, &lt;1.0</span>
 <span class="tok-s">    pytest-pycodestyle &gt;=2.0.0, &lt;3.0</span>
 
 <span class="tok-c1"># ...</span>
-
-<span class="tok-k">[aliases]</span>
-<span class="tok-na">test</span><span class="tok-o">=</span><span class="tok-s">pytest</span>
 
 <span class="tok-k">[tool:pytest]</span>
 <span class="tok-na">addopts</span> <span class="tok-o">=</span> <span class="tok-s">--verbose --pylint --pylint-rcfile=setup.cfg --cov=k8secrets --cov-report html --pycodestyle</span>
@@ -1191,22 +1193,31 @@ production).</p>
 <div class="sect3">
 <h4 id="_running_ci_checks_locally">Running CI checks locally</h4>
 <div class="paragraph">
-<p>If you look at the package configuration you will see a lot of different
-<code>pytest</code> related dependencies.</p>
+<p>All test dependencies are defined in the <code>tests</code> extra. When working on the
+package we install by running <code>pip install ".[tests]"</code>. Then we can run tests
+with <code>pytest</code>.</p>
 </div>
-<div class="paragraph">
-<p><code>pytest-runner</code> allows us to run tests with <code>setuptools</code> like this:</p>
-</div>
-<div class="paragraph">
-<p><code>python setup.py test</code></p>
-</div>
-<div class="paragraph">
-<p>This will install the package and its dependencies and run tests. This is done
-independently in its own environment.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In the past we used the <code>pytest-runner</code> plugin to run tests with <code>python
+setup.py test</code> but this approach and the plugin is <a href="https://pypi.org/project/pytest-runner/">deprecated</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><code>pytest-cov</code>, <code>pytest-pylint</code> and <code>pytest-pycodestyle</code> are plugins that run code
 coverage, pylint and pycodestyle respectively, together with tests.</p>
+</div>
+<div class="paragraph">
+<p>For local <code>pytest</code> settings we use the <code>pytest.ini</code> file which is ignored in
+Teamcity. This way developers can change <code>pytest</code> behavior without changing the
+CI settings.</p>
 </div>
 <div class="paragraph">
 <p>This works both locally and in Teamcity, so you can run CI checks before pushing
@@ -1214,14 +1225,6 @@ your code. One option is to add a pre-commit hook to the Git repository that
 will not allow commiting code that did not pass the checks. This is up to each
 developer and needs to be done for each project. There are some tools that help
 with this, such as <a href="https://pre-commit.com/">pre-commit.com</a>.</p>
-</div>
-<div class="paragraph">
-<p>One issue with setup that I personally have is, that I always run my tests with
-setuptools (<code>python setup.py test</code>) and that runs both tests and linters
-every time. I haven&#8217;t found a good solution yet. For now I just turn off the
-linters temporarily (I run linters with the same settings right in my editor).
-This is of course not ideal, because I can easily forget to turn the linters back
-on and they will not run in CI.</p>
 </div>
 </div>
 </div>
@@ -1240,7 +1243,7 @@ incrementally over time. For now, we are happy with how everything works.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-04 21:30:56 CEST
+Last updated 2020-06-05 16:53:45 CEST
 </div>
 </div>
 </body>
