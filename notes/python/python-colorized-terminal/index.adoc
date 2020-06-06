@@ -14,13 +14,13 @@ link:https://support.microsoft.com/cs-cz/kb/101875[ANSI.SYS] enabled.
 [source, python]
 ----
 class colors():
-    	# Text mode
+    # Text mode
     ENDC      = '\033[0m'
     BOLD      = '\033[1m'
     UNDERLINE = '\033[4m'
-    	INVERSE   = '\033[7m'
+    INVERSE   = '\033[7m'
 
-    	# Colors
+    # Colors
     ORANGE    = '\033[93m'
     BLACK     = '\033[0;30m'
     BLUE      = '\033[0;34m'
