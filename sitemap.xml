@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url><loc>http://localhost:8000</loc><lastmod>2020-06-06T10:59:51+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/reading/articles-february-2020/</loc><lastmod>2020-06-06T10:58:26+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/python/whats-new-in-pythons/</loc><lastmod>2020-06-06T10:58:26+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/python/python-tooling/</loc><lastmod>2020-06-06T10:58:25+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/python/python-decorators/</loc><lastmod>2020-06-06T10:58:25+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/reading/articles-january-2020/</loc><lastmod>2020-06-06T10:58:26+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/python/pip-freeze-editables-and-git/</loc><lastmod>2020-06-06T10:58:24+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/reading/articles-march-2020/</loc><lastmod>2020-06-06T10:58:27+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/reading/articles-november-2019/</loc><lastmod>2020-06-06T10:58:27+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/python/python-colorized-terminal/</loc><lastmod>2020-06-06T10:58:24+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/work/exchange-program-buddy-contract/</loc><lastmod>2020-06-06T10:58:27+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/reading/articles-december-2019/</loc><lastmod>2020-06-06T10:58:26+00:00</lastmod></url>
+<url><loc>http://localhost:8000/notes/software/technicky-dluh/</loc><lastmod>2020-06-05T15:48:11+00:00</lastmod></url>
+</urlset>
