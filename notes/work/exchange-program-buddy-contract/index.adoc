@@ -1,0 +1,47 @@
+= Exchange buddy contract
+June 6th, 2020
+:description: How we are running and exchange program and how we deal with mentoring.
+
+== Exchange program
+Our team has a program where developers from other teams can come to work with us
+for a month or two. This way, we can share our know-how and spread best
+practices(TM) at our company. Sometimes, one of us will go to help out at other teams.
+
+So far, we had three people come to join us (of which
+two decided to stay with us -- it might not fulfill the goal of spreading
+knowledge completely).
+
+When someone comes to our team for an exchange (or when they join our team
+full-time), we assign them a buddy. This is a person that makes sure that the
+newcomer learns how our team works as fast as possible.
+
+When I was selected as a buddy for one of our exchange colleagues, I decided to
+put together the "Buddy contract" -- a list of explicit expectations and
+responsibilities.
+
+== Buddy contract
+
+=== What is my purpose as a buddy?
+I'm guiding my buddy in completing the assigned task.
+
+I'm helping my buddy when they are stuck.
+
+I give feedback on what my buddy can improve, and when they are doing a good
+job.
+
+I'm ensuring that my buddy learns as much as possible.
+
+=== What are my responsibilities?
+I must be available as often as my buddy will need me (within reason).
+
+I must give honest feedback.
+
+I must continually assess their progress and adjust my guidance accordingly.
+
+I must ensure that my buddy always knows what to do next.
+
+
+=== What do I expect?
+I expect my buddy to be motivated and interested in learning.
+
+I expect to learn something new from my buddy.
