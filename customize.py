@@ -4,14 +4,14 @@ import re
 
 STYLE = (
     "<style>\n"
-    "#main-header {font-variant-caps: small-caps;font-size: 1.2em;margin: 0.2em;}\n"
+    "#main-header {font-size: 1.2em;margin: 0.2em;}\n"
     "#main-header a {text-decoration: none;color: #ba3925;}\n"
     "#main-header a:hover {color: #822a1c;}\n"
 )
 
 HEADER = (
     '<body class="article">\n<div id="main-header">'
-    '<a href="/">Back to Luminar.dev</a></div>'
+    '<a href="/">⇽ back to luminar.dev</a></div>'
 )
 
 
