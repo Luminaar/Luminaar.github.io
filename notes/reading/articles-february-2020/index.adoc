@@ -1,5 +1,5 @@
 Article list from February of 2020
-==================================
+=================================
 March 16th, 2020
 :description: Some of the articles I've read in February of 2020. Better late than never.
 
@@ -15,9 +15,9 @@ going to take some preparation.
 https://www.robinsloan.com/notes/home-cooked-app/[An app can be a home-cooked meal]
 and https://web.archive.org/web/20040411202042/http://www.shirky.com/writings/situated_software.html[Shirky: Situated Software]
 are related to the theme of sustainable software. I'm not planning on writing
-any applications yet. Thought I started about something else - ditching Facebook
-for keeping in contact with my group of close friends in favor of something
-smaller, private. And possibly self-hosted.
+any applications yet. Thought I'm thinking about something else -- ditching
+Facebook for keeping in contact with my group of close friends in favor of
+something smaller, private. And possibly self-hosted.
 
 - - -
 
@@ -39,10 +39,6 @@ https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1
 I've wanted to get into more programming languages for a long time. Go seemed
 like something I would enjoy, but lately, Rust seems more and more appealing.
 We now have some code done in Rust, and I'm tempted to give it a go.
-
-
-And now we even have some coding done in Rust at work, I'm tempted to get into
-it even more. Now just to find some spare time.
 
 - - -
 
