@@ -1,0 +1,345 @@
+= Technický dluh a jeho dopady na kvalitu softwaru
+March 5th, 2019
+:description: Shrnutí poznatků o technickém dluhu
+
+
+Tento příspěvek je upravenou verzí semestrální práce, kterou
+jsem vypracoval v rámci studia (předmět Řízení kvality SW).
+
+Původní práce měla asi 15 stran. Pokusil jsem se to zkrátit do stravitelnější
+podoby.
+
+Článek je v podstatě kompilací informací, které se mi podařilo najít k tématu.
+Jsou to původní blogy, několik knih o SW inženýrství, které se o technickém
+dluhu krátce zmiňují, nebo akademické práce, které se snaží z toho udělat vědu
+(viz odkazy v textu a seznam literatury na konci článku). Když jsem začínal s
+psaním, přišlo mi, že vlastně nemám moc o čem. Nakonec se mi podařilo dát
+dohromady docela obsáhlý přehled.
+
+Hlavní účel tohoto článku vidím v sjednocení a vyjasnění pojmů pro následující
+diskuze o technickém dluhu na projektech.
+
+
+== Úvod
+Technický dluh je metafora, která vystihuje častý jev, vznikající při
+tvorbě softwarových systémů✱. Tento jev má téměř vždy negativní
+dopady a vyskytuje se v různých částech systému, z různých důvodů.
+Tento článek obsahuje definici technického dluhu, popisuje jeho
+vlastnosti a určuje několik různých druhů. Dále jsou popsány
+časté důvody vzniku technického dluhu a jeho přímé i nepřímé dopady
+na kvalitu softwaru. Nakonec jsou popsány postupy, jak
+technickému dluhu čelit.
+
+✱ __Pojmy software, systém a projekt jsou používány zaměnitelně pro
+  označení celku, na jehož tvorbě se podílí skupina lidí (tým
+  vývojářů, management, zákazníci).__
+
+== Definice technického dluhu
+Pojem technický dluh poprvé http://c2.com/doc/oopsla92.html[použil Ward
+Cunningham] jako metaforu, která se týká vývoje softwaru.
+
+Cunningham uvádí, že aby bylo dosaženo největší kvality softwaru,
+musí být implementace průběžně konsolidována (musí se odstraňovat
+nedostatky a zvyšovat její logická soudržnost). Počáteční
+implementace sice může být ze začátku pro zákazníka přijatelná, ale
+pokud nebude prováděn pravidelný refactoring, může to ohrozit celou
+organizaci:
+
+> Vydání první verze softwaru je jako půjčka. Malá půjčka zrychluje
+> vývoj pokud je brzo splacena refactoringem ... Nebezpeční nastává,
+> pokud není dluh splacen. Každá minuta kdy je používán ne zcela
+> správný kód jsou úroky z tohoto dluhu. Celé vývojářské organizace
+> mohou být tíhou dluhu nekonsolidovaného softwaru zcela zastaveny.
+
+http://wiki.c2.com/?WardExplainsDebtMetaphor[Ward později upřesňuje], že tato
+metafora neznamená vytvoření špatné implementace a jejího pozdějšího
+upravení na lepší implementaci.  Spíše jde o vytvoření takové
+implementace, která odpovídá úrovni poznání dané domény a její
+postupné zlepšování s tím, jak poznání roste.  Technický dluh podle
+něj také neznamená odložení implementace funkcionality. Týká se jen
+technických rozhodnutí, která ovlivňují další vývoj.
+
+Na rozdíl od Cunninghama, ostatní autoři do svých definicí zahrnují i
+nedokonalosti implementace. Steve McConnell dělí technický dluh podle
+následující taxonomie (viz toto https://vimeo.com/49866475[video]
+pro podrobný popis):
+
+1. Neočekávaný dluh
+2. Úmyslný dluh
+    A. Krátkodobý dluh
+    B. Dlouhodobý dluh
+
+Úmyslný dluh vzniká v systému přijetím explicitního rozhodnutí, které
+má své důvody a může sloužit vyššímu cíli. Neočekávaný dluh naopak
+vznikne aniž by to někdo pozoroval a později způsobuje nečekané
+komplikace.
+
+Krátkodobý dluh je takový, u kterého se očekává, že bude splácen
+často (např. mezi jednotlivými vývojovými cykly) nebo průběžně.
+Dlouhodobý je naopak v systému delší dobu.
+
+Podobně jako McConnell, i https://martinfowler.com/bliki/TechnicalDebtQuadrant.html[Martin Fowler ve svém příspěvku] zahrnuje
+neúmyslné nedokonalosti implementace do technického dluhu. Navíc
+rozlišuje, zda byl dluh přijat z dobrého důvodu, či nikoliv, pomocí
+následující matice:
+
+[%header,cols=3*]
+|===
+|
+|Reckless
+|Prudent
+
+|Deliberate
+|II.
+|I.
+
+|Inadvertent
+|III.
+|IV.
+
+|===
+
+První kvadrant označuje technický dluh, který byl přijat za účelem splnění
+nějakého cíle s plným uvědoměním si následků - ”Software musí být vydán hned.
+Uvědomujeme si, jak to ovlivní další práci”.
+
+Druhý kvadrant označuje dluh, který byl přijat záměrně, ale toto rozhodnutí
+nebylo promyšleno a nemá dobrý důvod - ”S designem se teď nebudeme zdržovat”.
+
+Do třetího kvadrantu spadají případy, kdy vývojáři nevědí, že přijímají
+technický dluh nejčastěji kvůli vlastní neschopnosti - ”Nějak to tam nasekáme”.
+
+Do posledního kvadrantu patří případy, kdy vývojáři sice udělali neoptimální
+rozhodnutí, ale později je odhalili a byli schopni se z nich poučit - ”Teď už
+víme, jak na to”.
+
+Dále v tomto článku budeme pracovat s touto definicí:
+
+- Technický dluh zahrnuje interní činnosti technického charakteru,
+jejichž provedení bylo odloženo (ať už úmyslně či ne), což bude mít
+do budoucna vliv na kvalitu softwaru a na práci vývojářů
+- Technický dluh zahrnuje i nedostatky implementace, které nevznikly
+úmyslně
+- Odložení implementace funkcionality není technickým dluhem
+
+
+== Typy technického dluhu
+Často jsou rozlišovány různé typy technického dluhu podle toho, která část
+systému ho obsahuje.
+
+Dluh kódu:: se projevuje porušením standardů při psaní zdrojového kódu (např.
+nedodržení stylu, nesprávné pojmenování atd). Tento dluh je často možné odhalit
+pomocí statické analýzu kódu.
+
+Designový dluh:: vzniká při nedodržení zásad dobré softwarové architektury a to
+buď od začátku (například kvůli nedostatku času) ale i když se požadavky mění
+na tolik, že původní architektura je již nemůže uspokojit.
+
+Testovací dluh:: vzniká při nedokonalém pokrytí systému testy. Ty buď zcela
+chybí, nebo jsou špatně napsané a nepomáhají v odhalení defektů. Testy mohou
+být také zastaralé, protože při předchozích úpravách nebyly upraveny. Pokud
+dobré testy existují, ale nejsou spouštěny automatizovaně, může to také být
+technickým dluhem.
+
+Dokumentační dluh:: je podobný jako testovací dluh. Dokumentace buď zcela
+chybí, je neaktuální nebo napsaná nekvalitně.
+
+
+== Vlastnosti technického dluhu
+Metafora technického dluhu se postupně vyvíjela a vznikaly další paralely s
+finančním dluhem.
+https://linkinghub.elsevier.com/retrieve/pii/B9780123855121000025[C. Seyman a
+Y. Guo] ve své akademické práci formalizují pojmy, které jsou často ve spojení
+s technickým dluhem používány.
+
+Výše dluhu:: je míra náročnosti odstranění technického dluhu. Tuto míru lze
+udávat buď jako čas (např. člověko-dny) nebo i v penězích.
+
+Pravděpodobnost úroků:: udává, jak pravděpodobné je, že technický dluh ovlivní
+budoucí práci. Například tím, že zaviní defekty v kódu, nebo že bude upravován
+kód, který není otestovaný a zdokumentovaný.  Ovlivňujícím faktorem může být i
+špatná architektura, která ztíží přidání nové funkcionality.
+
+Výše úroků:: udává míru úsilí, které bude muset být vynaložené navíc, pokud
+technický dluh nebude odstraněn.
+
+Tyto míry nelze měřit přesně a musí se odhadovat. Přesnost těchto odhadů bude
+záviset na zkušenosti osoby, která bude odhady provádět a také na dostupných
+historických datech. Čím jsou dostupná data podrobnější, tím přesnější budou
+odhady. Zřejmě nejtěžší bude odhad výše úroků, protože vývojáři jen těžko
+vezmou v potaz všechny možnosti, jak je může technický dluh ovlivnit.
+
+
+== Důvody vzniku technického dluhu
+Přirozeným důvodem vzniku technického dluhu, tak jak jej definoval Cunningham
+je nedostatečná znalost problematiky ze strany vývojářů, zejména v počátečních
+stádiích vývoje.
+
+Častým důvodem jsou také vnější faktory, které vyvíjejí tlak na vývojáře, aby
+zrychlili dokončení projektu nebo implementaci funkcionality. Takovým faktorem
+může být (technický) management, změna požadavků zákazníka (a to i v konečné
+fázi implementace) nebo změna různých vnějších podmínek (tržní, legislativa).
+Časový skluz způsobují i nesprávné odhady (zejména od třetích stran, které se
+přímo nepodílí na vývoji), které neobsahují rezervy, nebo byly jednoduše
+vytvořeny nezkušenou osobou.
+
+Vývojáři nejsou nezávislí na zbytku organizace, musejí přinášet užitek
+naplňováním business požadavků, které jsou navíc často závislé na čase (daná
+vlastnost softwarového produktu přinese zisk nyní, ale už ne později). Často se
+proto musejí podřídit a přistoupit na kompromisy.
+
+Různé typy technického dluhu vznikají v různých částech systémů z různých
+důvodů. Pokud vývojáři nejsou dostatečně kompetentní, vzniká technický dluh
+všude, navíc aniž by o něm někdo měl ponětí.
+
+Dluh zdrojového kódu vzniká pokud v týmu nejsou nastavena určitá pravidla o
+tom, jak by měl být kód napsán. Pro tyto účely vznikají v týmech stylistické
+manuály a jsou používány automatické nástroje pro úpravu kódu (tzv. lintery).
+
+Testovací dluh vzniká, když je napsání testů odděleno od implementace
+funkcionality, tedy pokud jsou testy napsány někým jiným, nebo v pozdějším
+vývojovém cyklu.
+
+
+== Dopady technického dluhu
+Vznik technického dluhu není vždy nežádoucí. Mohou nastat situace, kdy je možné
+obhájit zadlužení. Obecně půjde o případy kdy je výhodnější dokončit projekt
+dříve a potřebné úpravy či refactoring provést později (náklady na tyto budoucí
+změny jsou menší, než případný ušlý zisk, pokud nebude projekt či funkcionalita
+dokončena včas). Pokud je kritické vstoupit na trh co nejdříve, bude pro
+organizaci lepší nashromáždit technický dluh, než promarnit příležitost.
+
+Technický dluh není viditelný pro zákazníky a často ani pro management, proto
+není překážkou k používání softwaru. Naopak, čím dříve zákazník začne software
+používat, tím dříve dostanou vývojáři zpětnou vazbu (toto je jedna ze zásad
+https://agilemanifesto.org/principles.html[agilního vývoje]). Avšak čím je
+větší, tím jsou změny nebo přidání nové funkcionality složitější.  Někdy můžou
+být změny i nemožné. Vývoj se zpomaluje i přesto, že efektivita vývojářů je
+stejná jako předtím. Požadavky zákazníků nejsou naplňovány nebo nejsou
+naplňovány včas. Pokud není technický dluh ”splácen”, bude se neustále
+zvětšovat a může přerůst cenu, kterou je zákazník zaplatit.
+
+Vývojáři jsou ti, kdo jako první pocítí dopady technického dluhu a to proto, že
+s ním přicházejí do styku každý den. Technický dluh ztěžuje jejich práci.
+
+Špatně napsaný zdrojový kód, který nedodržuje konvence je obtížné číst a tím se
+ztěžuje jeho pochopení pro ty, kdo ho nevytvořili ale musí na něm provádět
+úpravy.
+
+Pokud je architektura špatně zvolena, komponenty jsou nadměrně provázané a
+systém je příliš komplexní, je obtížné přidávat novou funkcionalitu a plnit
+požadavky zákazníků.  Vývojáři nemají jistotu, že jakákoliv změna nezpůsobí
+obtížně nalezitelné defekty. Snižuje se stabilita celého systému.
+
+
+== Jak čelit technickému dluhu
+Dopady technického dluhu budou vždy negativní (nikdy nebudou mít pozitivní vliv
+na kvalitu) ale jsou situace, kdy alternativa má ještě horší dopad. Vždy tedy
+půjde o volbu menšího zla. Je také zřejmé, že je pro organizaci nejvýhodnější
+snižovat technický dluh na minimum - splácet ho.
+
+=== Identifikace
+Prvním krokem při splácení technického dluhu je jeho identifikace a
+dokumentace. Uvnitř organizace nebo týmu by měl vzniknout centrální seznam
+všech částí systému, které jsou technickým dluhem postižené.  Každá položka by
+měla mít vypsány vlastnosti dluhu, uvedené výše.
+
+Tento seznam by měl být pravidelně udržovaný a přístupný pro všechny.  Při
+plánování vývojového cyklu pak celý tým do tohoto seznamu nahlíží, aby měli
+všichni přehled o technickém dluhu v systému.
+
+Jeden ze způsobů jak identifikovat technický dluh je analýza zdrojového kódu
+pomocí různých nástrojů.
+
+Cyklomatická složitost:: udává počet různých cest, kterými je možné programem
+procházet. Čím větší je složitost komponenty, tím složitější je její pochopení,
+je těžší komponentu upravit a zvyšuje se pravděpodobnost defektů. Přespřílišná
+složitost také může snižovat výkon.
+
+Provázanost kódu:: lze také měřit různými nástroji. Silná provázanost
+způsobuje, že při změně jedné komponenty (třídy, metody) je nutné měnit další
+komponenty. Takové úpravy jsou velice nákladné, způsobují nestabilitu systému a
+vytvářejí defekty.
+
+http://www.informit.com/articles/article.aspx?p=457502&seqNum=5[Duplikace kódu]::
+v systému může zvyšovat technický dluh, i když ne vždy (někdy může být
+duplikace výhodná). Často však vede ke zvýšené komplexitě, zátěži při vývoji a
+nižšímu výkonu. Duplikace je dobře měřitelná statickou analýzou kódu.
+
+https://martinfowler.com/bliki/TestCoverage.html[Pokrytí testy]:: měří, které
+části systému jsou spuštěny při testování.  Nízké pokrytí je (testovacím)
+technickým dluhem. Avšak vysoké pokrytí nemusí vždy znamenat nízký technický
+dluh, pokud nejsou testy dobře navrženy.
+
+Počet defektů:: je jasným ukazatelem technického dluhu. Pro sledování této
+metriky je nutné mít co nejpodrobnější databázi defektů.
+
+Nástroje pro správu verzí:: obsahují nejenom technický, ale i sociální rozměr.
+Analýzou projektu lze zjistit nejenom jak zdrojový kód vypadá teď, ale i jak se
+měnil a kdo úpravy prováděl.
+
+Lze zjistit, jaké části jsou často upravovány. Pokud je komponenta často
+upravována různými vývojáři, může to značit technický dluh.  Pokud je několik
+komponent často upravováno zároveň, není systém dobře navržen a může to
+zpomalovat další práci.
+
+=== Určení priorit
+Technický dluh v systému většinou nelze vyřešit najednou a proto je potřeba
+určit, který technický dluh má největší dopad. Dluh na některých částech
+systému nemusí mít žádný vliv a proto je možné ho neodstraňovat. Na základě
+odhadované výše dluhu, pravděpodobnosti a výše úroků lze určit, na jaké položky
+by se měl tým zaměřit.
+
+Položky, u kterých benefit z odstranění dluhu (pravděpodobnost vzniku × výše
+úroků) převyšuje jeho výši by měly být odstraněny co nejdříve.
+
+Čas potřebný na splacení dluhu je potřeba započítat do odhadů na další vývojové
+cykly.  Toto by měli dělat sami vývojáři, protože jejich zájem na jeho
+odstranění je větší než managementu nebo zákazníka.
+
+=== Splácení dluhu
+Jednoduchým řešením pro splacení dluhu je přerušení vývoje a zaměření úsilí
+celého vývojářského týmu na tuto činnost. Tato možnost je však pro zákazníky
+nepřijatelná, protože nezískávají přidanou hodnotu.  Tento postup by měl být
+volen až v krajních případech, kdy další rozvoj není možný, bez kompletního
+předělání celého systému.
+
+Přijatelnějším řešením pro většinu projektů je postupné splácení dluhu.
+Vývojáři můžou vyčlenit určitý čas, kdy se budou věnovat splácení technického
+dluhu. Tento čas by měl být započítán do odhadů při plánování vývojových cyklů.
+
+Dobrým přístupem je dodržování tzv. Boy-scout rule neboli provádět
+oportunistický refactoring. Pokaždé když vývojář začne upravovat nějakou část
+kódu (aby opravil defekt nebo přidal novou funkcionalitu), provede refactoring
+a splatí pokud možno všechen technický dluh na tomto místě.
+
+=== Předcházení vzniku
+Vývojáři mohou předcházet vzniku technického dluhu tak, že potřebné činnosti
+(např. refactoring) provedou ihned a neodloží jej na pozdější čas (což je ne
+vždy možné).
+
+Vzniku dluhu lze předcházet tím, že bude zabráněno vnějším vlivům vyvíjet tlak
+na zrychlení časového harmonogramu. Pokud jsou zákazníci a/nebo management
+seznámeni s pojmem technický dluh, mohou lépe zhodnotit jaká jsou jeho rizika.
+Potom mohou rozhodnout, zda riziko podstoupit či nikoliv.
+
+Pokud zákazníci a management rozumí tomuto pojmu, budou také spíše naklonění
+vynaložení prostředků na jeho odstranění (i když pro ně tato činnost nepřináší
+žádný přímý zisk).
+
+== Zajímavá literatura
+https://pragprog.com/book/atevol/software-design-x-rays[Software Design X-Rays]
+je kniha, která se zabývá identifikací technického dluhu pomocí analýzy toho,
+jak vývojáři pracují.
+
+https://www.managingsoftwaredebt.com/[Managing Software Debt] se snaží o
+definitivní popis problematiky technického dluhu.
+
+http://ieeexplore.ieee.org/document/6280547/[A Balancing Act: What Software
+Practitioners Have to Say about Technical Debt] je studie zabývající se
+technickým dluhem, která byla vypracována z interview s odborníky z praxe.
+
+http://www.designsmells.com/[Refactoring for software design smells: managing
+technical debt] obsahuje popis 25 "code smells" a způsoby jak je refaktorovat
+za účelem snížení technického dluhu.
+
