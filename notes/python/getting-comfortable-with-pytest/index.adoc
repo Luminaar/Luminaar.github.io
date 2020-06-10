@@ -1,0 +1,70 @@
+= Getting comfortable with Pytest
+0.1, June 9th, 2020
+:source-highlighter: pygments
+:description: An introduciton to testing with Pytest. Focusing on how Pytest makes it a joy to write tests.
+:keywords: python, pytest, introduction, tutorial
+
+
+== Introduction
+I hope that after reading this  you will be excited about writing tests. Writing tests
+should not be this chore that you do after you finished your project. It should a be a
+tool that helps you _while_ you are programming. It should automate repetitive tasks and
+raise confidence in your code.
+
+You are testing software even if you are not writing integration, unit and other
+smart-word tests. Everyone does. How else would we know that our code works? The most
+basic type of test is the *manual test* and everyone is doing those -- we just run the code
+and see what happens.
+
+I would like to show you, that `pytest` is a great tool that helps you to automate your
+manual tests. And at the same time `pytest` will not put obstacles in your way -- you don't
+have to write any boilerplate code to start testing. In fact, if you don't need to, you
+won't be writing any boilerplate code. Ever.
+
+But automating manual testing is just the first step. `pytest` can do so much more for
+you -- it can help you improve your code while you are writing it. How? It forces you to
+_use_ your code. Doesn't matter if you are testing one function or the whole application.
+Writing the test can show you how your design can be improved. A simple rule of thumb:
+
+> It it's hard to test, it's hard to use. If it's hard to use, it can be designed better.
+
+== No jargon
+There are many articles and videos about writing tests with `pytest`. I would like this
+article to be a bit different -- I won't try to describe all features of `pytest`, the
+https://docs.pytest.org/en/latest/contents.html[documentation] is there for that. I also
+would like to refrain from using the testing jargon like "unit under test",
+"setup/teardown" and "unit test". I especially won't be talking about "test-driven
+development" and "test coverage". I feel like these phrases are not helpful.
+
+To people who are not writing tests, I would like to show how to start writing _some_
+tests and how tests can help them.
+
+To people who are writing tests as an afterthought or are used to writing tests in other
+languages, I would like to show (maybe) a different way of thinking about tests.
+
+To people who are already proficient in using `pytest`, well, maybe they can teach _me_
+something.
+
+== Structure
+I would like to show how to start writing `pytest` from the first line of code -- not
+before, not after, but _while_ you are writing code.
+
+Then I would like to show a couple of tricks that `pytest` has to help you write readable,
+e.g. "fixtures" and "parametrization".
+
+Finaly, I would like to show, how to better structure your tests and integrate them into
+your application and workflow.
+
+
+== Notes
+Readability counts in test too -- tests should be as easy to review as code. Hard to
+understand tests are hard to fix. Badly structured and unreadable tests should not pass
+codereview (how often we skip tests during code review?).
+
+How fixtures help: Test should not contain any logic that is required to set up the test.
+A test should contain only asserts -- clearly described conditions when the test passes
+and when in fails. Everything should go into fixtures.
+
+Fixtures are help with "code reuse", you can combine fixtures.
+
+Structuring tests: a very good https://salmonmode.github.io/2019/03/29/building-good-tests.html[article].
