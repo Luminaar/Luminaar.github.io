@@ -1,0 +1,55 @@
+= Code reviews on demand
+June 14th, 2020
+:description: An idea for the Python Guild - a group of developers that will offer it's services as code reviewers.
+:keywords: python, guild, code-review
+
+
+This is an idea I had for our Python Guild. We have a lot of people writing
+Python code at our company. A lot of them are not developers primarily (or at least not
+Python developers). Because of that they are often write code that is not easy to
+maintain which is a problem if it needs to be maintained for a long time.
+
+I would like to help them write better code. Unfortunately it's not possible for me to
+personally teach each one.
+
+Code review is one of the best ways to improve your skills. But not all teams are used to
+do code reviews. Or maybe, there is nobody who can do one. I already had several people
+approach me and ask for a review. We can share this resource -- the code review -- across
+teams.
+
+I propose to create a group of volunteers that will offer their time to other developers
+and code reviews for them. The more people agree to this the better (I can't do it by
+myself).
+
+== How to ask for a code review
+1. Create a Git repository, leave the master branch empty
+2. Create another branch (e.g. "implementation") and put your code there
+3. Create a Pull Request from the feature branch to `master`
+4. Send a link to the PR to the `#help-python` channel with a `@python-code-review` mention
+    - Tip: indicate how thorough you want the CR to be. E.g. AT A GLANCE (give me feedback
+      if my design makes sense, I expect to work on this code), MODERATE (I doesn't need
+      to be perfect, focus on high level stuff), BRING IT ON (let's check every
+      statement, this will be live for years)
+5. When you are done incorporating changes, use the "re-request review" feature on Github
+6. After the PR is approved, you can merge your changes
+
+Be prepared to take feedback. Be respectful to the reviewers time
+
+== How to give a code review
+1. Indicate that you are going to a request for review
+2. Do a code review according to the indicated level of thoroughness
+3. Add your comments to the PR and request changes if need
+4. Communicate with the author
+5. Approve the PR when both parties are satisfied
+
+Remember, empathy is important in any communication. Be kind. Give clear feedback. Do not
+assume anything.
+
+== Implementation
+Propose this concept at the Python Guild.
+
+Get at least 5 volunteers.
+
+Create the `@python-code-review` user group on slack.
+
+Announce the group on `#help-python` and elsewhere with link to this article
