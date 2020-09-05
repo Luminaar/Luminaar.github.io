@@ -1,0 +1,12 @@
+1. Outline the task
+2. Write as one function definition and docstring.
+3. Docstring contains 'and' - split into two functions that take a message (and mutate it)
+4. Write tests - one function for each test case
+5. Write a naive implementation of the `extract_filename` function?
+6. What if we want to add some test cases? Refactor into test one function with a for cycle
+7. Refactor into parametrized test function, add more cases that will fail
+8. Refactor `extract_filename` function to pass tests
+9. Refactor `extract_filename` and `rank` to accept only value, not message (pure functions) - change test first
+    - Becuase I used the function in the tests, I realized that it could be implemented differently
+
+10. Write a test for `transform` function

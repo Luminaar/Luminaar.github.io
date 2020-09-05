@@ -68,3 +68,56 @@ and when in fails. Everything should go into fixtures.
 Fixtures are help with "code reuse", you can combine fixtures.
 
 Structuring tests: a very good https://salmonmode.github.io/2019/03/29/building-good-tests.html[article].
+
+Learning from functional programming. When you are thinking about your program, look for
+the smallest units of your logic that can be expressed as a pure function -- a function
+that doesn't have side effects (e.g. making HTTP calls, database queries, files system
+operations). These functions are very easy to test.
+
+Writign test will help you structure your code better. When you start thinking about
+testing some part of your code, you will notice, that maybe it does more than one thing
+and you will refactor it.
+
+Do you have to test everything? 100% test coverage in usually not necessary. You should
+test those part of your code in which you have the least confidence. If you can clearly
+see what the function does (you can run it in you head), it's not strictly necessary to
+test (you can, but if you are only write some tests, start elsewhere). As a rule of thumb,
+if you function has an if-statement, you should consider writing a test.
+
+== Show and tell
+I don't like code-heavy articles/talks. I feel that they are sometimes hard to follow. But
+testing is something that must be practiced to understand. I will try to demonstrate how
+test help me write better software with a simple application.
+
+Contrived examples are not very helpful, so I will be writing a simplest application that
+I can that is still as close as possible to what I'm doing in my day-to-day as possible.
+
+The problem:
+
+Some service is publishing messages to a RabbitMQ exchange. We need to read those
+messages, filter them, make some decision depending on the content and write them to a
+file.
+
+1. Take a JSON message
+2. Set a field depending on some value (e.g. prevalence)
+	- Choose boundary values
+3. Combine two fields into one
+4. Write it to disk
+
+=== How to proceed
+Let's look at the problem -- what's the unique part? It's not the consuming of messages,
+writing them to disk or even the validation, that's routine. The transformation makes this
+application useful. So that's what we are going to test. It also can be made into a "pure"
+function! And those are the easiest to test.
+
+
+
+== Key takeways
+1. pure functions
+2. parametriation
+3. fixtures
+4. readable tests
+
+
+
+

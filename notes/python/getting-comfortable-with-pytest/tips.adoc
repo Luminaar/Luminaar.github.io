@@ -1,0 +1,14 @@
+= Pytest tips and tricks
+
+https://docs.pytest.org/en/5.4.3/contents.html[Pytest documentation]
+
+https://docs.pytest.org/en/5.4.3/assert.html[Assertions]
+
+https://docs.pytest.org/en/5.4.3/mark.html[Marking tests]
+
+https://docs.pytest.org/en/5.4.3/skipping.html[Skipping tests]
+
+https://docs.pytest.org/en/5.4.3/plugins.html[Plugins]
+
+
+

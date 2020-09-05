@@ -1,0 +1,36 @@
+== Introduction
+
+- How to use Pytest - where to put tests, how to structure them, how to run
+them, how to understand the output
+
+- How to write tests together with code, not after you've finished it
+
+- The most useful features (parametrization, fixtures)
+
+NOTE: Recording  of this meeting will be available after and I will create some kind
+of a transcript.
+
+== Motivation
+
+Common knowledge: that you _should_, no -- *must* -- write tests.
+
+But for most people writing tests is a chore:
+
+> I've finished the task, I just need to add tests.
+
+Tests are skipped during code review.
+
+Tests are an afterthought.
+
+
+=== How test can improve your life
+
+That even if you don't write tests, you still test your code -- Pytest will make
+it much easier
+
+What to test -- you are not going to have 100% test coverage. Which parts to
+choose then?
+
+Design better programs by writing tests -- more testable, readable,
+refactorable, maintainable
+

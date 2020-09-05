@@ -1,0 +1,22 @@
+= Classify files submitted by our users
+
+== Why do it?
+We are receiving files with some information - sha256, file path, prevalence
+(added by our internal system), file size and file type.
+
+We would like to rank those file (RARE, COMMON, ...). This rank will be used in
+further analysis.
+
+We need to have a file name (last part of the file path). This is used by other
+services.
+
+== Definition of done
+There is an application that classifies files received from our users. The
+classifications are made available for further use.
+
+== Implementation details
+Files received from users are available from RabbitMQ exchange
+"UserSubmittedFiles".
+
+Add a classification for each file and send it to exchange "RankedFiles"
+

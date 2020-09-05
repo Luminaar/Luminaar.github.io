@@ -1,0 +1,125 @@
+== Introduction
+link:intro.adoc[here]
+
+Today I would like to show you the basics of using Pytest.
+
+I'm not going to go over all the features -- Pytest has excellent documentation
+and you can find all the information there.
+
+What I want to show you:
+
+- How to use Pytest - where to put tests, how to structure them, how to run
+them, how to understand the output
+- How to write tests together with code, not after you've finished it
+- The most useful features (parametrization, fixtures)
+
+I did not prepare slides -- today it's mostly live coding.
+
+Recording  of this meeting will be available after and I will create some kind
+of a transcript.
+
+== Motivation
+I think it's common knowledge that you _should_, no -- *must* -- write tests.
+
+But for most people writing tests is a chore. I often hear something like
+
+> I've finished the task, I just need to add tests.
+
+Tests are also something that is often overlooked in code reviews. It's an
+afterthought.
+
+I believe that the main reason for this is developers are not familiar with
+testing tools and workflows.
+
+It's not enough to say that "writing tests is good". I will try to show you
+specific ways in which testing will improve your life:
+
+- That even if you don't write tests, you still test your code (and Pytest will
+make it easier)
+- What to test (you are not going to have 100% test coverage. Which parts to
+choose then?)
+- How writing tests can help design better programs (more testable, readable,
+refactorable, maintainable)
+
+== The task
+I'm going to try to demonstrate my whole process when working on a task -- from
+requirements and design to implementation and testing.
+
+Here is the "ticket":
+
+link:ticket.adoc[here]
+
+(Talk briefly about RabbitMQ)
+
+== Before we begin
+What we need to do:
+
+1. Get a message
+2. Do some transformations on it
+3. Send the new message
+
+What do I want to test? There are two levels:
+1. Test the transformations done by the application are correct
+2. Test that the application correctly reads and sends messages
+
+We will mainly focus on 1. -- I will demonstrate all concepts on this.
+
+We will briefly look at 2. how we could automate our tests using Pytest.
+
+== Let's sketch out the application
+We usually like to create a class for our application.
+
+All the logic is then contained in the methods.
+
+The skeleton of the application will have these methods:
+
+- `run` - start the whole application
+- `send` - send a message to RabbitMQ
+- `consume` - a callback for the RabbitMQ consumer - will contain most of the
+logic
+
+Working with RabbitMQ is pretty routine, we have a library for that.
+
+What I like to do is separate the "infrastructure" tasks (RabbitMQ, calling
+services) from "the logic".
+
+Here I can see, that the `consume` method deals with RabbitMQ. It gets a
+message, validates it, does something and then returns `True` if the message was
+processed successfully, `False` otherwise.
+
+Everything else is handled by the library. This means that right now, I can just
+focus on processing of one message.
+
+Let's sketch out the consume function (validation, transform, send
+message).
+
+We can see, that the main logic (unique to this app) is the `transform`
+function. Everything else is boilerplate
+
+Let's leave the application for a moment and just for on that function. (go to a
+separate module)
+
+
+Steps:
+
+1.  Outline the task
+2.  Write as one function definition and docstring.
+3.  Docstring contains 'and' - split into two functions that take a message (and mutate it)
+4.  Implement the `rank` function, run manual test (in console first, then in the
+    module)
+5.  Write tests - one function for each test case
+	- Where to put tests so Pytest can find them?
+	- How to run Pytest?
+	- How to read Pytest output?
+6.  Write a naive implementation of the `extract_filename` function?
+7.  What if we want to add some test cases? Refactor into test one function with a for cycle
+8.  Refactor into parametrized test function, add more cases that will fail
+9.  Refactor `extract_filename` function to pass tests
+10. Refactor `extract_filename` and `rank` to accept only value, not message (pure functions) - change test first
+    - Becuase I used the function in the tests, I realized that it could be implemented differently
+11. Write a test for `transform` function (check that everything is applied)
+12. Move the functions to the App class. Rewrite tests to use a fixture.
+
+
+== Pytest tips and tricks
+link:tips.adoc[here]
