@@ -1,0 +1,10 @@
+= {title}
+{version}, {date}
+:source-highlighter: pygments
+:description: {description}
+:keywords: {keywords}
+
+Introduction
+
+== Section
+Content
