@@ -1,0 +1,67 @@
+= Paleo media diet
+September 5th, 2020
+:description: How I decided to improve my media diet
+:keywords: media diet paleo
+
+After a period of binging I decided that I need to watch my media intake. It
+seemed like a good idea to begin with a radical detox.
+
+== Motivation
+Lately it started bothering me that I spend way too much time stuffing my brain
+with content. I was constantly looking for distractions. If I had a minute left
+to myself, my mind would instantly try to occupy itself with something -- a
+Youtube video, Slack message, new article on Hackernews -- anything. Even though
+I almost don't use social media, there was always something to check. I would do
+anything for a dopamine hit.
+
+When I decided to limit my internet usage (e.g. stop binge-watching Youtube), I
+switched to off-line methods like binge-watching a TV show or reading books.
+
+
+== Junk-food
+For a long time now I had this thought at the edge of my mind -- I put a lot of
+stuff in my brain and not all of it is great. This thought became even more
+pressing in the last couple of weeks. I felt that my mind is covered in fog. I
+couldn't focus.
+
+This resulted (or maybe it was exacerbated by) in a state that could probably
+called depression. I had no interest (and no energy) to do anything (except
+maybe riding my bike) and it even began to affect my work (it doesn't help that
+right now I'm dealing with a legacy nightmare that I can't crack).
+
+I needed to snap out of it. That's why I decided to try something new.
+
+
+== Rules
+Simply put, I stopped consuming all media. Here are the rules:
+
+- No passive intake
+	** Youtube
+	** Movies, TV shows
+	** Podcasts
+- No reading
+	** News
+	** Blogs
+	** Books (both fiction and non-fiction)
+- Reading required for work and/or education (e.g. tutorials, documentation) is
+allowed
+- Limit dopamine hits
+	** Social media
+	** Checking e-mail, Slack (e.g. only checking it twice a day)
+- Music is allowed
+- Creating (programming, writing, drawing) is allowed
+
+
+== Findings so far
+It is hard to be in complete silence. I'm listening to a lot of music. I need to
+pay attention to that and try to reduce the amount of music as well. However I
+find that I'm more deliberate when choosing what to listen to. Before I just
+listened to the same things over and over, or just let Spotify suggest me
+something. Now I'm trying to find new artists or come back to my old favourites.
+
+Ideas about tasks other that work (e.g. home and life improvement,
+side-projects) are slowly coming back. It has only been a couple of days, I need
+more data to evaluate this.
+
+I snapped out of my low-energy state for now, completed some task that I've been
+putting off.
