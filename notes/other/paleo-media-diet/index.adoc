@@ -1,39 +1,72 @@
-= Paleo media diet
+= Paleo information diet
 September 5th, 2020
-:description: How I decided to improve my media diet
-:keywords: media diet paleo
+:description: How I decided to improve my information diet
+:keywords: information media diet paleo
 
-After a period of binging I decided that I need to watch my media intake. It
-seemed like a good idea to begin with a radical detox.
+In the last couple of weeks I've been in what I call "low-energy state" which
+means I've been feeling shitty and not getting anything done. Furthermore, I've
+been thinking about mindfulness (for lack of a better word) for quite some time
+now -- I can't remember, when was the last time I deeply thought about what am I
+doing with myself). All this lead to the following experiment.
 
 == Motivation
-Lately it started bothering me that I spend way too much time stuffing my brain
-with content. I was constantly looking for distractions. If I had a minute left
-to myself, my mind would instantly try to occupy itself with something -- a
-Youtube video, Slack message, new article on Hackernews -- anything. Even though
-I almost don't use social media, there was always something to check. I would do
-anything for a dopamine hit.
+This experiment was motivated by a combination of short-term and longer-term
+reasons.
 
-When I decided to limit my internet usage (e.g. stop binge-watching Youtube), I
-switched to off-line methods like binge-watching a TV show or reading books.
+=== Craving distractions
+I read that the internet and smart-phones give us dopamine hits that we learn to
+crave. I don't know if the science is good, but at least it's a helpful
+metaphor.
+
+I was constantly looking for my next hit. It felt like every waking minute, I
+just had to cram something into my brain -- a Youtube video, Slack message,
+e-mail, new article on Hackernews -- anything. Even though I almost don't use
+social media, there was always something to look at.
+
+My brain felt inflamed, my mind foggy. I couldn't focus.
+
+=== Heavy procrastination
+I got stuck at work. I'm dealing with an unpleasant task that I don't know how
+to finish. This leads to heavy procrastination. Because I feel bad about not
+working, I won't allow myself to do anything useful at all (e.g. like life and
+home improvement). This results in binging.
+
+At first it was Youtube. When I decided it was time to finally quit I moved on
+to TV shows. When I wanted to stop that, I moved to reading a book (this might
+sound good but it was not healthy at all).
+
+I realized that I'm just not capable of doing nothing anymore.
+
+=== Information quality
+For a long time now I felt that everything I consume is watered down -- blog
+posts, Youtube videos, even movies and TV shows. It's all "high calorie, low
+information density".
+
+I want to go back to primary sources. Sources that someone put real work into
+and got paid for (ad money doesn't count).
+
+I want to choose what I consume more carefully. I want to watch movies and read
+books, but my choices need to be delivered. I want to start learning new things
+again (something that feels I haven't been doing for a long time).
+
+I want to ban algorithms from my life -- I will find what I need myself, thank
+you very much.
 
 
-== Junk-food
-For a long time now I had this thought at the edge of my mind -- I put a lot of
-stuff in my brain and not all of it is great. This thought became even more
-pressing in the last couple of weeks. I felt that my mind is covered in fog. I
-couldn't focus.
+== Goals
 
-This resulted (or maybe it was exacerbated by) in a state that could probably
-called depression. I had no interest (and no energy) to do anything (except
-maybe riding my bike) and it even began to affect my work (it doesn't help that
-right now I'm dealing with a legacy nightmare that I can't crack).
-
-I needed to snap out of it. That's why I decided to try something new.
+Short term:
+- Get out of a short term "minimum energy state"
+- Stop procrastination, put what's causing it behind me
+Long term:
+- Strive for a clearer, more focused mind
+- Spend more time "with myself"
+- Lower my dopamine levels
+- Consume media more deliberately, choose more carefully
 
 
 == Rules
-Simply put, I stopped consuming all media. Here are the rules:
+Simply put, I will only consume media that cave people did (none).
 
 - No passive intake
 	** Youtube
@@ -50,6 +83,10 @@ allowed
 	** Checking e-mail, Slack (e.g. only checking it twice a day)
 - Music is allowed
 - Creating (programming, writing, drawing) is allowed
+
+This strict diet is short term only. I will see where it leads me over time.
+Later I will allow myself to consume media again, but hopefully in a more
+healthy way.
 
 
 == Findings so far
