@@ -14,7 +14,7 @@ This experiment was motivated by a combination of short-term and longer-term
 reasons.
 
 === Craving distractions
-I read that the internet and smart-phones give us dopamine hits that we learn to
+I've read that the internet and smart-phones give us dopamine hits that we learn to
 crave. I don't know if the science is good, but at least it's a helpful
 metaphor.
 
@@ -56,9 +56,12 @@ you very much.
 == Goals
 
 Short term:
+
 - Get out of a short term "minimum energy state"
 - Stop procrastination, put what's causing it behind me
+
 Long term:
+
 - Strive for a clearer, more focused mind
 - Spend more time "with myself"
 - Lower my dopamine levels
@@ -66,7 +69,7 @@ Long term:
 
 
 == Rules
-Simply put, I will only consume media that cave people did (none).
+Simply put, I will only consume media that cave people did -- none.
 
 - No passive intake
 	** Youtube
