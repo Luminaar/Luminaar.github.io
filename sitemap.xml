@@ -2,58 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://luminar.dev</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
+</url>
+<url>
+  <loc>https://luminar.dev/notes/other/paleo-information-diet/</loc>
+  <lastmod>2020-09-07</lastmod>
+</url>
+<url>
+  <loc>https://luminar.dev/notes/python/getting-comfortable-with-pytest/</loc>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/python/pip-freeze-editables-and-git/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/python/python-colorized-terminal/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/python/python-decorators/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/python/python-tooling/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/python/whats-new-in-pythons/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/reading/articles-december-2019/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/reading/articles-february-2020/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/reading/articles-january-2020/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/reading/articles-march-2020/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/reading/articles-november-2019/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/software/technicky-dluh/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
+</url>
+<url>
+  <loc>https://luminar.dev/notes/work/code-reviews-on-demand/</loc>
+  <lastmod>2020-09-07</lastmod>
 </url>
 <url>
   <loc>https://luminar.dev/notes/work/exchange-program-buddy-contract/</loc>
-  <lastmod>2020-06-06</lastmod>
+  <lastmod>2020-09-07</lastmod>
 </url>
 </urlset>
