@@ -84,6 +84,7 @@ allowed
 - Limit dopamine hits
 	** Social media
 	** Checking e-mail, Slack (e.g. only checking it twice a day)
+- No video-games
 - Music is allowed
 - Creating (programming, writing, drawing) is allowed
 
@@ -105,3 +106,18 @@ more data to evaluate this.
 
 I snapped out of my low-energy state for now, completed some task that I've been
 putting off.
+
+=== One week update
+I mostly feel fine, if a little bored at times. Made progress at work. I'm
+trying a new way of structuring my day -- focus on the main task of the day
+before lunch, do small tasks (like code reviews and answer non-urgent questions)
+after lunch. It works nicely.
+
+I do a lot of cleaning (I did that before as well except for the last couple of
+weeks, where I was slacking a bit) which gives me a break from work.
+
+I'm trying to come up with the best way forward. This strict "diet" is
+unsustainable but I'm not going back to how it was before either. I need to find
+a healthy way to spend my free time. Right now it's biking, cleaning and taking
+naps. I can't really get myself to do anything else (like drawing which I wanted
+to work on for a long time).
