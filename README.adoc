@@ -1,0 +1,69 @@
+= Luminar.dev
+This is my personal web page. It is a static page with some information about
+myself and a handful of articles written by me.
+
+== Implementation
+The current version is made of HTML pages generated from `asciidoc` files,
+using the (slightly customized) default CSS template from Asciidoctor.
+link:./index.html[index.html] was generated once. Now I edit the HTML directly
+(e.g. to add a new link).
+
+A custom header with a link back to the homepage is added to each article.
+
+== Structure
+Articles are stored in the `notes` directory. Sub-directories are used for
+categories. Each article is a separate directory that contains the `index.adoc`
+file and any other related files or images.
+
+`index.html` file is generated from `index.adoc` and stored in the same
+directory. This makes URLs for articles "nice":
+
+    https://luminar.dev/notes/python/pip-freeze-editables-and-git/
+
+
+Old version of the page is saved in the link:./pelican[pelican] directory.
+
+== Requirements
+These programs must be available:
+
+- https://asciidoctor.org/[asciidoctor] to transform `.adoc` file into HTML
+- https://pygments.org/[pygments] source highlighter to handle source code in `.adoc` files
+- Python3 for `Pygments` and custom scripts
+- Packages specified in link:requirements.txt[requirements.txt]
+- http://eradman.com/entrproject[entr] for auto-building of pages while editing
+
+== Scripts
+
+=== make.sh
+Generate HTML from a `.adoc` file, run the `customize.py` script on the result.
+
+Usage:
+
+    ./make.sh notes/python/python-tooling/index.adoc
+
+=== customize.py
+Add a custom header to a HTML file by replacing the opening `<body>` tag.
+
+Usage:
+
+    python customize.py ./make.sh notes/python/python-tooling/index.html
+
+=== watch.sh
+Watches a file for changes and runs `make.sh`. Uses the `entr` program.
+
+Usage:
+
+    ./watch notes/python/python-tooling/index.adoc
+
+=== sitemap.sh
+Runs the included `sitemap_gen.py` script to generate a `sitemap.xml` file. It
+works on the published version of the website and must be run after any changes
+are pushed.
+
+=== linkchecker
+Must be installed from Github (see link:requirements.txt[requirements.txt]).
+Look for any dead links.
+
+Usage:
+
+    linkchecker https://luminar.dev
